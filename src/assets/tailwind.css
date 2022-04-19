@@ -1,0 +1,130 @@
+@import url('http://fonts.cdnfonts.com/css/br-firma');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .download-resume {
+        position: absolute;
+        width: 12em;
+        height: 3em;
+        right: 2em;
+        font-weight: 600;
+        font-family: 'BR Firma';
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+
+    .main-header {
+        position: absolute;
+        top: 3em;
+        width: 889px;
+        height: 100px;
+        font-family: 'BR Firma';
+        font-size: 60px;
+        font-weight: 600;
+        color: black;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .main-sub-header {
+        position: absolute;
+        width: 664px;
+        height: 62px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+
+    }
+
+    .navbar {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        width: 544px;
+        height: 3.5em;
+
+        /*left: 688px;*/
+        /*top: 875px;*/
+
+        background: #FFFFFF;
+        opacity: 0.82;
+        box-shadow: 0px 8px 24px 9px rgba(0, 0, 0, 0.13);
+        backdrop-filter: blur(22px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 15px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        flex-grow: 0;
+        margin: 0px 12px
+
+        /*position: static;*/
+        /*width: 121px;*/
+        /*height: 53px;*/
+
+    }
+
+    .navbar-nav:hover {
+        padding: 6px;
+        background: #CCCCCC;
+        border-radius: 15px;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+    }
+
+    .navbar-nav.active {
+        padding: 6px;
+        background-color: black;
+        border-radius: 15px;
+
+    }
+
+    .navbar-nav.active .nav-item {
+        color: white;
+    }
+
+    .nav-item {
+        font-family: 'BR Firma';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        /* identical to box height, or 29px */
+
+        text-align: center;
+
+        color: #000000;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 10px;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #0d6efd;
+        text-decoration: none;
+    }
+}
