@@ -1,4 +1,7 @@
 import React from 'react';
+import logo from '../black-logo.png';
+import {Link} from "react-router-dom";
+import {TopNav} from "../components/Navbar";
 
 const Home = () => {
     return (
@@ -6,13 +9,7 @@ const Home = () => {
             <div className="background">
                 <span className="green"/>
                 <span className="blue "/>
-                <div className="top-nav flex justify-between px-8 pt-12">
-                    <div className="download-resume z-10">
-                        <button className='download-resume-button'>Download Resume</button></div>
-                    <div className="download-resume z-10">
-                        <button className='download-resume-button'>Download Resume</button>
-                    </div>
-                </div>
+                <TopNav/>
                 <div className="homepage-headers flex justify-center items-center">
                     <div className="main-header">
                         Hi, I’m Obed Balogun <br/>

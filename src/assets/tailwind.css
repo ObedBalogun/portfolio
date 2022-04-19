@@ -5,9 +5,23 @@
 @tailwind utilities;
 
 @layer components {
-    body {
+    h2 {
+        font-family: 'Br Firma';
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 140%;
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-family: 'Br Firma';
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 0.5rem;
 
     }
+
     .green {
         position: absolute;
         left: 0%;
@@ -22,7 +36,7 @@
         transform-origin: right;
     }
 
-    .blue{
+    .blue {
         position: absolute;
         left: 44.65%;
         right: 0;
@@ -36,6 +50,7 @@
         transform-origin: left;
 
     }
+
     @keyframes rotateItemBlue {
         0% {
             transform: rotate(0deg);
@@ -46,18 +61,26 @@
         }
     }
     @keyframes rotateItemGreen {
-        0%{
-            transform:rotate(0);
+        0% {
+            transform: rotate(0);
         }
-        100%{
-            transform:rotate(360deg);
+        100% {
+            transform: rotate(360deg);
         }
+    }
+
+    .logo {
+        width: 12em;
+        height: 3em;
+        font-weight: 600;
+        font-family: 'BR Firma';
+        /*background: rgba(255, 255, 255, 0.07);*/
     }
 
     .download-resume-button {
         width: 12em;
         height: 3em;
-        right: 2em;
+        /*right: 2em;*/
         font-weight: 600;
         font-family: 'BR Firma';
         background: rgba(255, 255, 255, 0.07);
@@ -74,11 +97,11 @@
 
     .main-header {
         position: absolute;
-        top: 3.5em;
+        top: 4em;
         width: 889px;
         height: 100px;
         font-family: 'BR Firma';
-        font-size: 60px;
+        font-size: 64px;
         font-weight: 600;
         color: black;
         line-height: 120%;
@@ -87,11 +110,11 @@
 
     .main-sub-header {
         position: absolute;
-        top: 15.2em;
-        width: 664px;
+        top: 19em;
+        width: 24em;
         height: 62px;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 140%;
         text-align: center;
 
@@ -118,6 +141,7 @@
 
         border-radius: 15px;
     }
+
 
     .navbar-nav {
         display: flex;
@@ -180,4 +204,33 @@
         color: #0d6efd;
         text-decoration: none;
     }
+
+    .project-background .download-resume-button, .contact-background .download-resume-button {
+        background: white;
+        border: 1px solid #FFFFFF;
+
+    }
+
+    .left-side-text {
+        width: 15em;
+        height: 288px;
+        font-family: 'BR Firma';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 47px;
+        line-height: 120%;
+    }
+
+    .right-side-text {
+        width: 700px;
+        height: 288px;
+        font-family: 'BR Firma';
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    /*.email-address{*/
+    /*    font-size: ;*/
+    /*}*/
 }
