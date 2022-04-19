@@ -5,8 +5,56 @@
 @tailwind utilities;
 
 @layer components {
-    .download-resume {
+    body {
+
+    }
+    .green {
         position: absolute;
+        left: 0%;
+        right: 52.96%;
+        top: 19.59%;
+        bottom: 0;
+        background: #73E0A9;
+        filter: blur(208px);
+        animation-duration: 15s;
+        animation-name: rotateItemGreen;
+        animation-iteration-count: infinite;
+        transform-origin: right;
+    }
+
+    .blue{
+        position: absolute;
+        left: 44.65%;
+        right: 0;
+        top: 0;
+        bottom: 5.36%;
+        background: #5B68DF;
+        filter: blur(208px);
+        animation-duration: 15s;
+        animation-name: rotateItemBlue;
+        animation-iteration-count: infinite;
+        transform-origin: left;
+
+    }
+    @keyframes rotateItemBlue {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotateItemGreen {
+        0%{
+            transform:rotate(0);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+
+    .download-resume-button {
         width: 12em;
         height: 3em;
         right: 2em;
@@ -15,12 +63,18 @@
         background: rgba(255, 255, 255, 0.07);
         border: 1px solid #000000;
         box-sizing: border-box;
-        border-radius: 24px;
+        border-radius: 15px;
+    }
+
+    .download-resume-button:hover {
+        background-color: black;
+        color: white;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
     }
 
     .main-header {
         position: absolute;
-        top: 3em;
+        top: 3.5em;
         width: 889px;
         height: 100px;
         font-family: 'BR Firma';
@@ -29,16 +83,17 @@
         color: black;
         line-height: 120%;
         text-align: center;
-        margin-bottom: 1em;
     }
 
     .main-sub-header {
         position: absolute;
+        top: 15.2em;
         width: 664px;
         height: 62px;
         font-weight: 400;
         font-size: 24px;
         line-height: 140%;
+        text-align: center;
 
     }
 
@@ -104,10 +159,7 @@
         font-weight: 400;
         font-size: 22px;
         line-height: 150%;
-        /* identical to box height, or 29px */
-
         text-align: center;
-
         color: #000000;
 
 
@@ -116,8 +168,9 @@
         flex: none;
         order: 0;
         flex-grow: 0;
-        margin: 0px 10px;
+        margin: 0 10px;
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        cursor: pointer;
 
     }
 
