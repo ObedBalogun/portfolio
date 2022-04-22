@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import logo from "../black-logo.png";
+import logo2 from "../white-logo.png";
 
 const Navbar = () => {
     const [active, setActive] = React.useState(true);
@@ -9,7 +10,7 @@ const Navbar = () => {
     }
     return (
         <>
-            <nav className="navbar fixed mx-auto inset-x-0 bottom-12 z-10">
+            <nav className="navbar fixed mx-auto inset-x-0 bottom-12 z-40">
                 <NavLink to='/' className="navbar-nav">
                     <div>
                         <span className="nav-item">Home</span>
@@ -35,11 +36,14 @@ const Navbar = () => {
     );
 };
 const TopNav = () => {
+    let location = useLocation()
+    location = location.pathname;
+    location = location === "/" || location === "/about"
     return (
-        <div className="top-nav flex justify-between items-center px-6 pt-12 -mt-10">
+        <div className="top-nav flex justify-between items-center px-6 pt-12">
             <div className="nav-logo z-10">
                 <Link to="/">
-                    <img src={logo} alt="" className="w-36 h-36 -mr-12"/>
+                    <img src={location ? logo : logo2 } alt="" className="w-12 h-12"/>
                 </Link>
             </div>
             <div className="download-resume z-10">
