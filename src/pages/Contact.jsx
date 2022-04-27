@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {TopNav} from "../components/Navbar";
-import Noise from "../Noise.png";
 import {useLocation} from "react-router-dom";
+import {motion} from 'framer-motion';
+
 
 const ContactPage = () => {
     const [show, setShow] = useState(false);
@@ -10,24 +11,47 @@ const ContactPage = () => {
     location = location === "/" || location === "/contact";
     console.log(location);
 
+    const transition = {
+        duration: 0.5,
+        ease: [0.6, 0.05, -0.01, 0.9],
+
+        // ease: [0.43, 0.13, 0.23, 0.96]
+    };
+    const variants = {
+        enter: {
+            x: "0%",
+            opacity: 1,
+            transition
+        },
+                exit: {x: "100%", opacity: 0, transition},
+
+
+    };
+
     return (
-        <>
-            <div className="container relative h-screen w-screen overflow-hidden contact-background bg-black">
-                <TopNav/>
-                <div className="background">
-                    <span className={`green ${location ? 'animate' : ''}`}/>
-                    <span className={`blue ${location ? 'animate' : ''}`}/>
+        <motion.div
+            className="container relative h-screen w-screen overflow-hidden background contact-background bg-black"
+            variants={variants}
+
+            initial="exit" animate="enter" exit="initial">
+            <TopNav/>
+
+            {/*<Animate>*/}
+
+            <div className="colored-background">
+                <span className={`green ${location ? 'animate' : ''}`}/>
+                <span className={`blue ${location ? 'animate' : ''}`}/>
+            </div>
+            <div className="grid grid-flow-col gap-4 text-white px-8 mt-24">
+                <div className="col-span-6 left-side-text z-20 w-11/12 font-semibold text-5xl leading-tight ">
+                    Have an idea or a concept that really excites you? What do you say? Let’s make magic
+                    together.
                 </div>
-                <div className="grid grid-flow-col gap-4 text-white px-8 mt-24">
-                    <div className="col-span-6 left-side-text z-20">
-                        Have an idea or a concept that really excites you? What do you say? Let’s make magic
-                        together.
-                    </div>
-                    <div className="col-span-6 right-side-text z-20">
-                        <div className="email-address relative">
-                            <h3>Email</h3>
-                            <h2>obedbalogun@gmail.com</h2>
-                            <div className="email-animation">
+                <div className="col-span-6 right-side-text z-20">
+                    <div className="email-address relative">
+                        <h3>Email</h3>
+                        <h2>obedbalogun@gmail.com</h2>
+                        <div className="email-animation">
                                     <span className="email-icon flex flex-col items-center">
                                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -38,13 +62,13 @@ const ContactPage = () => {
                                         <span className='p-4 w-34 flex-wrap email-text text-center'>Send an email</span>
 
                                     </span>
-                            </div>
                         </div>
-                        <div className={`phone-number ${show ? 'hover' : ''} md:mt-14 relative`}
-                             onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
-                            <h3>Phone</h3>
-                            <h2>+234 706 741 7382</h2>
-                            <div className="phone-animation">
+                    </div>
+                    <div className={`phone-number ${show ? 'hover' : ''} md:mt-14 relative`}
+                         onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+                        <h3>Phone</h3>
+                        <h2>+234 706 741 7382</h2>
+                        <div className="phone-animation">
                                     <span className="phone-icon flex flex-col items-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -59,19 +83,17 @@ const ContactPage = () => {
                                         <span className='p-4 w-34 flex-wrap email-text text-center'>Call me</span>
 
                                     </span>
-                            </div>
+                        </div>
 
-                        </div>
-                        <div className="links flex md:mt-20">
-                            <h3 className="underline underline-offset-8 mr-16">Twitter</h3>
-                            <h3 className="underline underline-offset-8 mr-16">Linkedin</h3>
-                            <h3 className="underline underline-offset-8">Instagram</h3>
-                        </div>
+                    </div>
+                    <div className="links flex md:mt-20">
+                        <h3 className="underline underline-offset-8 mr-16">Twitter</h3>
+                        <h3 className="underline underline-offset-8 mr-16">Linkedin</h3>
+                        <h3 className="underline underline-offset-8">Instagram</h3>
                     </div>
                 </div>
-
             </div>
-        </>
+        </motion.div>
     );
 };
 

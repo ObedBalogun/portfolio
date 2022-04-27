@@ -10,8 +10,7 @@ const Home = () => {
     location = location === "/" || location === "/about";
     return (
         <div className="container relative h-screen w-screen overflow-hidden">
-                        <TopNav/>
-
+            <TopNav/>
             <div className="background">
                 <span className={`green ${location ? 'animate' : ''}`}/>
                 <span className={`blue ${location ? 'animate' : ''}`}/>
