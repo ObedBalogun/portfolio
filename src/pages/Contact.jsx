@@ -35,9 +35,6 @@ const ContactPage = () => {
 
             initial="exit" animate="enter" exit="initial">
             <TopNav/>
-
-            {/*<Animate>*/}
-
             <div className="colored-background">
                 <span className={`green ${location ? 'animate' : ''}`}/>
                 <span className={`blue ${location ? 'animate' : ''}`}/>

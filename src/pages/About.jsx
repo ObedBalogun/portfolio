@@ -12,14 +12,12 @@ const AboutPage = () => {
     console.log(location);
     return (
         <>
-            <div className="container relative h-100 w-100 overflow-hidden background bg-white">
+            <div className="container relative overflow-hidden background bg-white">
                 <TopNav/>
-                <div className="colored-background z-0">
+                <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>
-                <Animate>
-
                     <div className="about-heading flex mt-32 px-6">
                         <span className="text-5xl z-20 font-semibold w-9/12 leading-tight">
                         Hey Obed Balogun here. <br/>
@@ -43,7 +41,6 @@ const AboutPage = () => {
                             MYSQL, GIT and AWS
                         </div>
                     </div>
-                </Animate>
                 <div className="services mt-20 px-6">
                     <Services/>
                 </div>

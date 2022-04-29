@@ -23,18 +23,24 @@
         width: 0;
     }
 
+    div{
 
+    }
     h1 {
-        position: relative;
-        font-family: 'Br Firma', sans-serif;
+        display: block;
         font-weight: 600;
         font-size: 4rem;
         line-height: 0;
         margin-bottom: 1rem;
     }
-
-    h2 {
-        font-family: 'Br Firma';
+    h2{
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: .5rem;
+    }
+    h3 {
+        position: relative;
         font-weight: 600;
         font-size: 35px;
         line-height: 140%;
@@ -363,30 +369,7 @@
         font-size: 1.5em;
         line-height: 120%;
         width: 70%;
-        height: 0;
-        /*opacity: 0;*/
-        /*display: none;*/
         overflow: hidden;
-        transition: all 4s ease-in-out;
-    }
-
-    .services-text.open {
-        height: 100%
-    }
-
-    @keyframes slideDown {
-        0% {
-            opacity: 0;
-            transform: translateY(0);
-        }
-        25% {
-            opacity: 0.25;
-            transform: translateY(25%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(100%);
-        }
     }
 
     .about-image {
