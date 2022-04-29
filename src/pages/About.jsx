@@ -2,8 +2,8 @@ import React from 'react';
 import {useLocation} from "react-router-dom";
 import {TopNav} from "../components/Navbar";
 import portrait from "../potrait.png"
-import Animate from "../components/AnimatePage";
 import Services from "../components/Services";
+import Experience from "../components/Experience";
 
 const AboutPage = () => {
     let location = useLocation()
@@ -30,19 +30,22 @@ const AboutPage = () => {
                     </div>
                     <div className="about-content flex flex-row gap-4 text-white px-10 mt-24">
                         <div
-                            className="basis-1/2 left-side-text z-20 font-semibold text-black text-2xl leading-tight w-11/12">
-                        <span className="">In addition to software engineering, I also have an interest in Machine Learning.
+                            className=" z-20 font-semibold text-black text-2xl leading-10 w-10/12">
+                       In addition to software engineering, I also have an interest in Machine Learning.
                         I enjoy the idea of analyzing and generating useful insights from data. I have developed an RNN
-                            model for flood susceptibility prediction based on weather and land use data.</span>
+                            model for flood susceptibility prediction based on weather and land use data.
                         </div>
                         <div
-                            className="basis-1/2 right-side-text z-20 font-semibold text-black text-2xl leading-tight">
+                            className="z-20 font-semibold text-black text-2xl leading-10 w-10/12">
                             Skilled in Python, Django, JavaScript, NodeJS, ReactJS, TailwindCSS, Bootstrap, Postgresql,
                             MYSQL, GIT and AWS
                         </div>
                     </div>
                 <div className="services mt-20 px-6">
                     <Services/>
+                </div>
+                <div className="work-experience my-48 px-6">
+                    <Experience/>
                 </div>
             </div>
         </>

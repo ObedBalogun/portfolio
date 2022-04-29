@@ -103,14 +103,15 @@ const Services = () => {
                                 experience with NoSql database structures like Redis.
                             </motion.div>
                         </div>
-                        <hr className="relative solid border-black"/>
                     </div>
                 </div>
+                <hr className="relative solid border-black"/>
+
                 {/*############ 04 ############*/}
                 <div className="flex flex-row gap-x-28" onMouseEnter={() => handleHover(4)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative flex-none w-16">
-                        <h1 className="py-16">03</h1>
+                        <h1 className="py-16">04</h1>
                     </div>
                     <div className="flex-1">
                         <div className="relative table-content">
@@ -126,9 +127,10 @@ const Services = () => {
                                 project and deliver according to the client's specifications.
                             </motion.div>
                         </div>
-                        <hr className="relative solid border-black"/>
                     </div>
                 </div>
+                <hr className="relative solid border-black"/>
+
 
             </div>
         </div>
