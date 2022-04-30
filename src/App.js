@@ -9,7 +9,7 @@ import {AnimatePresence} from "framer-motion";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-black">
           <BrowserRouter>
               <Navbar/>
               <AnimatePresence >

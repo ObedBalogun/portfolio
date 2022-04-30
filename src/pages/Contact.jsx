@@ -6,35 +6,29 @@ import {motion} from 'framer-motion';
 
 const ContactPage = () => {
         const [show, setShow] = useState(false);
-        let location = useLocation()
+        let location = useLocation();
+        let prevLocation = location.state.from
         location = location.pathname;
         location = location === "/" || location === "/contact";
-        console.log(location);
-
         const transition = {
-            duration: 0.5,
-            ease: [0.6, 0.05, -0.01, 0.9],
-            stiffness: 500,
-
-            // ease: [0.43, 0.13, 0.23, 0.96]
+            duration: 0.19,
+            type: "tween",
+            // stiffness: 500,
+            // ease: [0.1, 0.13, 0.23, 0.96]
         };
         const variants = {
             hidden: {
-                opacity: 0,
+                opacity: 1,
                 x: '70vw'
             },
             visible: {
                 opacity: 1,
                 x: 0,
-                transition: {
-                    // delay: 0,
-                    duration: .5,
-                    // type: 'spring',
-                    // stiffness: 50
-                }
+                transition
+
             },
             exit: {
-                x: '-150vw'
+                x: '-20vw',
             }
         }
 
