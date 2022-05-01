@@ -20,7 +20,7 @@ const AboutPage = () => {
     const variants = {
         hidden: {
             opacity: 1,
-            x: prevLocation !== '/projects' ? '-70vw' : '70vw'
+            x: prevLocation !== '/projects' && prevLocation !== '/'  ? '-70vw' : '70vw'
         },
         visible: {
             opacity: 1,

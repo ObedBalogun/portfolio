@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TopNav} from "../components/Navbar";
 import {useLocation} from "react-router-dom";
 import {motion} from 'framer-motion';
+import Projects from "../components/Projects";
 
 const ProjectsPage = () => {
     let location = useLocation()
@@ -34,14 +35,17 @@ const ProjectsPage = () => {
             initial="hidden"
             animate="visible"
             exit="exit">
-            <div className="container relative h-screen w-screen overflow-hidden project-background bg-black">
+            <div className="container relative h-full w-screen overflow-hidden project-background bg-black">
                 <TopNav/>
                 <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>
-                <div className="page-title text-center text-white">
+                <div className="page-title text-center text-white mt-10">
                     <h1 className="relative">Projects</h1>
+                </div>
+                <div className="projects">
+                    <Projects/>
                 </div>
             </div>
         </motion.div>
