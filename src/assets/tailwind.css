@@ -306,27 +306,27 @@
         border-radius: 120%;
     }
 
-    .email-animation:hover {
-        animation-duration: 2s;
-        animation-name: slideIn;
-    }
+    /*.email-animation:hover {*/
+    /*    animation-duration: 2s;*/
+    /*    animation-name: slideIn;*/
+    /*}*/
 
-    @keyframes slideIn {
-        0% {
-            opacity: 0;
-            transform: translateX(0);
-        }
-        /*50% {*/
-        /*    opacity: 0.5;*/
-        /*}*/
-        /*75%{*/
-        /*    opacity: 0.75;*/
-        /*}*/
-        100% {
-            opacity: 1;
-            transform: translateX(100%);
-        }
-    }
+    /*@keyframes slideIn {*/
+    /*    0% {*/
+    /*        opacity: 0;*/
+    /*        transform: translateX(0);*/
+    /*    }*/
+    /*    !*50% {*!*/
+    /*    !*    opacity: 0.5;*!*/
+    /*    !*}*!*/
+    /*    !*75%{*!*/
+    /*    !*    opacity: 0.75;*!*/
+    /*    !*}*!*/
+    /*    100% {*/
+    /*        opacity: 1;*/
+    /*        transform: translateX(100%);*/
+    /*    }*/
+    /*}*/
     .email-text {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -390,11 +390,7 @@
 
     }
 
-    .project-card-2:hodver {
-        width: 43em;
-        height: 43em;
-        background: url('../images/project-2X.png'), #FFFFFF;
-    }
+
 
     .view-button > button {
         /*width: 8em;*/

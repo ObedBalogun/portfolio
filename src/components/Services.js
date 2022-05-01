@@ -27,7 +27,7 @@ const Services = () => {
     };
     return (
         <div className="services-container">
-            <div className="relative mb-20 text-6xl font-semibold">
+            <div className="relative mb-16 text-6xl font-semibold">
                 Services
             </div>
             <div className="services-content">

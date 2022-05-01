@@ -5,13 +5,13 @@ import {motion} from 'framer-motion';
 
 
 const ContactPage = () => {
-        const [show, setShow] = useState(false);
+        const [isActive, setIsActive] = useState(0);
         let location = useLocation();
         let prevLocation = location.state.from
         location = location.pathname;
         location = location === "/" || location === "/contact";
         const transition = {
-            duration: 0.19,
+            duration: 0.3,
             type: "tween",
             // stiffness: 500,
             // ease: [0.1, 0.13, 0.23, 0.96]
@@ -30,6 +30,31 @@ const ContactPage = () => {
             exit: {
                 x: '-20vw',
             }
+        }
+        const slideOut = {
+            hidden: {
+                x: '-20vw',
+                opacity: 0
+            },
+            hover: {
+                x: 250,
+                opacity: 1,
+                transition
+            },
+        }
+        const slideOutVariant = {
+            hidden: {
+                x: '-10vw',
+                opacity: 0
+            },
+            hover: {
+                x: 300,
+                opacity: 1,
+                transition
+            },
+        }
+        const handleHover = (cardId) => {
+            setIsActive(cardId);
         }
 
 
@@ -50,10 +75,16 @@ const ContactPage = () => {
                         together.
                     </div>
                     <div className="col-span-6 right-side-text z-20">
-                        <div className="email-address relative">
-                            <h3>Email</h3>
-                            <h2>obedbalogun@gmail.com</h2>
-                            <div className="email-animation">
+                        <div className="email-address relative" onMouseEnter={() => handleHover(1)}
+                             onMouseLeave={() => setIsActive(0)}>
+                            <h4>Email</h4>
+                            <h3>obedbalogun@gmail.com</h3>
+                            <motion.div
+                                initial={"hidden"}
+                                animate={isActive === 1 ? "hover" : "hidden"}
+                                exit={"hidden"}
+                                variants={slideOut}
+                                className="email-animation">
                                     <span className="email-icon flex flex-col items-center">
                                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -64,13 +95,20 @@ const ContactPage = () => {
                                         <span className='p-4 w-34 flex-wrap email-text text-center'>Send an email</span>
 
                                     </span>
-                            </div>
+                            </motion.div>
                         </div>
-                        <div className={`phone-number ${show ? 'hover' : ''} md:mt-14 relative`}
-                             onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
-                            <h3>Phone</h3>
-                            <h2>+234 706 741 7382</h2>
-                            <div className="phone-animation">
+                        <div className='phone-number  md:mt-14 relative'
+                             onMouseEnter={() => handleHover(2)}
+                             onMouseLeave={() => setIsActive(0)}
+                        >
+                            <h4>Phone</h4>
+                            <h3>+234 706 741 7382</h3>
+                            <motion.div
+                                initial={"hidden"}
+                                animate={isActive === 2 ? "hover" : "hidden"}
+                                exit={"hidden"}
+                                variants={slideOutVariant}
+                                className="phone-animation">
                                     <span className="phone-icon flex flex-col items-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -85,13 +123,13 @@ const ContactPage = () => {
                                         <span className='p-4 w-34 flex-wrap email-text text-center'>Call me</span>
 
                                     </span>
-                            </div>
+                            </motion.div>
 
                         </div>
                         <div className="links flex md:mt-20">
-                            <h3 className="underline underline-offset-8 mr-16">Twitter</h3>
-                            <h3 className="underline underline-offset-8 mr-16">Linkedin</h3>
-                            <h3 className="underline underline-offset-8">Instagram</h3>
+                            <h4 className="underline underline-offset-8 mr-16">Twitter</h4>
+                            <h4 className="underline underline-offset-8 mr-16">Linkedin</h4>
+                            <h4 className="underline underline-offset-8">Instagram</h4>
                         </div>
                     </div>
                 </div>

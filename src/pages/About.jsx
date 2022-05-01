@@ -12,8 +12,11 @@ const AboutPage = () => {
     location = location.pathname;
     location = location === "/" || location === "/contact";
     const transition = {
-        duration: 0.19,
-        type: "tween",
+        // duration: 0.19,
+        // type: "tween",
+        duration: 0.3,
+            stiffness: 500,
+            ease: [0.1, 0.13, 0.23, 0.96]
         // stiffness: 500,
         // ease: [0.1, 0.13, 0.23, 0.96]
     };
