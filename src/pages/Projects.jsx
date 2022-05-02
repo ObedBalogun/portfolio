@@ -35,7 +35,7 @@ const ProjectsPage = () => {
             initial="hidden"
             animate="visible"
             exit="exit">
-            <div className="project-container relative h-screen w-screen overflow-x-hidden project-background bg-black">
+            <div className="project-container relative h-screen w-screen overflow-x-hidden overflow-y-auto project-background bg-black">
                 <TopNav/>
                 <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>

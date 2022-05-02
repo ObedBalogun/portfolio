@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 import image from "../images/project.png"
 import image2 from "../images/project-2.png";
 
 const Modal = ({cardNumber, show}) => {
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(show);
 
     const slideUp = {
         hidden: {
             opacity: 0,
-            y: 500,
+            y:'100vh',
 
             transition: {
                 duration: .5,
@@ -26,6 +26,17 @@ const Modal = ({cardNumber, show}) => {
                 // ease: 'easeInOut'
             }
         },
+        exit: {
+            opacity: 0,
+            y: '100vh',
+            transition: {
+                duration: .3,
+                type: "tween",
+                stiffness: 100,
+                // ease: 'easeInOut'
+            }
+
+        }
     }
     useEffect(() => {
         if (cardNumber === 0) {
@@ -36,11 +47,12 @@ const Modal = ({cardNumber, show}) => {
     }, [cardNumber]);
 
     return (
-        <motion.div
+        <AnimatePresence>
+            <motion.div
             initial={'hidden'}
             animate={showModal ? 'active' : 'hidden'}
             variants={slideUp}
-            className="project-modal rounded-2xl bg-white mt-10 mx-6 h-screen p-6 fixed top-0 z-50 overflow-x-hidden">
+            className="project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
             <div className="project-content mt-10 mb-10 mx-10">
                 <div className="top-content flex flex-column">
                     <div className="flex-1">
@@ -109,7 +121,7 @@ const Modal = ({cardNumber, show}) => {
                 </div>
                 <div className="close-button relative" onClick={() => setShowModal(false)}>
                     <button
-                        className="flex bg-white/[.82] fixed mx-auto w-24 inset-x-0 bottom-5 text-black-100 font-bold py-2 px-4 rounded-full">
+                        className="flex bg-white/[.82] fixed mx-auto w-24 inset-x-0 bottom-10 text-black-100 font-bold py-2 px-4 rounded-full">
                         <span className={"flex items-center"}>
                         <span className={"pr-2"}>Close</span>
                         <span>
@@ -130,6 +142,8 @@ const Modal = ({cardNumber, show}) => {
             </div>
 
         </motion.div>
+
+        </AnimatePresence>
     );
 };
 

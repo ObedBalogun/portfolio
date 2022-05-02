@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 import image from "../images/project.png"
 import image2 from "../images/project-2.png"
 import Modal from "./Project-Modal";
@@ -94,9 +94,9 @@ const Projects = () => {
     const [cardNumber, setCardNumber] = useState(0);
 
 
+
     return (
         <>
-            <Modal cardNumber={cardNumber}/>
 
             <div className="flex flex-column px-8 mt-32 relative">
                 <div className="flex-1">
@@ -308,7 +308,9 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-
+            <AnimatePresence>
+            <Modal cardNumber={cardNumber}/>
+            </AnimatePresence>
         </>
     );
 };
