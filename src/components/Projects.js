@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
+import finag1 from "../images/finag-1.png"
+import akmarv from "../images/akmarv-1.png"
+import shyne from "../images/shyne.png"
 import image from "../images/project.png"
 import image2 from "../images/project-2.png"
 import Modal from "./Project-Modal";
@@ -12,8 +15,8 @@ const Projects = () => {
         setIsActive(cardId);
     }
     const handleModal = (cardNumber) => {
-            setCardNumber(cardNumber);
-            setShow(true)
+        setCardNumber(cardNumber);
+        setShow(true)
     }
     const slideDown = {
         hidden: {
@@ -94,7 +97,6 @@ const Projects = () => {
     const [cardNumber, setCardNumber] = useState(0);
 
 
-
     return (
         <>
 
@@ -102,8 +104,9 @@ const Projects = () => {
                 <div className="flex-1">
                     <div className="project-card text-white relative mb-5" onMouseEnter={() => handleHover(1)}
                          onMouseLeave={() => setIsActive(0)}>
-                        <div className="card-background rounded-3xl bg-black overflow-hidden">
-                            <motion.img src={image} alt=""
+                        <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
+                            <motion.img src={shyne} alt=""
+                                        className={`w-full h-full object-cover`}
                                         initial={false}
                                         animate={isActive === 1 ? "hover" : "hidden"}
                                         variants={zoom}
@@ -117,13 +120,13 @@ const Projects = () => {
                                 variants={slideDown}
                                 className="flex technology-pills py-6">
                                 <button className="mr-2">
-                                    <span>Django</span>
+                                    <span>Bootstrap</span>
                                 </button>
                                 <button className="mr-2">
-                                    <span>React</span>
+                                    <span>Django</span>
                                 </button>
                                 <button>
-                                    <span>Postgresql</span>
+                                    <span>React</span>
                                 </button>
                             </motion.div>
                             <motion.div
@@ -132,8 +135,9 @@ const Projects = () => {
                                 exit={"hidden"}
                                 variants={toggleHide}
                                 className="flex view-button justify-center pt-64 pb-32">
-                                <button className="flex text-white items-center py-2 px-6">
-                                    <span onClick={() => handleModal(1)}>View Project</span>
+                                <button className="flex text-white items-center py-2 px-6"
+                                        onClick={() => handleModal(1)}>
+                                    <span>View Project</span>
                                 </button>
                             </motion.div>
                             <motion.div
@@ -143,15 +147,17 @@ const Projects = () => {
                                 variants={slideUp}
                                 className="flex">
                                 <div className="project-details">
-                                    <div className="title">Project Title</div>
+                                    <div className="title">Shyne</div>
                                     <div className="content font-light text-2xl">
-                                        Project description and sha type a summary and make the space okay
+                                        Shyne is a platform that connects cleaning services to clients within their area
+                                        who need a shyne.
+
                                     </div>
                                 </div>
                             </motion.div>
                         </div>
                     </div>
-                    <div className="project-card text-white relative" onMouseEnter={() => handleHover(3)}
+                    <div className="project-card text-white relative mt-10" onMouseEnter={() => handleHover(3)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden">
                             <motion.img src={image} alt=""
@@ -183,8 +189,9 @@ const Projects = () => {
                                 exit={"hidden"}
                                 variants={toggleHide}
                                 className="flex view-button justify-center pt-64 pb-32">
-                                <button className="flex text-white items-center py-2 px-6">
-                                    <span onClick={() => handleModal(3)}>View Project</span>
+                                <button className="flex text-white items-center py-2 px-6"
+                                        onClick={() => handleModal(3)}>
+                                    <span>View Project</span>
                                 </button>
                             </motion.div>
                             <motion.div
@@ -206,8 +213,10 @@ const Projects = () => {
                 <div className="flex-1 mt-24 text-white relative">
                     <div className="project-card text-white relative" onMouseEnter={() => handleHover(2)}
                          onMouseLeave={() => setIsActive(0)}>
-                        <div className="card-background rounded-3xl bg-black overflow-hidden">
-                            <motion.img src={image2} alt=""
+                        <div
+                            className="card-background rounded-3xl bg-black overflow-hidden h-full w-full object-cover">
+                            <motion.img src={akmarv} alt=""
+                                        className="h-full w-full object-cover"
                                         initial={false}
                                         animate={isActive === 2 ? "hover" : "hidden"}
                                         variants={zoom}
@@ -236,8 +245,9 @@ const Projects = () => {
                                 exit={"hidden"}
                                 variants={toggleHide}
                                 className="flex view-button justify-center pt-64 pb-32">
-                                <button className="flex text-white items-center py-2 px-6">
-                                    <span onClick={() => handleModal(2)}>View Project</span>
+                                <button className="flex text-white items-center py-2 px-6"
+                                        onClick={() => handleModal(2)}>
+                                    <span>View Project</span>
                                 </button>
                             </motion.div>
                             <motion.div
@@ -258,7 +268,7 @@ const Projects = () => {
                     <div className="project-card text-white relative mt-5" onMouseEnter={() => handleHover(4)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden">
-                            <motion.img src={image2} alt=""
+                            <motion.img src={finag1} alt=""
                                         initial={false}
                                         animate={isActive === 4 ? "hover" : "hidden"}
                                         variants={zoom}
@@ -287,8 +297,9 @@ const Projects = () => {
                                 exit={"hidden"}
                                 variants={toggleHide}
                                 className="flex view-button justify-center pt-64 pb-32">
-                                <button className="flex text-white items-center py-2 px-6">
-                                    <span onClick={() => handleModal(4)}>View Project</span>
+                                <button className="flex text-white items-center py-2 px-6"
+                                        onClick={() => handleModal(4)}>
+                                    <span>View Project</span>
                                 </button>
                             </motion.div>
                             <motion.div
@@ -298,9 +309,12 @@ const Projects = () => {
                                 variants={slideUp}
                                 className="flex">
                                 <div className="project-details">
-                                    <div className="title">Project Title</div>
-                                    <div className="content font-light text-2xl">
-                                        Project description and sha type a summary and make the space okay
+                                    <div className="project-details">
+                                        <div className="title">Finag</div>
+                                        <div className="content font-light text-2xl">
+                                            USSD based application for farmers to manage their supply chain and
+                                            transactions.
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
@@ -308,9 +322,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <AnimatePresence>
             <Modal cardNumber={cardNumber}/>
-            </AnimatePresence>
         </>
     );
 };
