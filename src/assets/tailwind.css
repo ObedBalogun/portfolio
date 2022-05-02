@@ -144,6 +144,7 @@
     .download-resume-button {
         width: 12em;
         height: 3em;
+        padding: .9em;
         /*right: 2em;*/
         font-weight: 600;
         font-family: 'BR Firma';

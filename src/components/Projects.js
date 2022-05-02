@@ -6,6 +6,7 @@ import shyne from "../images/shyne.png"
 import image from "../images/project.png"
 import image2 from "../images/project-2.png"
 import Modal from "./Project-Modal";
+import shyne1 from "../images/shyne-1.png";
 
 
 const Projects = () => {
@@ -105,7 +106,7 @@ const Projects = () => {
                     <div className="project-card text-white relative mb-5" onMouseEnter={() => handleHover(1)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
-                            <motion.img src={shyne} alt=""
+                            <motion.img src={shyne1} alt=""
                                         className={`w-full h-full object-cover`}
                                         initial={false}
                                         animate={isActive === 1 ? "hover" : "hidden"}
@@ -257,9 +258,9 @@ const Projects = () => {
                                 variants={slideUp}
                                 className="flex">
                                 <div className="project-details">
-                                    <div className="title">Project Title</div>
+                                    <div className="title">AKMarv Beat Repo</div>
                                     <div className="content font-light text-2xl">
-                                        Project description and sha type a summary and make the space okay
+                                        Website to listen to and purchase music producer AKMarvs beats.
                                     </div>
                                 </div>
                             </motion.div>

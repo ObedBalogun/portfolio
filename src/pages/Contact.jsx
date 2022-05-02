@@ -13,23 +13,23 @@ const ContactPage = () => {
         const transition = {
             duration: 0.3,
             type: "tween",
-            stiffness: 500,
+            stiffness: 1000,
             ease: [0.1, 0.13, 0.23, 0.96]
         };
         const variants = {
             hidden: {
-                opacity: 1,
+                // opacity: 1,
                 x: '70vw'
             },
             visible: {
-                opacity: 1,
+                // opacity: 1,
                 x: 0,
                 transition
 
             },
             exit: {
-                opacity:0,
-                x: '-20vw',
+                opacity: 0,
+                x: '70vw',
                 transition
             }
         }
@@ -63,9 +63,11 @@ const ContactPage = () => {
         return (
             <motion.div
                 className="container relative h-screen w-screen overflow-hidden background contact-background bg-black"
+                initial="hidden"
+                animate="visible"
+                exit="exit"
                 variants={variants}
-
-                initial="hidden" animate="visible" exit="exit">
+            >
                 <TopNav/>
                 <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>

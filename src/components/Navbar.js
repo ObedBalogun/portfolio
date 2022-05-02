@@ -52,7 +52,7 @@ const TopNav = () => {
                 </Link>
             </div>
             <div className="download-resume z-10">
-                <button className='download-resume-button'>Download Resume</button>
+                <Link to='/CV/Obed%20Balogun%20Resume.pdf' target="_blank" download className='download-resume-button'>Download Resume</Link>
             </div>
         </div>
 
