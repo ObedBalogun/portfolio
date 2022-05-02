@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../black-logo.png';
 import {Link, useLocation} from "react-router-dom";
 import {TopNav} from "../components/Navbar";
-import Noise from "../Noise.png"
 import {motion} from 'framer-motion';
 
 
