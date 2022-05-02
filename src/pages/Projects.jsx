@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {TopNav} from "../components/Navbar";
+import {Navbar, TopNav} from "../components/Navbar";
 import {useLocation} from "react-router-dom";
 import {motion} from 'framer-motion';
 import Projects from "../components/Projects";
@@ -20,7 +20,7 @@ const ProjectsPage = () => {
             x: prevLocation !== '/' ? '-100vw' : '70vw'
         },
         visible: {
-            opacity: 1,
+            opacity: [0,0.2,0.5,1],
             x: 0,
             transition
         },
@@ -35,7 +35,7 @@ const ProjectsPage = () => {
             initial="hidden"
             animate="visible"
             exit="exit">
-            <div className="container relative h-full w-screen overflow-hidden project-background bg-black">
+            <div className="project-container relative h-screen w-screen overflow-x-hidden project-background bg-black">
                 <TopNav/>
                 <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>
@@ -47,6 +47,7 @@ const ProjectsPage = () => {
                 <div className="projects">
                     <Projects/>
                 </div>
+
             </div>
         </motion.div>
     );

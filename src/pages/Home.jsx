@@ -8,20 +8,16 @@ import {motion} from 'framer-motion';
 
 const Home = () => {
     let location = useLocation();
-    console.log(location.state.from)
     location = location.pathname;
     location = location === "/" || location === "/about";
-    const variants = {
+    const variants =    {
         hidden: {
             opacity: 0,
         },
         visible: {
             opacity: 1,
             transition: {
-                // delay: 0,
                 duration: .5,
-                // type: 'spring',
-                // stiffness: 50
             }
         },
         exit: {

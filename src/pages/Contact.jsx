@@ -13,8 +13,8 @@ const ContactPage = () => {
         const transition = {
             duration: 0.3,
             type: "tween",
-            // stiffness: 500,
-            // ease: [0.1, 0.13, 0.23, 0.96]
+            stiffness: 500,
+            ease: [0.1, 0.13, 0.23, 0.96]
         };
         const variants = {
             hidden: {
@@ -28,7 +28,9 @@ const ContactPage = () => {
 
             },
             exit: {
+                opacity:0,
                 x: '-20vw',
+                transition
             }
         }
         const slideOut = {
@@ -75,7 +77,7 @@ const ContactPage = () => {
                         together.
                     </div>
                     <div className="col-span-6 right-side-text z-20">
-                        <div className="email-address relative" onMouseEnter={() => handleHover(1)}
+                        <div className="email-address relative" onMouseEnter={() => setIsActive(1)}
                              onMouseLeave={() => setIsActive(0)}>
                             <h4>Email</h4>
                             <h3>obedbalogun@gmail.com</h3>
@@ -98,7 +100,7 @@ const ContactPage = () => {
                             </motion.div>
                         </div>
                         <div className='phone-number  md:mt-14 relative'
-                             onMouseEnter={() => handleHover(2)}
+                             onMouseEnter={() => setIsActive(2)}
                              onMouseLeave={() => setIsActive(0)}
                         >
                             <h4>Phone</h4>

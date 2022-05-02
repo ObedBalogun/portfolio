@@ -11,7 +11,7 @@ const Navbar = () => {
     }
     return (
         <>
-            <nav className="navbar fixed mx-auto inset-x-0 bottom-20 z-40">
+            <nav className="navbar fixed mx-auto inset-x-0 bottom-20 z-10">
                 <NavLink to='/' state={{from: pathname}}
                          className="navbar-nav">
                     <div>

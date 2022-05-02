@@ -1,0 +1,136 @@
+import React, {useEffect, useState} from 'react';
+import {motion} from 'framer-motion';
+import image from "../images/project.png"
+import image2 from "../images/project-2.png";
+
+const Modal = ({cardNumber, show}) => {
+    const [showModal, setShowModal] = useState(false);
+
+    const slideUp = {
+        hidden: {
+            opacity: 0,
+            y: 500,
+
+            transition: {
+                duration: .5,
+                // ease: 'easeInOut'
+            }
+        },
+        active: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: .3,
+                type: "tween",
+                stiffness: 100,
+                // ease: 'easeInOut'
+            }
+        },
+    }
+    useEffect(() => {
+        if (cardNumber === 0) {
+            setShowModal(false);
+        } else {
+            setShowModal(true);
+        }
+    }, [cardNumber]);
+
+    return (
+        <motion.div
+            initial={'hidden'}
+            animate={showModal ? 'active' : 'hidden'}
+            variants={slideUp}
+            className="project-modal rounded-2xl bg-white mt-10 mx-6 h-screen p-6 fixed top-0 z-50 overflow-x-hidden">
+            <div className="project-content mt-10 mb-10 mx-10">
+                <div className="top-content flex flex-column">
+                    <div className="flex-1">
+                        <div className="left-text">
+                            <h2 className="mb-6">CashCard</h2>
+                            <span className="text-xl text-neutral-600">CashCard enables smallholder farmers in rural Nigeria to receive digital payments and build their financial identity.
+                                    Over 38 million smallholder farmers in Nigeria lack access to finance to increase their agricultural production. </span>
+                        </div>
+                    </div>
+                    <div className="flex-1">
+                        <div className="left-right mt-20">
+                            <div className="role">
+                                <span className="mb-10 text-neutral-600	font-normal">Role</span> <br/>
+                                <span className="font-normal text-xl">Software Developer</span>
+                                <hr className="relative solid border-slate-300 my-2"/>
+                            </div>
+                            <div className="stack">
+                                <span className="mb-10 text-neutral-600	font-normal">Stack</span> <br/>
+                                <span className="font-normal text-xl">Django</span>
+                                <hr className="relative solid border-slate-300 my-2"/>
+                            </div>
+                            <div className="year">
+                                <span className="mb-10 text-neutral-600	font-normal">Year</span> <br/>
+                                <span className="font-normal text-xl">2022</span>
+                                <hr className="relative solid border-slate-300 my-2"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div className="other-content mt-20">
+                    <div className="flex flex-col">
+                        <div className="top-image">
+                            <img src={image2} alt="" className="w-full object-cover rounded-3xl"/>
+                        </div>
+                        <div className="mt-10 w-1/2 m-6 text-xl text-neutral-600">
+                            CashCard enables smallholder farmers in rural Nigeria to receive digital payments and build
+                            their financial identity.
+                            Over 38 million smallholder farmers in Nigeria lack access to finance to increase their
+                            agricultural production.
+                        </div>
+                        <div className="flex middle-image mt-10">
+                            <img src={image} alt="" className="w-1/2 object-cover rounded-3xl"/>
+                            <span className="m-6 w-1/2 text-xl text-neutral-600">CashCard enables smallholder farmers in rural Nigeria to receive
+                                digital payments and build their financial identity. Over 38 million smallholder farmers
+                                in Nigeria lack access to finance to increase their agricultural production.
+                            </span>
+                        </div>
+                        <div className="flex mt-10 text-xl text-neutral-600">
+                            <div className="flex-1">CashCard enables smallholder farmers in rural Nigeria to receive
+                                digital payments and build their financial identity.
+                                Over 38 million smallholder farmers in Nigeria lack access to finance to increase their
+                                agricultural production.
+                            </div>
+                            <div className="flex-1">
+                                CashCard enables smallholder farmers in rural Nigeria to receive digital payments and
+                                build their financial identity.
+                                Over 38 million smallholder farmers in Nigeria lack access to finance to increase their
+                                agricultural production.
+                            </div>
+                        </div>
+                        <div className="final-image mt-10">
+                            <img src={image2} alt="" className="w-full object-cover rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="close-button relative" onClick={() => setShowModal(false)}>
+                    <button
+                        className="flex bg-white/[.82] fixed mx-auto w-24 inset-x-0 bottom-5 text-black-100 font-bold py-2 px-4 rounded-full">
+                        <span className={"flex items-center"}>
+                        <span className={"pr-2"}>Close</span>
+                        <span>
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path
+    d="M10.0003 18.8334C14.5837 18.8334 18.3337 15.0834 18.3337 10.5C18.3337 5.91669 14.5837 2.16669 10.0003 2.16669C5.41699 2.16669 1.66699 5.91669 1.66699 10.5C1.66699 15.0834 5.41699 18.8334 10.0003 18.8334Z"
+    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" stroke-width="1.5" stroke-linecap="round"
+      stroke-linejoin="round"/>
+<path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" stroke-width="1.5" stroke-linecap="round"
+      stroke-linejoin="round"/>
+</svg>
+                        </span>
+</span>
+                    </button>
+                </div>
+            </div>
+
+        </motion.div>
+    );
+};
+
+export default Modal;

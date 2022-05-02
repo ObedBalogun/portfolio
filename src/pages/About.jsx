@@ -26,12 +26,14 @@ const AboutPage = () => {
             x: prevLocation !== '/projects' && prevLocation !== '/'  ? '-70vw' : '70vw'
         },
         visible: {
-            opacity: 1,
+            opacity: [0,0.2,0.5,1],
             x: 0,
             transition
         },
         exit: {
-            x: '-150vw'
+            opacity: 0,
+            x: '-150vw',
+            transition
         }
     }
 
