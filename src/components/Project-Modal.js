@@ -19,6 +19,8 @@ const Modal = ({cardNumber, show}) => {
 
             transition: {
                 duration: .5,
+                type: "tween",
+                stiffness: 100,
                 // ease: 'easeInOut'
             }
         },
@@ -58,6 +60,7 @@ const Modal = ({cardNumber, show}) => {
                 key={cardNumber}
                 initial={'hidden'}
                 animate={showModal ? 'active' : 'hidden'}
+                exit={'exit'}
                 variants={slideUp}
                 className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
@@ -164,6 +167,7 @@ const Modal = ({cardNumber, show}) => {
                 key={cardNumber}
                 initial={'hidden'}
                 animate={showModal ? 'active' : 'hidden'}
+                exit={'exit'}
                 variants={slideUp}
                 className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
@@ -271,6 +275,7 @@ const Modal = ({cardNumber, show}) => {
                 key={cardNumber}
                 initial={'hidden'}
                 animate={showModal ? 'active' : 'hidden'}
+                exit={'exit'}
                 variants={slideUp}
                 className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">

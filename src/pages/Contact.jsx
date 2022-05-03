@@ -18,11 +18,11 @@ const ContactPage = () => {
         };
         const variants = {
             hidden: {
-                // opacity: 1,
+                opacity: 1,
                 x: '70vw'
             },
             visible: {
-                // opacity: 1,
+                opacity: 1,
                 x: 0,
                 transition
 
@@ -30,6 +30,7 @@ const ContactPage = () => {
             exit: {
                 opacity: 0,
                 x: '70vw',
+                type: "tween",
                 transition
             }
         }
