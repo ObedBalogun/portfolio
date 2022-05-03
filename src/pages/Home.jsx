@@ -30,7 +30,7 @@ const Home = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="container relative h-screen w-screen
+            className="relative h-screen w-screen
             overflow-hidden bg-white">
             <TopNav/>
             <div className="background">

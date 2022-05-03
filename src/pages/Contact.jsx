@@ -62,7 +62,7 @@ const ContactPage = () => {
 
         return (
             <motion.div
-                className="container relative h-screen w-screen overflow-hidden background contact-background bg-black"
+                className="relative h-screen w-screen overflow-hidden background contact-background bg-black"
                 initial="hidden"
                 animate="visible"
                 exit="exit"

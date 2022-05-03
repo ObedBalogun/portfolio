@@ -59,7 +59,7 @@ const Modal = ({cardNumber, show}) => {
                 initial={'hidden'}
                 animate={showModal ? 'active' : 'hidden'}
                 variants={slideUp}
-                className="project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
+                className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
                     <div className="top-content flex flex-column">
                         <div className="flex-1">
@@ -165,7 +165,7 @@ const Modal = ({cardNumber, show}) => {
                 initial={'hidden'}
                 animate={showModal ? 'active' : 'hidden'}
                 variants={slideUp}
-                className="project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
+                className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
                     <div className="top-content flex flex-column">
                         <div className="flex-1">
@@ -272,7 +272,7 @@ const Modal = ({cardNumber, show}) => {
                 initial={'hidden'}
                 animate={showModal ? 'active' : 'hidden'}
                 variants={slideUp}
-                className="project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
+                className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
                     <div className="top-content flex flex-column">
                         <div className="flex-1">

@@ -101,9 +101,9 @@ const Projects = () => {
     return (
         <>
 
-            <div className="flex flex-column px-8 mt-32 relative">
+            <div className="flex flex-column justify-center px-8 mt-32 relative">
                 <div className="flex-1">
-                    <div className="project-card text-white relative mb-5" onMouseEnter={() => handleHover(1)}
+                    <div className="project-card text-white relative mb-5 lg:mb-0 lg:p-4" onMouseEnter={() => handleHover(1)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
                             <motion.img src={shyne1} alt=""
@@ -158,7 +158,7 @@ const Projects = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="project-card text-white relative mt-10" onMouseEnter={() => handleHover(3)}
+                    <div className="project-card text-white relative mt-10 lg:mt-0 lg:p-4" onMouseEnter={() => handleHover(3)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden">
                             <motion.img src={image} alt=""
@@ -212,7 +212,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="flex-1 mt-24 text-white relative">
-                    <div className="project-card text-white relative" onMouseEnter={() => handleHover(2)}
+                    <div className="project-card text-white relative lg:p-4" onMouseEnter={() => handleHover(2)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div
                             className="card-background rounded-3xl bg-black overflow-hidden h-full w-full object-cover">
@@ -266,7 +266,7 @@ const Projects = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="project-card text-white relative mt-5" onMouseEnter={() => handleHover(4)}
+                    <div className="project-card text-white relative mt-5 lg:p-4" onMouseEnter={() => handleHover(4)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden">
                             <motion.img src={finag1} alt=""

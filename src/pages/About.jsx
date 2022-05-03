@@ -43,7 +43,7 @@ const AboutPage = () => {
             initial="hidden"
             animate="visible"
             exit="exit">
-            <div className="container relative overflow-hidden background bg-white">
+            <div className="relative overflow-hidden background bg-white">
                 <TopNav/>
                 <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>

@@ -11,7 +11,9 @@ function App() {
   return (
     <div className="App bg-black">
           <BrowserRouter>
+              <div className="z-10">
               <Navbar/>
+              </div>
               <AnimatePresence >
               <Routes>
                   <Route path='/' element={<Home/>}/>
