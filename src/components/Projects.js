@@ -135,7 +135,7 @@ const Projects = ({navOpen}) => {
                                 animate={isActive === 1 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={toggleHide}
-                                className="flex view-button justify-center pt-64 pb-32">
+                                className="flex view-button justify-center pt-64 pb-32" onClick={() => handleModal(1)}>
                                 <button className="flex text-white items-center py-2 px-6"
                                         onClick={() => handleModal(1)}>
                                     <span>View Project</span>
@@ -189,7 +189,7 @@ const Projects = ({navOpen}) => {
                                 animate={isActive === 3 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={toggleHide}
-                                className="flex view-button justify-center pt-64 pb-32">
+                                className="flex view-button justify-center pt-64 pb-32" onClick={() => handleModal(3)}>
                                 <button className="flex text-white items-center py-2 px-6"
                                         onClick={() => handleModal(3)}>
                                     <span>View Project</span>
@@ -245,7 +245,7 @@ const Projects = ({navOpen}) => {
                                 animate={isActive === 2 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={toggleHide}
-                                className="flex view-button justify-center pt-64 pb-32">
+                                className="flex view-button justify-center pt-64 pb-32" onClick={() => handleModal(2)}>
                                 <button className="flex text-white items-center py-2 px-6"
                                         onClick={() => handleModal(2)}>
                                     <span>View Project</span>
@@ -297,7 +297,7 @@ const Projects = ({navOpen}) => {
                                 animate={isActive === 4 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={toggleHide}
-                                className="flex view-button justify-center pt-64 pb-32">
+                                className="flex view-button justify-center pt-64 pb-32" onClick={() => handleModal(4)}>
                                 <button className="flex text-white items-center py-2 px-6"
                                         onClick={() => handleModal(4)}>
                                     <span>View Project</span>

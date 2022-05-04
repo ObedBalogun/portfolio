@@ -138,15 +138,16 @@ const Modal = ({cardNumber, handleModal}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="close-button fixd" onClick={() => {
+                </div>
+                <div className="close-button fixed inset-x-0" onClick={() => {
                         setShowModal(false);
                         handleModal(0)
                     }}>
                         <button
-                            className="flex bg-white/[.82] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
+                            className="flex bg-black/[.2] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
                             <span className={"flex items-center"}>
-                            <span className={"pr-2"}>Close</span>
-                            <span>
+                                <span className={"pr-2"}>Close</span>
+                                <span>
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -161,10 +162,9 @@ const Modal = ({cardNumber, handleModal}) => {
                                           strokeLinejoin="round"/>
                                 </svg>
                             </span>
-    </span>
+                            </span>
                         </button>
                     </div>
-                </div>
 
             </motion.div>
             }
@@ -249,15 +249,16 @@ const Modal = ({cardNumber, handleModal}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="close-button fixed inset-x-0" onClick={() => {
+                </div>
+                <div className="close-button fixed bottom-0 inset-x-0" onClick={() => {
                         setShowModal(false);
                         handleModal(0)
                     }}>
                         <button
-                            className="flex bg-white/[.82] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
+                            className="flex bg-black/[.2] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
                             <span className={"flex items-center"}>
-                            <span className={"pr-2"}>Close</span>
-                            <span>
+                                <span className={"pr-2"}>Close</span>
+                                <span>
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -272,10 +273,9 @@ const Modal = ({cardNumber, handleModal}) => {
                                           strokeLinejoin="round"/>
                                 </svg>
                             </span>
-    </span>
+                            </span>
                         </button>
                     </div>
-                </div>
 
             </motion.div>
             }
