@@ -9,7 +9,7 @@ import Modal from "./Project-Modal";
 import shyne1 from "../images/shyne-1.png";
 
 
-const Projects = () => {
+const Projects = ({navOpen}) => {
     const [show, setShow] = useState(false);
     const [isActive, setIsActive] = useState(0);
     const handleHover = (cardId) => {
@@ -17,12 +17,12 @@ const Projects = () => {
     }
     const handleModal = (cardNumber) => {
         setCardNumber(cardNumber);
-        setShow(true)
+        navOpen()
     }
     const slideDown = {
         hidden: {
             opacity: 0,
-            y: -50,
+            y: -10,
 
             transition: {
                 y: 0,
@@ -119,7 +119,7 @@ const Projects = () => {
                                 animate={isActive === 1 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={slideDown}
-                                className="flex technology-pills py-6">
+                                className="flex technology-pills py-10">
                                 <button className="mr-2">
                                     <span>Bootstrap</span>
                                 </button>
@@ -173,7 +173,7 @@ const Projects = () => {
                                 animate={isActive === 3 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={slideDown}
-                                className="flex technology-pills py-6">
+                                className="flex technology-pills py-10">
                                 <button className="mr-2">
                                     <span>Django</span>
                                 </button>
@@ -229,7 +229,7 @@ const Projects = () => {
                                 animate={isActive === 2 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={slideDown}
-                                className="flex technology-pills py-6">
+                                className="flex technology-pills py-10">
                                 <button className="mr-2">
                                     <span>Django</span>
                                 </button>
@@ -281,7 +281,7 @@ const Projects = () => {
                                 animate={isActive === 4 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={slideDown}
-                                className="flex technology-pills py-6">
+                                className="flex technology-pills py-10">
                                 <button className="mr-2">
                                     <span>Django</span>
                                 </button>
@@ -323,7 +323,10 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <Modal cardNumber={cardNumber}/>
+                         {/*<div className={'modal-container h-screen z-40'}>*/}
+
+            <Modal cardNumber={cardNumber} handleModal={handleModal}/>
+                         {/*</div>*/}
         </>
     );
 };

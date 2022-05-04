@@ -9,13 +9,13 @@ import akmarv2 from "../images/akmarv-2.png";
 import akmarv3 from "../images/akmarv-3.png";
 import akmarv4 from "../images/akmarv-4.png";
 
-const Modal = ({cardNumber, show}) => {
+const Modal = ({cardNumber, handleModal}) => {
     const [showModal, setShowModal] = useState(true);
-
     const slideUp = {
         hidden: {
             opacity: 0,
             y: '100vh',
+            // height: 0,
 
             transition: {
                 duration: .5,
@@ -26,6 +26,7 @@ const Modal = ({cardNumber, show}) => {
         },
         active: {
             opacity: 1,
+            height: '80vh',
             y: 0,
             transition: {
                 duration: .3,
@@ -37,6 +38,7 @@ const Modal = ({cardNumber, show}) => {
         exit: {
             opacity: 0,
             y: '100vh',
+            // height: 0,
             transition: {
                 duration: .3,
                 type: "tween",
@@ -62,7 +64,7 @@ const Modal = ({cardNumber, show}) => {
                 animate={showModal ? 'active' : 'hidden'}
                 exit={'exit'}
                 variants={slideUp}
-                className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
+                className="z-50 project-modal rounded-2xl bg-white mx-6 p-6 h-screen fixed bottom-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
                     <div className="top-content flex flex-column">
                         <div className="flex-1">
@@ -135,7 +137,10 @@ const Modal = ({cardNumber, show}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="close-button fixed inset-x-0" onClick={() => setShowModal(false)}>
+                    <div className="close-button fixd" onClick={() => {
+                        setShowModal(false);
+                        handleModal(0)
+                    }}>
                         <button
                             className="flex bg-white/[.82] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
                             <span className={"flex items-center"}>
@@ -145,14 +150,14 @@ const Modal = ({cardNumber, show}) => {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M10.0003 18.8334C14.5837 18.8334 18.3337 15.0834 18.3337 10.5C18.3337 5.91669 14.5837 2.16669 10.0003 2.16669C5.41699 2.16669 1.66699 5.91669 1.66699 10.5C1.66699 15.0834 5.41699 18.8334 10.0003 18.8334Z"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round"/>
-                                    <path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" stroke-width="1.5"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                    <path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" stroke-width="1.5"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"/>
+                                        stroke="black" strokeWidth="1.5" strokeLinecap="round"
+                                        strokeLinejoin="round"/>
+                                    <path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"/>
+                                    <path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"/>
                                 </svg>
                             </span>
     </span>
@@ -169,7 +174,7 @@ const Modal = ({cardNumber, show}) => {
                 animate={showModal ? 'active' : 'hidden'}
                 exit={'exit'}
                 variants={slideUp}
-                className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
+                className="z-50 project-modal rounded-2xl bg-white mx-6 p-6 h-screen fixed bottom-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
                     <div className="top-content flex flex-column">
                         <div className="flex-1">
@@ -243,7 +248,10 @@ const Modal = ({cardNumber, show}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="close-button fixed inset-x-0" onClick={() => setShowModal(false)}>
+                    <div className="close-button fixed inset-x-0" onClick={() => {
+                        setShowModal(false);
+                        handleModal(0)
+                    }}>
                         <button
                             className="flex bg-white/[.82] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
                             <span className={"flex items-center"}>
@@ -253,14 +261,14 @@ const Modal = ({cardNumber, show}) => {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M10.0003 18.8334C14.5837 18.8334 18.3337 15.0834 18.3337 10.5C18.3337 5.91669 14.5837 2.16669 10.0003 2.16669C5.41699 2.16669 1.66699 5.91669 1.66699 10.5C1.66699 15.0834 5.41699 18.8334 10.0003 18.8334Z"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round"/>
-                                    <path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" stroke-width="1.5"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                    <path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" stroke-width="1.5"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"/>
+                                        stroke="black" strokeWidth="1.5" strokeLinecap="round"
+                                        strokeLinejoin="round"/>
+                                    <path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"/>
+                                    <path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"/>
                                 </svg>
                             </span>
     </span>
@@ -277,7 +285,7 @@ const Modal = ({cardNumber, show}) => {
                 animate={showModal ? 'active' : 'hidden'}
                 exit={'exit'}
                 variants={slideUp}
-                className="z-50 project-modal rounded-2xl bg-white mt-5 mx-6 p-6 h-screen fixed top-0 overflow-x-hidden overflow-y-auto">
+                className="z-50 project-modal rounded-2xl bg-white mx-6 p-6 h-screen fixed bottom-0 overflow-x-hidden overflow-y-auto">
                 <div className="project-content mt-10 mb-10 mx-10">
                     <div className="top-content flex flex-column">
                         <div className="flex-1">
@@ -349,7 +357,10 @@ const Modal = ({cardNumber, show}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="close-button fixed inset-x-0" onClick={() => setShowModal(false)}>
+                    <div className="close-button fixed inset-x-0" onClick={() => {
+                        setShowModal(false);
+                        handleModal(0)
+                    }}>
                         <button
                             className="flex bg-white/[.82] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
                             <span className={"flex items-center"}>
@@ -359,14 +370,14 @@ const Modal = ({cardNumber, show}) => {
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M10.0003 18.8334C14.5837 18.8334 18.3337 15.0834 18.3337 10.5C18.3337 5.91669 14.5837 2.16669 10.0003 2.16669C5.41699 2.16669 1.66699 5.91669 1.66699 10.5C1.66699 15.0834 5.41699 18.8334 10.0003 18.8334Z"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round"/>
-                                    <path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" stroke-width="1.5"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                    <path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" stroke-width="1.5"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"/>
+                                        stroke="black" strokeWidth="1.5" strokeLinecap="round"
+                                        strokeLinejoin="round"/>
+                                    <path d="M7.6416 12.8583L12.3583 8.14166" stroke="black" strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"/>
+                                    <path d="M12.3583 12.8583L7.6416 8.14166" stroke="black" strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"/>
                                 </svg>
                             </span>
     </span>

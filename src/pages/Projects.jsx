@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom";
 import {motion} from 'framer-motion';
 import Projects from "../components/Projects";
 
-const ProjectsPage = () => {
+const ProjectsPage = ({navOpen}) => {
     let location = useLocation()
     let prevLocation = location.state.from
     location = location.pathname;
@@ -45,7 +45,7 @@ const ProjectsPage = () => {
                     <h1 className="relative">Projects</h1>
                 </div>
                 <div className="projects">
-                    <Projects/>
+                    <Projects navOpen={navOpen}/>
                 </div>
 
             </div>
