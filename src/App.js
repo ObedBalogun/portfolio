@@ -9,13 +9,13 @@ import {AnimatePresence} from "framer-motion";
 import {useState} from "react";
 
 function App() {
-    const [isNavOpen, setIsNavOpen] = useState(true);
-    const handleNavToggle = () => {setIsNavOpen(!isNavOpen)};
+    const [showNav, setShowNav] = useState(true);
+    const handleNavToggle = () => {setShowNav(!showNav)};
 
   return (
     <div className="App bg-black">
           <BrowserRouter>
-              {isNavOpen&&<Navbar/>}
+              {showNav&&<Navbar/>}
               <AnimatePresence exitBeforeEnter >
               <Routes>
                   <Route path='/' element={<Home/>}/>

@@ -26,7 +26,7 @@ const Modal = ({cardNumber, handleModal}) => {
         },
         active: {
             opacity: 1,
-            height: '80vh',
+            height: '90vh',
             y: 0,
             transition: {
                 duration: .3,
@@ -40,7 +40,7 @@ const Modal = ({cardNumber, handleModal}) => {
             y: '100vh',
             // height: 0,
             transition: {
-                duration: .3,
+                duration: .5,
                 type: "tween",
                 stiffness: 100,
             }
@@ -57,6 +57,7 @@ const Modal = ({cardNumber, handleModal}) => {
 
     return (
         <AnimatePresence>
+
             {cardNumber === 1 && showModal &&
             <motion.div
                 key={cardNumber}

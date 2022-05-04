@@ -17,22 +17,20 @@ const AboutPage = () => {
         duration: 0.3,
             stiffness: 1000,
             ease: [0.1, 0.13, 0.23, 0.96]
-        // stiffness: 500,
-        // ease: [0.1, 0.13, 0.23, 0.96]
     };
     const variants = {
         hidden: {
-            // opacity: 1,
+            opacity: 0,
             x: prevLocation !== '/projects' && prevLocation !== '/'  ? '-70vw' : '70vw'
         },
         visible: {
-            // opacity: [0,0.2,0.5,1],
+            opacity: 1,
             x: 0,
             transition
         },
         exit: {
-            // opacity: 0,
-            x: '-150vw',
+            opacity: 0,
+            x: prevLocation !== '/projects' && prevLocation !== '/'  ? '70vw' : '-70vw',
             transition
         }
     }

@@ -323,10 +323,7 @@ const Projects = ({navOpen}) => {
                     </div>
                 </div>
             </div>
-                         {/*<div className={'modal-container h-screen z-40'}>*/}
-
             <Modal cardNumber={cardNumber} handleModal={handleModal}/>
-                         {/*</div>*/}
         </>
     );
 };
