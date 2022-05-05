@@ -20,7 +20,7 @@
 
     }
 
-    body::-webkit-scrollbar,.project-modal::-webkit-scrollbar,.project-container::-webkit-scrollbar {
+    body::-webkit-scrollbar, .project-modal::-webkit-scrollbar, .project-container::-webkit-scrollbar {
         width: 0;
     }
 
@@ -102,42 +102,28 @@
     }
 
     .green.animate {
-        animation-duration: 10s;
-        animation-name: rotateItemGreen;
-        animation-iteration-count: infinite;
+        animation: rotate 8s infinite linear;
         transform-origin: left;
     }
 
     .blue.animate {
-        animation-duration: 10s;
-        animation-name: rotateItemBlue;
-        animation-iteration-count: infinite;
+        animation: rotate 8s infinite linear;
         transform-origin: right;
     }
 
-    @keyframes rotateItemBlue {
-        0% {
+    @keyframes rotate {
+        from {
             transform: rotate(0deg);
         }
 
-        100% {
-            transform: rotate(360deg);
+        to {
+            transform: rotate(359deg);
         }
     }
-    @keyframes rotateItemGreen {
-        0% {
-            transform: rotate(0);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
     .logo {
         width: 12em;
         height: 3em;
         font-weight: 600;
-        font-family: 'BR Firma';
         /*background: rgba(255, 255, 255, 0.07);*/
     }
 
@@ -364,7 +350,6 @@
     }
 
 
-
     .view-button > button {
         font-weight: 400;
         font-size: 2em;
@@ -375,7 +360,8 @@
         line-height: 120%;
 
     }
-    .technology-pills > button{
+
+    .technology-pills > button {
         font-size: 15px;
         font-weight: 300;
         padding: 3px 8px;
@@ -385,15 +371,17 @@
         border-radius: 11px;
         line-height: 120%;
     }
-    .project-details .title{
+
+    .project-details .title {
         font-size: 3.5em;
     }
-    .project-details .content{
+
+    .project-details .content {
         font-size: 1.4em;
     }
 
-   .top-image>img,.final-image > img{
-       height: 600px
-   }
+    .top-image > img, .final-image > img {
+        height: 600px
+    }
 
 }
