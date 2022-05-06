@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {TopNav} from "../components/Navbar";
-import {Link, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {motion} from 'framer-motion';
 
 
@@ -8,7 +8,7 @@ const ContactPage = () => {
         const [isActive, setIsActive] = useState(0);
         const [enlarge, setEnlarge] = useState(0)
         let location = useLocation();
-        let prevLocation = location.state.from
+        // let prevLocation = location.state.from
         location = location.pathname;
         location = location === "/" || location === "/contact";
         const transition = {
@@ -93,7 +93,7 @@ const ContactPage = () => {
                     </div>
                     <div className="col-span-6 right-side-text z-20">
                         <div className="email-address relative" onMouseEnter={() => setIsActive(1)}
-                             onMouseLeave={() => setIsActive(0)}>
+                             onMouseLeave={() => setIsActive(0)} onClick={ ()=> window.open('mailto:obedbalogun@gmail.com')}>
                             <h4>Email</h4>
                             <h3>obedbalogun@gmail.com</h3>
                             <motion.div
@@ -156,7 +156,7 @@ const ContactPage = () => {
                             {/*    onMouseLeave={() => handleZoom(0)}>Twitter*/}
                             {/*</motion.h4>*/}
                             {/*</Link>*/}
-                            <a href="https://www.linkedin.com/in/obedbalogun/" target="_blank">
+                            <a href="https://www.linkedin.com/in/obedbalogun/" target="_blank" rel="noreferrer">
                                 <motion.h4
                                     initial={false}
                                     animate={enlarge === 2 ? "hover" : ""}
@@ -166,7 +166,7 @@ const ContactPage = () => {
                                     onMouseLeave={() => handleZoom(0)}>Linkedin
                                 </motion.h4>
                             </a>
-                            <a href="https://www.instagram.com/brotherbalogun/" target="_blank">
+                            <a href="https://www.instagram.com/brotherbalogun/" target="_blank" rel="noreferrer">
                                 <motion.h4
                                     initial={false}
                                     animate={enlarge === 3 ? "hover" : " "}
@@ -176,7 +176,7 @@ const ContactPage = () => {
                                     onMouseLeave={() => handleZoom(0)}>Instagram
                                 </motion.h4>
                             </a>
-                            <a href="https://github.com/obedbalogun" target="_blank">
+                            <a href="https://github.com/obedbalogun" target="_blank" rel="noreferrer">
                                 <motion.h4
                                     initial={false}
                                     animate={enlarge === 4 ? "hover" : " "}

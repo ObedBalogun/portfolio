@@ -6,7 +6,7 @@ import Projects from "../components/Projects";
 
 const ProjectsPage = ({navOpen}) => {
     let location = useLocation()
-    let prevLocation = location.state.from
+    let prevLocation = location.state ? location.state.from : {pathname: '/projects'}
     location = location.pathname;
     location = location === "/" || location === "/about";
     const transition = {

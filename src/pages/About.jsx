@@ -8,7 +8,7 @@ import Experience from "../components/Experience";
 
 const AboutPage = () => {
     let location = useLocation();
-    let prevLocation = location.state.from
+    let prevLocation = location.state ? location.state.from : {pathname: '/about'}
     location = location.pathname;
     location = location === "/" || location === "/contact";
     const transition = {
