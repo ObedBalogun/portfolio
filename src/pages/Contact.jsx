@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {TopNav} from "../components/Navbar";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {motion} from 'framer-motion';
 
 
@@ -69,6 +69,7 @@ const ContactPage = () => {
         }
         const handleZoom = (linkId) => {
             setEnlarge(linkId);
+
         }
 
 
@@ -145,38 +146,46 @@ const ContactPage = () => {
                             </div>
                         </div>
                         <div className="links flex md:mt-20">
-                            <motion.h4
-                                initial={false}
-                                animate={enlarge === 1 ? "hover" : " "}
-                                variants={zoom}
-                                className="underline underline-offset-8 mr-16"
-                                onMouseEnter={() => handleZoom(1)}
-                                onMouseLeave={() => handleZoom(0)}>Twitter
-                            </motion.h4>
-                            <motion.h4
-                                initial={false}
-                                animate={enlarge === 2 ? "hover" : ""}
-                                variants={zoom}
-                                className="underline underline-offset-8 mr-16"
-                                onMouseEnter={() => handleZoom(2)}
-                                onMouseLeave={() => handleZoom(0)}>Linkedin
-                            </motion.h4>
-                            <motion.h4
-                                initial={false}
-                                animate={enlarge === 3 ? "hover" : " "}
-                                variants={zoom}
-                                className="underline underline-offset-8 mr-16"
-                                onMouseEnter={() => handleZoom(3)}
-                                onMouseLeave={() => handleZoom(0)}>Instagram
-                            </motion.h4>
-                            <motion.h4
-                                initial={false}
-                                animate={enlarge === 4 ? "hover" : " "}
-                                variants={zoom}
-                                className="underline underline-offset-8"
-                                onMouseEnter={() => handleZoom(4)}
-                                onMouseLeave={() => handleZoom(0)}>Github
-                            </motion.h4>
+                            {/*<Link to="/">*/}
+                            {/*<motion.h4*/}
+                            {/*    initial={false}*/}
+                            {/*    animate={enlarge === 1 ? "hover" : " "}*/}
+                            {/*    variants={zoom}*/}
+                            {/*    className="underline underline-offset-8 mr-16"*/}
+                            {/*    onMouseEnter={() => handleZoom(1)}*/}
+                            {/*    onMouseLeave={() => handleZoom(0)}>Twitter*/}
+                            {/*</motion.h4>*/}
+                            {/*</Link>*/}
+                            <Link to={{pathname:"https://www.linkedin.com/in/obedbalogun/"}} target="_blank">
+                                <motion.h4
+                                    initial={false}
+                                    animate={enlarge === 2 ? "hover" : ""}
+                                    variants={zoom}
+                                    className="underline underline-offset-8 mr-16"
+                                    onMouseEnter={() => handleZoom(2)}
+                                    onMouseLeave={() => handleZoom(0)}>Linkedin
+                                </motion.h4>
+                            </Link>
+                            <Link to="https://www.instagram.com/brotherbalogun" target="_blank">
+                                <motion.h4
+                                    initial={false}
+                                    animate={enlarge === 3 ? "hover" : " "}
+                                    variants={zoom}
+                                    className="underline underline-offset-8 mr-16"
+                                    onMouseEnter={() => handleZoom(3)}
+                                    onMouseLeave={() => handleZoom(0)}>Instagram
+                                </motion.h4>
+                            </Link>
+                            <Link to="https://github.com/obedbalogun" target="_blank">
+                                <motion.h4
+                                    initial={false}
+                                    animate={enlarge === 4 ? "hover" : " "}
+                                    variants={zoom}
+                                    className="underline underline-offset-8"
+                                    onMouseEnter={() => handleZoom(4)}
+                                    onMouseLeave={() => handleZoom(0)}>Github
+                                </motion.h4>
+                            </Link>
                         </div>
                     </div>
                 </div>
