@@ -108,7 +108,7 @@ const ContactPage = () => {
                                                 d="M29.9698 1.4133L10.4048 7.9133C-2.7469 12.3116 -2.7469 19.4833 10.4048 23.86L16.2114 25.7883L18.1398 31.595C22.5164 44.7466 29.7098 44.7466 34.0864 31.595L40.6081 12.0516C43.5114 3.27664 38.7448 -1.5117 29.9698 1.4133ZM30.6631 13.07L22.4298 21.3466C22.1048 21.6716 21.6931 21.8233 21.2814 21.8233C20.8698 21.8233 20.4581 21.6716 20.1331 21.3466C19.5048 20.7183 19.5048 19.6783 20.1331 19.05L28.3664 10.7733C28.9948 10.145 30.0348 10.145 30.6631 10.7733C31.2914 11.4016 31.2914 12.4416 30.6631 13.07Z"
                                                 fill="white"/>
                                         </svg>
-                                        <span className='p-4 w-26 flex-wrap icon-text text-center'>Send an <br/>email</span>
+                                        <span className='p-4 flex-wrap icon-text text-center'>Send an <br/>email</span>
 
                                     </span>
                             </motion.div>
@@ -138,7 +138,7 @@ const ContactPage = () => {
                                         </svg>
 
 
-                                        <span className='p-4 w-24 flex-wrap icon-text text-center'>Call Me</span>
+                                        <span className='p-3  flex-wrap icon-text text-center'>Call Me</span>
 
                                     </span>
                                 </motion.div>
