@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import {motion} from "framer-motion";
 import c2c from "../images/c2c.png";
+import tempo from "../images/tempo.png";
+import goodchat from "../images/good-chat.png";
+import selorm from "../images/selorm.png";
 
 const Experience = () => {
         const [isActive, setIsActive] = useState(0);
@@ -55,7 +58,7 @@ const Experience = () => {
                     <hr className="relative solid border-gray-500"/>
                     <div className="flex flex-row justify-between py-8 relative" onMouseEnter={() => handleHover(2)}
                          onMouseLeave={() => setIsActive(0)}>
-                        <motion.img src={c2c} alt=""
+                        <motion.img src={goodchat} alt=""
                                     initial={"hidden"}
                                     animate={isActive === 2 ? "hover" : "hidden"}
                                     exit={"hidden"}
@@ -74,7 +77,7 @@ const Experience = () => {
                     <hr className="relative solid border-gray-500"/>
                     <div className="flex flex-row justify-between py-8 relative" onMouseEnter={() => handleHover(3)}
                          onMouseLeave={() => setIsActive(0)}>
-                        <motion.img src={c2c} alt=""
+                        <motion.img src={selorm} alt=""
                                     initial={"hidden"}
                                     animate={isActive === 3 ? "hover" : "hidden"}
                                     exit={"hidden"}
@@ -93,7 +96,7 @@ const Experience = () => {
                     <hr className="relative solid border-gray-500"/>
                     <div className="flex flex-row justify-between py-8 relative" onMouseEnter={() => handleHover(4)}
                          onMouseLeave={() => setIsActive(0)}>
-                        <motion.img src={c2c} alt=""
+                        <motion.img src={tempo} alt=""
                                     initial={"hidden"}
                                     animate={isActive === 4 ? "hover" : "hidden"}
                                     exit={"hidden"}
