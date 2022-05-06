@@ -40,7 +40,7 @@ const Experience = () => {
                                     animate={isActive === 1 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
-                                    className="absolute w-48 h-48 z-40 -top-12"/>
+                                    className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>
                         <div className="relative flex-1 text-2xl font-semibold text-black">
                             AUGUST 2021 - PRESENT
                         </div>
@@ -60,7 +60,7 @@ const Experience = () => {
                                     animate={isActive === 2 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
-                                    className="absolute w-48 h-48 z-40 -top-12"/>
+                                    className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>
                         <div className="relative flex-1 text-2xl font-semibold text-black">
                             DECEMBER 2020 - PRESENT
                         </div>
@@ -79,7 +79,7 @@ const Experience = () => {
                                     animate={isActive === 3 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
-                                    className="absolute w-48 h-48 z-40 -top-12"/>
+                                    className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>
                         <div className="relative flex-1 text-2xl font-semibold text-black">
                             FEBRUARY 2020 - NOVEMBER 2020
                         </div>
@@ -98,7 +98,7 @@ const Experience = () => {
                                     animate={isActive === 4 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
-                                    className="absolute w-48 h-48 z-40 -top-12"/>
+                                    className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>
                         <div className="relative flex-1 text-2xl font-semibold text-black">
                             APRIL 2018 - MARCH 2019
                         </div>

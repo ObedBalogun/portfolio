@@ -291,11 +291,11 @@
     }
 
 
-    .email-text {
+    .icon-text {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 100%
 
     }
@@ -323,9 +323,6 @@
 
     }
 
-    .jj {
-        height: 0;
-    }
 
     .services-text {
         font-weight: 600;
@@ -373,7 +370,7 @@
     }
 
     .project-details .title {
-        font-size: 3.5em;
+        font-size: 2.7em;
     }
 
     .project-details .content {

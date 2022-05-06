@@ -46,7 +46,7 @@ const Services = () => {
                                 animate={isOpen === 1 ? "visible" : "hidden"}
                                 exit={"hidden"}
                                 variants={variants}
-                                className={'services-text leading-9 -mt-5 mb-5'}>
+                                className={'services-text leading-9 -mt-5 mb-5 pointer-events-none'}>
                                 I use React, TailWind and Bootstrap to design client-friendly and responsive UIs. I
                                 enjoy
                                 the ease and comfort of using the React Library (with Hooks) to design components
@@ -73,7 +73,7 @@ const Services = () => {
                                 animate={isOpen === 2 ? "visible" : "hidden"}
                                 exit={"hidden"}
                                 variants={variants}
-                                className="services-text leading-9 -mt-5 mb-5">
+                                className="services-text leading-9 -mt-5 mb-5 pointer-events-none">
                                 I am comfortable with and often utilize Python/Django and its associated stack. I have
                                 built APIs with the Django REST framework, interacted with databases using Django Object
                                 Relational Mapping and also tested code. I have also built some applications with other
@@ -98,7 +98,7 @@ const Services = () => {
                                 animate={isOpen === 3 ? "visible" : "hidden"}
                                 exit={'hidden'}
                                 variants={variants}
-                                className="services-text leading-9 -mt-5 mb-5 ">
+                                className="services-text leading-9 -mt-5 mb-5 pointer-events-none">
                                 I use Postgresql and MySql to build object oriented database systems. I have some
                                 experience with NoSql database structures like Redis.
                             </motion.div>
@@ -121,7 +121,7 @@ const Services = () => {
                                 animate={isOpen === 4 ? "visible" : "hidden"}
                                 exit={'hidden'}
                                 variants={variants}
-                                className="services-text leading-9 -mt-5 mb-5 ">
+                                className="services-text leading-9 -mt-5 mb-5 pointer-events-none">
                                 Understanding clients needs and requirements builds on the projects knowledge. This
                                 knowledge along with research helps to determine the best way to approach the client's
                                 project and deliver according to the client's specifications.
