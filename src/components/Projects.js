@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
 import finag1 from "../images/finag-1.png"
-import akmarv from "../images/akmarv-1.png"
+import akmarv from "../images/akmarv-cover.png"
 import image from "../images/project.png"
 import Modal from "./Project-Modal";
 import shyne1 from "../images/shyne-1.png";
 import shyne from "../images/shyne-cover.png";
 import selorm from "../images/selorm-cover.png";
+import goodchat from "../images/goodchat-cover.png";
 
 
 const Projects = ({navOpen}) => {
@@ -162,7 +163,7 @@ const Projects = ({navOpen}) => {
                     <div className="project-card text-white relative mt-5 lg:p-4" onMouseEnter={() => handleHover(4)}
                          onMouseLeave={() => setIsActive(0)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
-                            <motion.img src={finag1} alt=""
+                            <motion.img src={goodchat} alt=""
                                         className={`w-full h-full object-cover`}
 
                                         initial={false}
@@ -201,6 +202,64 @@ const Projects = ({navOpen}) => {
                             <motion.div
                                 initial={"hidden"}
                                 animate={isActive === 4 ? "hover" : "hidden"}
+                                exit={"hidden"}
+                                variants={slideUp}
+                                className="flex -mt-6">
+                                <div className="project-details">
+                                    <div className="project-details">
+                                        <div className="title">Goodchat</div>
+                                        <div className="content font-light text-2xl">
+                                            If you need someone to chat with, rant about your problems, or just want to
+                                            be listened you, Goodchat is the service for you.
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                    <div className="project-card text-white relative mt-5 lg:p-4" onMouseEnter={() => handleHover(5)}
+                         onMouseLeave={() => setIsActive(0)}>
+                        <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
+                            <motion.img src={finag1} alt=""
+                                        className={`w-full h-full object-cover`}
+
+                                        initial={false}
+                                        animate={isActive === 5 ? "hover" : "hidden"}
+                                        variants={zoom}
+                            />
+                        </div>
+                        <div className="card-content px-8 overflow-hidden absolute top-0">
+                            <motion.div
+                                initial={"hidden"}
+                                animate={isActive === 5 ? "hover" : "hidden"}
+                                exit={"hidden"}
+                                variants={slideDown}
+                                className="flex technology-pills py-10">
+                                <button className="mr-2">
+                                    <span>Django</span>
+                                </button>
+                                <button className="mr-2">
+                                    <span>React</span>
+                                </button>
+                                <button>
+                                    <span>Postgresql</span>
+                                </button>
+                            </motion.div>
+                            <motion.div
+                                initial={"hidden"}
+                                animate={isActive === 5 ? "hover" : "hidden"}
+                                exit={"hidden"}
+                                variants={toggleHide}
+                                className="flex view-button justify-center pt-64 pb-32" onClick={() => handleModal(4)}>
+                                <button className="flex text-white items-center py-3 px-7"
+                                        onClick={() => handleModal(5)}>
+                                    <span>View Project</span>
+                                </button>
+                            </motion.div>
+                            <motion.div
+                                initial={"hidden"}
+                                animate={isActive === 5 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={slideUp}
                                 className="flex">
