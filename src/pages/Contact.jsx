@@ -156,7 +156,7 @@ const ContactPage = () => {
                             {/*    onMouseLeave={() => handleZoom(0)}>Twitter*/}
                             {/*</motion.h4>*/}
                             {/*</Link>*/}
-                            <Link to={{pathname:"https://www.linkedin.com/in/obedbalogun/"}} target="_blank">
+                            <a href="https://www.linkedin.com/in/obedbalogun/" target="_blank">
                                 <motion.h4
                                     initial={false}
                                     animate={enlarge === 2 ? "hover" : ""}
@@ -165,8 +165,8 @@ const ContactPage = () => {
                                     onMouseEnter={() => handleZoom(2)}
                                     onMouseLeave={() => handleZoom(0)}>Linkedin
                                 </motion.h4>
-                            </Link>
-                            <Link to="https://www.instagram.com/brotherbalogun" target="_blank">
+                            </a>
+                            <a href="https://www.instagram.com/brotherbalogun/" target="_blank">
                                 <motion.h4
                                     initial={false}
                                     animate={enlarge === 3 ? "hover" : " "}
@@ -175,8 +175,8 @@ const ContactPage = () => {
                                     onMouseEnter={() => handleZoom(3)}
                                     onMouseLeave={() => handleZoom(0)}>Instagram
                                 </motion.h4>
-                            </Link>
-                            <Link to="https://github.com/obedbalogun" target="_blank">
+                            </a>
+                            <a href="https://github.com/obedbalogun" target="_blank">
                                 <motion.h4
                                     initial={false}
                                     animate={enlarge === 4 ? "hover" : " "}
@@ -185,7 +185,7 @@ const ContactPage = () => {
                                     onMouseEnter={() => handleZoom(4)}
                                     onMouseLeave={() => handleZoom(0)}>Github
                                 </motion.h4>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
