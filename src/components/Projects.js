@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import Modal from "./Project-Modal";
+import {projects} from "../data/projects";
 
 
 const Projects = ({navOpen}) => {
     const [showModal, setShowModal] = useState(false);
-    const [leftSideProjects, setLeftSideProjects] = useState([]);
-    const [rightSideProjects, setRightSideProjects] = useState([]);
+    const rightSide = projects.filter(project => project.position === 'right');
+    const leftSide = projects.filter(project => project.position === 'left');
     const [isActive, setIsActive] = useState(0);
     const handleHover = (cardId) => {
         setIsActive(cardId);
@@ -93,34 +94,12 @@ const Projects = ({navOpen}) => {
         },
     }
     const [cardNumber, setCardNumber] = useState(0);
-    const getData = () => {
-        fetch('data/projects.json', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (projects) {
-                let allProjects = projects.projects;
-                let leftSide = allProjects.filter(project => project.position === "left");
-                let rightSide = allProjects.filter(project => project.position === "right");
-                setLeftSideProjects(leftSide);
-                setRightSideProjects(rightSide);
-            });
-    }
-    useEffect(() => {
-        getData()
-    }, [])
 
     return (
         <>
             <div className="flex flex-column justify-center px-8 mt-32 relative">
                 <div className="flex-1">
-                    {leftSideProjects.map((project) => (
+                    {leftSide.map((project) => (
                         <div key={project.id} className="project-card text-white relative mb-5 lg:mb-0 lg:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>
@@ -175,7 +154,7 @@ const Projects = ({navOpen}) => {
                     ))}
                 </div>
                 <div className="flex-1 mt-24 text-white relative">
-                    {rightSideProjects.map((project, index) => (
+                    {rightSide.map((project, index) => (
                         <div key={project.id} className="project-card text-white relative lg:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>

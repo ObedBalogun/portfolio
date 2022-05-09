@@ -1,15 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
-import image from "../images/project.png"
-import image2 from "../images/project.png"
-import shyne2 from "../images/shyne-cars.png";
-import shyneCars from "../images/shyne-cars.png";
-import shyneTemp from "../images/shyne-temp.png";
-
+import {projectDetails} from "../data/projects";
 
 const Modal = ({cardNumber, handleModal}) => {
     const [showModal, setShowModal] = useState(true);
-    const [project, setProject] = useState([]);
     const slideUp = {
         hidden: {
             opacity: 0,
@@ -46,27 +40,8 @@ const Modal = ({cardNumber, handleModal}) => {
 
         }
     }
-    const getData = () => {
-        fetch('data/projectDetails.json', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (projects) {
-                let allProjects = projects.projects;
-                let getProject = allProjects.filter(project => project.id === cardNumber);
-                setProject(getProject);
-            });
-
-    }
-
+    const project = projectDetails.find(project => project.id === cardNumber);
     useEffect(() => {
-        getData();
         if (cardNumber === 0) {
             setShowModal(false);
         } else {
@@ -77,7 +52,7 @@ const Modal = ({cardNumber, handleModal}) => {
 
     return (
         <AnimatePresence>
-            {project.map(project => (
+            {showModal && (
                 <motion.div
                 key={cardNumber}
                 initial={'hidden'}
@@ -171,8 +146,7 @@ const Modal = ({cardNumber, handleModal}) => {
                     </div>
 
             </motion.div>
-            ))}
-
+            )}
         </AnimatePresence>
     );
 };
