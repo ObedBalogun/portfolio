@@ -60,9 +60,6 @@
 
     }
 
-    .background {
-    }
-
     .background::before {
         content: "";
         position: absolute;
@@ -199,11 +196,6 @@
         padding: 6px;
         flex-grow: 0;
         margin: 0px 12px
-
-        /*position: static;*/
-        /*width: 121px;*/
-        /*height: 53px;*/
-
     }
 
     .navbar-nav:hover {

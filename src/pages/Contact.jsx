@@ -120,7 +120,7 @@ const ContactPage = () => {
                         >
                             <div className="content">
                                 <h4>Phone</h4>
-                                <h3>+234 706 741 7382</h3>
+                                <a href="tel:+2347067417382"><h3>+234 706 741 7382</h3></a>
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === 2 ? "hover" : "hidden"}
