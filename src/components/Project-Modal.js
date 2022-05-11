@@ -19,7 +19,7 @@ const Modal = ({cardNumber, handleModal}) => {
         },
         active: {
             opacity: 1,
-            height: '90vh',
+            height: '100vh',
             y: 0,
             transition: {
                 duration: .3,
@@ -41,6 +41,10 @@ const Modal = ({cardNumber, handleModal}) => {
         }
     }
     const project = projectDetails.find(project => project.id === cardNumber);
+    const handleClose = () => {
+        setShowModal(false);
+        handleModal(0);
+    }
     useEffect(() => {
         if (cardNumber === 0) {
             setShowModal(false);
@@ -51,79 +55,85 @@ const Modal = ({cardNumber, handleModal}) => {
 
 
     return (
-        <AnimatePresence>
-            {showModal && (
-                <motion.div
-                key={cardNumber}
-                initial={'hidden'}
-                animate={showModal ? 'active' : 'hidden'}
-                exit={'exit'}
-                variants={slideUp}
-                className="z-50 project-modal rounded-2xl bg-white mx-6 p-6 h-screen fixed bottom-0 overflow-x-hidden overflow-y-auto">
-                <div className="project-content mt-10 mb-10 mx-10">
-                    <div className="top-content flex flex-column">
-                        <div className="flex-1">
-                            <div className="left-text">
-                                <h2 className="mb-6">{project.name}</h2>
-                                <span className="text-xl text-neutral-600">{project.description}</span>
-                            </div>
-                        </div>
-                        <div className="flex-1">
-                            <div className="left-right mt-20">
-                                <div className="role">
-                                    <span className="mb-10 text-neutral-600	font-normal">Role</span> <br/>
-                                    <span className="font-normal text-xl">{project.role}</span>
-                                    <hr className="relative solid border-slate-300 my-2"/>
-                                </div>
-                                <div className="stack">
-                                    <span className="mb-10 text-neutral-600	font-normal">Tools</span> <br/>
-                                    <span
-                                        className="font-normal text-xl">{project.tools}</span>
-                                    <hr className="relative solid border-slate-300 my-2"/>
-                                </div>
-                                <div className="year">
-                                    <span className="mb-10 text-neutral-600	font-normal">Year</span> <br/>
-                                    <span className="font-normal text-xl">{project.year}</span>
-                                    <hr className="relative solid border-slate-300 my-2"/>
-                                </div>
+        <>
+            <AnimatePresence>
+                {showModal && (
+                    <motion.div
+                        key={cardNumber}
+                        initial={'hidden'}
+                        animate={showModal ? 'active' : 'hidden'}
+                        exit={'exit'}
+                        variants={slideUp}
+                        className="modal-background bg-black/[.6] z-50 h-screen w-screen overflow-hidden fixed mx-auto bottom-0"
+                        onClick={handleClose}>
+                        <div className="project-modal rounded-2xl bg-white mx-8 mt-10 p-10 h-screen overflow-y-auto">
+                            <div className="project-content m-10">
+                                <div className="top-content flex flex-column">
+                                    <div className="flex-1">
+                                        <div className="left-text">
+                                            <h2 className="mb-6">{project.name}</h2>
+                                            <span className="text-xl text-neutral-600">{project.description}</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex-1">
+                                        <div className="left-right mt-20">
+                                            <div className="role">
+                                                <span className="mb-10 text-neutral-600	font-normal">Role</span>
+                                                <br/>
+                                                <span className="font-normal text-xl">{project.role}</span>
+                                                <hr className="relative solid border-slate-300 my-2"/>
+                                            </div>
+                                            <div className="stack">
+                                                <span className="mb-10 text-neutral-600	font-normal">Tools</span>
+                                                <br/>
+                                                <span
+                                                    className="font-normal text-xl">{project.tools}</span>
+                                                <hr className="relative solid border-slate-300 my-2"/>
+                                            </div>
+                                            <div className="year">
+                                                <span className="mb-10 text-neutral-600	font-normal">Year</span>
+                                                <br/>
+                                                <span className="font-normal text-xl">{project.year}</span>
+                                                <hr className="relative solid border-slate-300 my-2"/>
+                                            </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="other-content mt-20">
-                        <div className="flex flex-col">
-                            <div className="top-image w-full">
-                                <img src={require('../images' + project.image1)} alt="" className="w-full object-cover rounded-3xl"/>
-                            </div>
-                            <div className="mt-10 w-1/2 text-xl text-neutral-600">
-                                {project.details1}
-                            </div>
-                            <div className="flex middle-image mt-10">
-                                <img src={require('../images' + project.image2)} alt="" className="w-1/2 object-cover rounded-3xl"/>
-                                <span className="m-6 w-1/2 text-xl text-neutral-600">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="other-content mt-20">
+                                    <div className="flex flex-col">
+                                        <div className="top-image w-full">
+                                            <img src={require('../images' + project.image1)} alt=""
+                                                 className="w-full object-cover rounded-3xl"/>
+                                        </div>
+                                        <div className="mt-10 w-1/2 text-xl text-neutral-600">
+                                            {project.details1}
+                                        </div>
+                                        <div className="flex middle-image mt-10">
+                                            <img src={require('../images' + project.image2)} alt=""
+                                                 className="w-1/2 object-cover rounded-3xl"/>
+                                            <span className="m-6 w-1/2 text-xl text-neutral-600">
                                     {project.details2}
                                 </span>
-                            </div>
-                            <div className="flex mt-10 p-5 text-xl text-neutral-600">
-                                <div className="flex-1">
-                                    {project.details3}
+                                        </div>
+                                        <div className="flex mt-10 p-5 text-xl text-neutral-600">
+                                            <div className="flex-1">
+                                                {project.details3}
+                                            </div>
+                                            <div className="flex-1">
+                                                {project.details4}
+                                            </div>
+                                        </div>
+                                        <div className="final-image mt-10">
+                                            <img src={require('../images' + project.image3)} alt=""
+                                                 className="w-full object-contain rounded-3xl"/>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="flex-1">
-                                    {project.details4}
-                                </div>
                             </div>
-                            <div className="final-image mt-10">
-                                <img src={require('../images' + project.image3)} alt="" className="w-full object-contain rounded-3xl"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="close-button inset-x-0" onClick={() => {
-                        setShowModal(false);
-                        handleModal(0)
-                    }}>
-                        <button
-                            className="flex bg-black/[.2] mx-auto w-24 text-black-100 font-bold py-2 px-4 rounded-full">
+                            <div className="close-button fixed bottom-14 inset-x-0" onClick={handleClose}>
+                                <button
+                                    className="flex bg-white/[.8] mx-auto w-24 text-black-100 font-normal py-4 px-4 rounded-xl shadow-lg">
                             <span className={"flex items-center"}>
                                 <span className={"pr-2"}>Close</span>
                                 <span>
@@ -142,13 +152,16 @@ const Modal = ({cardNumber, handleModal}) => {
                                 </svg>
                             </span>
                             </span>
-                        </button>
-                    </div>
+                                </button>
+                            </div>
 
-            </motion.div>
-            )}
-        </AnimatePresence>
-    );
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
+    )
+
 };
 
 export default Modal;

@@ -5,6 +5,7 @@ import {projects} from "../data/projects";
 
 
 const Projects = ({navOpen}) => {
+    const [cardNumber, setCardNumber] = useState(0);
     const [showModal, setShowModal] = useState(false);
     const rightSide = projects.filter(project => project.position === 'right');
     const leftSide = projects.filter(project => project.position === 'left');
@@ -16,6 +17,14 @@ const Projects = ({navOpen}) => {
         setCardNumber(cardNumber);
         setShowModal(true);
         navOpen()
+    }
+    const handleOverflow = (cardNumber) => {
+        let container = document.getElementsByClassName("project-container");
+        if (cardNumber === 0) {
+            container[0].classList.replace("overflow-hidden", "overflow-y-auto")
+        } else {
+            container[0].classList.replace("overflow-y-auto", "overflow-hidden")
+        }
     }
     const slideDown = {
         hidden: {
@@ -93,8 +102,9 @@ const Projects = ({navOpen}) => {
             }
         },
     }
-    const [cardNumber, setCardNumber] = useState(0);
-
+    useEffect(() => {
+        handleOverflow(cardNumber)
+    }, [cardNumber]);
     return (
         <>
             <div className="flex flex-column justify-center px-8 mt-32 relative">
@@ -154,7 +164,7 @@ const Projects = ({navOpen}) => {
                     ))}
                 </div>
                 <div className="flex-1 mt-24 text-white relative">
-                    {rightSide.map((project, index) => (
+                    {rightSide.map((project) => (
                         <div key={project.id} className="project-card text-white relative lg:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>
@@ -210,8 +220,11 @@ const Projects = ({navOpen}) => {
                     ))}
 
                 </div>
-                {showModal && <Modal cardNumber={cardNumber} handleModal={handleModal}/>}
+
             </div>
+            {showModal &&
+                <Modal cardNumber={cardNumber} handleModal={handleModal}/>
+            }
         </>
     );
 };
