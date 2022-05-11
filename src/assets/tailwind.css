@@ -1,10 +1,20 @@
-@import url('http://fonts.cdnfonts.com/css/br-firma');
+/*@import url('http://fonts.cdnfonts.com/css/br-firma');*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap');
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Br Firma Regular';
+    src: local('Br Firma Regular'), url('../fonts/br-firma-cdnfonts/BR Firma Regular.otf') format('opentype');
+    font-weight: normal;
+}
+@font-face {
+  font-family: 'Br Firma Light';
+    src: local('Br Firma Light'), url('../fonts/br-firma-cdnfonts/BR Firma Light.otf') format('opentype');
+    font-weight: normal;
+}
 
 @layer components {
     html,
@@ -15,7 +25,7 @@
 
     body {
         position: relative;
-        font-family: "Br Firma", sans-serif;
+        font-family: 'Br Firma Regular', sans-serif;
 
 
     }
@@ -52,7 +62,6 @@
     }
 
     h4 {
-        font-family: 'Br Firma';
         font-size: 26px;
         font-weight: 400;
         line-height: 140%;
@@ -130,7 +139,6 @@
         padding: .9em;
         /*right: 2em;*/
         font-weight: 600;
-        font-family: 'BR Firma';
         background: rgba(255, 255, 255, 0.07);
         border: 1px solid #000000;
         box-sizing: border-box;
@@ -148,7 +156,6 @@
         top: 4em;
         width: 889px;
         height: 100px;
-        font-family: 'BR Firma';
         font-size: 64px;
         font-weight: 600;
         color: black;
@@ -181,7 +188,7 @@
 
         background: #FFFFFF;
         opacity: 0.9;
-        box-shadow: 0px 8px 24px 9px rgba(0, 0, 0, 0.13);
+        box-shadow: 0 8px 24px 9px rgba(0, 0, 0, 0.13);
         backdrop-filter: blur(22px);
 
         border-radius: 15px;
@@ -195,7 +202,7 @@
         align-items: center;
         padding: 6px;
         flex-grow: 0;
-        margin: 0px 12px
+        margin: 0 12px
     }
 
     .navbar-nav:hover {
@@ -218,7 +225,6 @@
     }
 
     .nav-item {
-        font-family: 'BR Firma';
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
@@ -371,6 +377,9 @@
 
     .top-image > img, .final-image > img {
         height: 600px
+    }
+    .content{
+        font-family: "Br Firma Light", sans-serif;
     }
 
 }

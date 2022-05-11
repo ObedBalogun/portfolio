@@ -110,7 +110,7 @@ const Projects = ({navOpen}) => {
             <div className="flex flex-column justify-center px-8 mt-32 relative">
                 <div className="flex-1">
                     {leftSide.map((project) => (
-                        <div key={project.id} className="project-card text-white relative mb-5 lg:mb-0 lg:p-4"
+                        <div key={project.id} className="project-card text-white relative mb-5 lg:mb-0 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
@@ -130,7 +130,7 @@ const Projects = ({navOpen}) => {
                                     className="flex technology-pills py-10">
                                     {project.technology.map((technology, techIndex) => (
                                         <button className="mr-2" key={techIndex}>
-                                            <span>{technology}</span>
+                                            <span className="content">{technology}</span>
                                         </button>
                                     ))}
                                 </motion.div>
@@ -210,7 +210,7 @@ const Projects = ({navOpen}) => {
                                     className="flex">
                                     <div className="project-details">
                                         <div className="title">{project.name}</div>
-                                        <div className="content font-light text-2xl">
+                                        <div className="content text-2xl">
                                             {project.description}
                                         </div>
                                     </div>
