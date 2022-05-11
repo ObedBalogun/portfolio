@@ -25,7 +25,7 @@
 
     body {
         position: relative;
-        font-family: 'Br Firma Regular', sans-serif;
+        font-family: 'Br Firma Regular';
 
 
     }
@@ -379,7 +379,7 @@
         height: 600px
     }
     .content{
-        font-family: "Br Firma Light", sans-serif;
+        font-family: "Br Firma Light";
     }
 
 }
