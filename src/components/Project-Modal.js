@@ -70,9 +70,9 @@ const Modal = ({cardNumber, handleModal}) => {
                             <div className="project-content m-10">
                                 <div className="top-content flex flex-column">
                                     <div className="flex-1">
-                                        <div className="left-text">
+                                        <div className="left-text m-5">
                                             <h2 className="mb-6">{project.name}</h2>
-                                            <span className="text-xl text-neutral-600">{project.description}</span>
+                                            <span className="text-xl text-neutral-600 text-left">{project.description}</span>
                                         </div>
                                     </div>
                                     <div className="flex-1">
