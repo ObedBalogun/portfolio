@@ -21,6 +21,7 @@ function App() {
         img.src = require('./images' + project.imageURL)
         return img.src
     });
+    const preLoadedPortrait = new Image().src=portrait;
     const handleNavToggle = () => {
         setShowNav(!showNav)
     };
@@ -39,7 +40,7 @@ function App() {
                 <AnimatePresence exitBeforeEnter>
                     <Routes>
                         <Route path='/' element={<Home/>}/>
-                        <Route path='/about' element={<AboutPage portrait={portrait}/>}/>
+                        <Route path='/about' element={<AboutPage portrait={preLoadedPortrait}/>}/>
                         <Route path='/contact' element={<ContactPage/>}/>
                         <Route path='/projects' element={<ProjectsPage navOpen={handleNavToggle}
                                                                        preLoadedImages={preLoadedPictures}
