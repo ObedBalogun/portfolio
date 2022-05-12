@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom";
 import {AnimatePresence, motion} from 'framer-motion';
 import Projects from "../components/Projects";
 
-const ProjectsPage = ({navOpen}) => {
+const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
     let location = useLocation()
     let prevLocation = location.state ? location.state.from : {pathname: '/projects'}
     location = location.pathname;
@@ -49,7 +49,7 @@ const ProjectsPage = ({navOpen}) => {
                         <h1 className="relative">Projects</h1>
                     </div>
                     <div className="projects">
-                        <Projects navOpen={navOpen}/>
+                        <Projects navOpen={navOpen} preLoadedImages={preLoadedImages} projects={projects}/>
                     </div>
 
                 </div>

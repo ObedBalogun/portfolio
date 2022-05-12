@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import Modal from "./Project-Modal";
-import {projects} from "../data/projects";
 
 
-const Projects = ({navOpen}) => {
+const Projects = ({navOpen,preLoadedImages,projects}) => {
     const [cardNumber, setCardNumber] = useState(0);
     const [showModal, setShowModal] = useState(false);
     const rightSide = projects.filter(project => project.position === 'right');
@@ -102,15 +101,11 @@ const Projects = ({navOpen}) => {
             }
         },
     }
-    let preLoadedData = projects.map((project)=>{
-        const img = new Image()
-        img.src = require('../images' + project.imageURL)
-        return img
-
-    })
     useEffect(() => {
         handleOverflow(cardNumber)
     }, [cardNumber]);
+
+
     return (
         <>
             <div className="flex flex-column justify-center px-8 mt-32 relative">
@@ -176,7 +171,7 @@ const Projects = ({navOpen}) => {
                              onMouseLeave={() => setIsActive(0)}>
                             <div
                                 className="card-background rounded-3xl bg-black overflow-hidden h-full w-full object-cover">
-                                <motion.img src={require('../images' + project.imageURL)} alt=""
+                                <motion.img src={preLoadedImages[project.id-1]} alt=""
                                             className="h-full w-full object-cover"
                                             initial={false}
                                             animate={isActive === project.id ? "hover" : "hidden"}

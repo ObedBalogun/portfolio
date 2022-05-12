@@ -7,12 +7,12 @@
 @tailwind utilities;
 @font-face {
   font-family: 'Br Firma Regular';
-    src: local('Br Firma Regular'), url('../fonts/br-firma-cdnfonts/BR Firma Regular.otf') format('opentype');
+    src: local('Br Firma Regular'), url('../fonts/BR-Firma/BR Firma Regular.otf') format('opentype');
     font-weight: normal;
 }
 @font-face {
   font-family: 'Br Firma Light';
-    src: local('Br Firma Light'), url('../fonts/br-firma-cdnfonts/BR Firma Light.otf') format('opentype');
+    src: local('Br Firma Light'), url('../fonts/BR-Firma/BR Firma Light.otf') format('opentype');
     font-weight: normal;
 }
 
