@@ -102,6 +102,12 @@ const Projects = ({navOpen}) => {
             }
         },
     }
+    let preLoadedData = projects.map((project)=>{
+        const img = new Image()
+        img.src = require('../images' + project.imageURL)
+        return img
+
+    })
     useEffect(() => {
         handleOverflow(cardNumber)
     }, [cardNumber]);
