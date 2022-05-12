@@ -1,12 +1,11 @@
 import React from 'react';
 import {useLocation} from "react-router-dom";
 import {TopNav} from "../components/Navbar";
-import portrait from "../potrait.png"
 import {motion} from 'framer-motion';
 import Services from "../components/Services";
 import Experience from "../components/Experience";
 
-const AboutPage = () => {
+const AboutPage = ({portrait}) => {
     let location = useLocation();
     let prevLocation = location.state ? location.state.from : {pathname: '/about'}
     location = location.pathname;

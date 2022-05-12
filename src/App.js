@@ -8,6 +8,8 @@ import ProjectsPage from "./pages/Projects";
 import {AnimatePresence} from "framer-motion";
 import {useEffect, useState} from "react";
 import {projects} from "./data/projects";
+import portrait from "./potrait.png"
+
 
 
 function App() {
@@ -37,7 +39,7 @@ function App() {
                 <AnimatePresence exitBeforeEnter>
                     <Routes>
                         <Route path='/' element={<Home/>}/>
-                        <Route path='/about' element={<AboutPage/>}/>
+                        <Route path='/about' element={<AboutPage portrait={portrait}/>}/>
                         <Route path='/contact' element={<ContactPage/>}/>
                         <Route path='/projects' element={<ProjectsPage navOpen={handleNavToggle}
                                                                        preLoadedImages={preLoadedPictures}
