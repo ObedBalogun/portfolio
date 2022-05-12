@@ -117,10 +117,10 @@ const Modal = ({cardNumber, handleModal}) => {
                                 </span>
                                         </div>
                                         <div className="flex mt-10 p-5 text-xl text-neutral-600">
-                                            <div className="flex-1">
+                                            <div className="flex-1 p-5">
                                                 {project.details3}
                                             </div>
-                                            <div className="flex-1">
+                                            <div className="flex-1 p-5">
                                                 {project.details4}
                                             </div>
                                         </div>

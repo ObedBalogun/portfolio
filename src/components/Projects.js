@@ -153,7 +153,7 @@ const Projects = ({navOpen}) => {
                                     variants={slideUp}
                                     className="flex -mt-6">
                                     <div className="project-details">
-                                        <div className="title">Shyne</div>
+                                        <div className="title">{project.name}</div>
                                         <div className="content font-light text-2xl">
                                             {project.description}
                                         </div>
