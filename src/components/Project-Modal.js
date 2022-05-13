@@ -45,7 +45,7 @@ const Modal = ({cardNumber, handleModal}) => {
         setShowModal(false);
         handleModal(0);
     }
-    let preLoadedData = projectDetails.map((project)=>{
+    let preLoadedData = projectDetails.map((project) => {
         const img = new Image()
         img.src = require('../images' + project.image1)
         return img
@@ -73,12 +73,13 @@ const Modal = ({cardNumber, handleModal}) => {
                         className="modal-background bg-black/[.6] z-50 h-screen w-screen overflow-hidden fixed mx-auto bottom-0"
                         onClick={handleClose}>
                         <div className="project-modal rounded-2xl bg-white mx-8 mt-10 p-10 h-screen overflow-y-auto">
-                            <div className="project-content m-10">
-                                <div className="top-content flex flex-column">
+                            <div className="project-content m-6">
+                                <div className="top-content flex flex-column gap-4">
                                     <div className="flex-1">
-                                        <div className="left-text m-5">
+                                        <div className="left-text">
                                             <h2 className="mb-6">{project.name}</h2>
-                                            <span className="text-xl text-neutral-600 text-left">{project.description}</span>
+                                            <span
+                                                className="text-xl text-neutral-600 text-left">{project.description}</span>
                                         </div>
                                     </div>
                                     <div className="flex-1">
@@ -112,21 +113,21 @@ const Modal = ({cardNumber, handleModal}) => {
                                             <img src={require('../images' + project.image1)} alt=""
                                                  className="w-full object-cover rounded-3xl"/>
                                         </div>
-                                        <div className="mt-10 w-1/2 text-xl text-neutral-600">
+                                        <div className="mt-20 w-1/2 text-xl text-neutral-600">
                                             {project.details1}
                                         </div>
                                         <div className="flex middle-image mt-10">
                                             <img src={require('../images' + project.image2)} alt=""
                                                  className="w-1/2 object-cover rounded-3xl"/>
-                                            <span className="m-6 w-1/2 text-xl text-neutral-600">
-                                    {project.details2}
-                                </span>
+                                            <span className="my-auto p-6 w-1/2 ml-10 text-xl text-neutral-600">
+                                                {project.details2}
+                                            </span>
                                         </div>
-                                        <div className="flex mt-10 p-5 text-xl text-neutral-600">
-                                            <div className="flex-1 p-5">
+                                        <div className="flex mt-20 text-xl text-neutral-600 gap-4">
+                                            <div className="flex-1 ">
                                                 {project.details3}
                                             </div>
-                                            <div className="flex-1 p-5">
+                                            <div className="flex-1">
                                                 {project.details4}
                                             </div>
                                         </div>

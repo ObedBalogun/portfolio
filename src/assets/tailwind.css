@@ -381,5 +381,7 @@
     .content{
         font-family: "Br Firma Light";
     }
-
+    .middle-image > img {
+        height: 55em
+    }
 }
