@@ -6,12 +6,12 @@
 @tailwind utilities;
 @font-face {
   font-family: 'Br Firma Regular';
-    src: local('Br Firma Regular'), url('../fonts/BR-Firma/Regular.ttf') format('truetype');
+    src: local('Br Firma Regular'), url('../fonts/BR-Firma/Regular.woff') format('woff');
     font-weight: normal;
 }
 @font-face {
   font-family: 'Br Firma Light';
-    src: local('Br Firma Light'), url('../fonts/BR-Firma/Light.ttf') format('truetype');
+    src: local('Br Firma Light'), url('../fonts/BR-Firma/Light.woff') format('woff');
     font-weight: normal;
 }
 
@@ -20,12 +20,11 @@
     body {
         overflow-x: hidden;
         scroll-behavior: smooth;
+        font-family: 'Br Firma Regular',sans-serif;
     }
 
     body {
         position: relative;
-        font-family: 'Br Firma Regular';
-
 
     }
 

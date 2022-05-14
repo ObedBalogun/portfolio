@@ -16,7 +16,7 @@
     src: local('BR Firma'), local('BRFirma-Regular'),
         url('BRFirma-Regular.eot?#iefix') format('embedded-opentype'),
         url('BRFirma-Regular.woff2') format('woff2'),
-        url('BRFirma-Regular.woff') format('woff'),
+        url('Regular.woff') format('woff'),
         url('Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
