@@ -1,3 +1,4 @@
+import "./assets/fonts/BR-Firma/Regular.woff"
 import "./assets/styles/style.css"
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Navbar} from "./components/Navbar";
@@ -9,8 +10,15 @@ import {AnimatePresence} from "framer-motion";
 import {useEffect, useState} from "react";
 import {projects} from "./data/projects";
 import portrait from "./potrait.png"
+import WebFont from 'webfontloader';
 
 
+
+WebFont.load({
+    custom: {
+        families: ['Regular.woff'],
+    },
+});
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -26,16 +34,23 @@ function App() {
         setShowNav(!showNav)
     };
     useEffect(() => {
+        WebFont.load({
+            google: {
+                families: ['Regular','BR Firma'],
+            }
+        });
+    }, []);
+    useEffect(() => {
         setPreLoadProjects(projects);
         if (preLoadedPictures.length > 0) {
             setIsLoading(false)
         }
 
-    }, [])
+    }, [preLoadedPictures])
 
     return (
         <div className="App bg-black">
-            {isLoading ? <div className="loader"></div> : <BrowserRouter>
+            {isLoading ? <p>ASS</p> : <BrowserRouter>
                 {showNav && <Navbar/>}
                 <AnimatePresence exitBeforeEnter>
                     <Routes>
