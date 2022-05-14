@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Br Firma Regular';
+    src: local('Br Firma Regular'), url('../fonts/BR-Firma/Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+  font-family: 'Br Firma Light';
+    src: local('Br Firma Light'), url('../fonts/BR-Firma/Light.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@layer components {
+    html,
+    body {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        position: relative;
+        font-family: 'Br Firma Regular';
+
+
+    }
+
+    body::-webkit-scrollbar, .project-modal::-webkit-scrollbar, .project-container::-webkit-scrollbar {
+        width: 0;
+    }
+
+    div {
+
+    }
+
+    h1 {
+        display: block;
+        font-weight: 600;
+        font-size: 4rem;
+        line-height: 0;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: .5rem;
+    }
+
+    h3 {
+        position: relative;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 140%;
+        margin-bottom: 0.5rem;
+    }
+
+    h4 {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 0.5rem;
+
+    }
+
+    .background::before {
+        content: "";
+        position: absolute;
+        width: 200vw;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: fill;
+        background-image: url("data:image/png;base64,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");
+        opacity: 1;
+
+
+    }
+
+
+    .green {
+        position: absolute;
+        left: 44.65%;
+        right: 0;
+        top: 0;
+        bottom: 5.36%;
+        background: #73E0A9;
+        filter: blur(150px);
+        animation: none;
+
+    }
+
+    .blue {
+        position: absolute;
+        left: 0;
+        right: 52.96%;
+        top: 19.59%;
+        bottom: 0;
+        background: #5B68DF;
+        filter: blur(150px);
+        animation: none;
+    }
+
+    .green.animate {
+        animation: rotate 8s infinite linear;
+        transform-origin: left;
+    }
+
+    .blue.animate {
+        animation: rotate 8s infinite linear;
+        transform-origin: right;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(359deg);
+        }
+    }
+    .logo {
+        width: 12em;
+        height: 3em;
+        font-weight: 600;
+        /*background: rgba(255, 255, 255, 0.07);*/
+    }
+
+    .download-resume-button {
+        width: 12em;
+        height: 3em;
+        padding: .9em;
+        /*right: 2em;*/
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    .download-resume-button:hover {
+        background-color: black;
+        color: white;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    }
+
+    .main-header {
+        position: absolute;
+        top: 4em;
+        width: 889px;
+        height: 100px;
+        font-size: 64px;
+        font-weight: 600;
+        color: black;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    .main-sub-header {
+        position: absolute;
+        top: 19em;
+        width: 24em;
+        height: 62px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 140%;
+        text-align: center;
+
+    }
+
+    .navbar {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        width: 544px;
+        height: 3.5em;
+
+
+        background: #FFFFFF;
+        opacity: 0.9;
+        box-shadow: 0 8px 24px 9px rgba(0, 0, 0, 0.13);
+        backdrop-filter: blur(22px);
+
+        border-radius: 15px;
+    }
+
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        flex-grow: 0;
+        margin: 0 12px
+    }
+
+    .navbar-nav:hover {
+        padding: 6px;
+        background: #CCCCCC;
+        border-radius: 15px;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+    }
+
+    .navbar-nav.active {
+        padding: 6px;
+        background-color: black;
+        border-radius: 15px;
+
+    }
+
+    .navbar-nav.active .nav-item {
+        color: white;
+    }
+
+    .nav-item {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        text-align: center;
+        color: #000000;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0 10px;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        cursor: pointer;
+
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #0d6efd;
+        text-decoration: none;
+    }
+
+    .project-background .download-resume-button, .contact-background .download-resume-button {
+        background: white;
+        border: 1px solid #FFFFFF;
+
+    }
+
+    .project-background .download-resume-button:hover, .contact-background .download-resume-button:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid #000000;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    }
+
+    .right-side-text {
+        width: 700px;
+        height: 288px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    .email-animation {
+        position: absolute;
+        left: 30%;
+        right: 52.87%;
+        top: -34.71%;
+        bottom: -34.71%;
+        width: 170px;
+        height: 170px;
+        justify-content: center;
+        align-items: center;
+        background: #238BF4;
+        display: flex;
+        opacity: 0;
+        border-radius: 120%;
+    }
+
+
+    .icon-text {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%
+
+    }
+
+    .phone-animation {
+        position: absolute;
+        left: 5%;
+        right: 40.76%;
+        top: -34.71%;
+        bottom: -34.71%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #34A853;
+        width: 170px;
+        height: 170px;
+        opacity: 0;
+        border-radius: 200px;
+
+    }
+
+    .phone-number.hover > .phone-animation {
+        left: 50%;
+        opacity: 1;
+
+    }
+
+
+    .services-text {
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 120%;
+        width: 70%;
+        overflow: hidden;
+    }
+
+    .project-card {
+        width: 45em;
+        height: 45em;
+
+    }
+
+    .project-card-2 {
+        width: 45em;
+        height: 45em;
+        background: url('../../images/project-2.png'), #FFFFFF;
+        border-radius: 38px;
+
+    }
+
+
+    .view-button > button {
+        font-weight: 400;
+        font-size: 2em;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 20px;
+        line-height: 120%;
+
+    }
+
+    .technology-pills > button {
+        font-size: 15px;
+        font-weight: 300;
+        padding: 3px 8px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 11px;
+        line-height: 120%;
+    }
+
+    .project-details .title {
+        font-size: 2.7em;
+    }
+
+    .project-details .content {
+        font-size: 1.4em;
+    }
+
+    .top-image > img, .final-image > img {
+        height: 600px
+    }
+    .content{
+        font-family: "Br Firma Light";
+    }
+    .middle-image > img {
+        height: 55em
+    }
+}

@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/tailwind.css';
+import './assets/styles/style.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import  './fonts/BR-Firma/BRFirma-Black.otf'
-import  './fonts/BR-Firma/BRFirma-Bold.otf'
-import  './fonts/BR-Firma/BR Firma Light.otf'
-import  './fonts/BR-Firma/BR Firma Medium.otf'
-import  './fonts/BR-Firma/BR Firma SemiBold.otf'
-import  './fonts/BR-Firma/BR Firma Thin.otf'
+// import  './fonts/BR-Firma-Firma/BRFirma-Black.otf'
+// import  './fonts/BR-Firma-Firma/BRFirma-Bold.otf'
+// import  './fonts/BR-Firma-Firma/BR-Firma Firma Light.otf'
+// import  './fonts/BR-Firma-Firma/BR-Firma Firma Medium.otf'
+// import  './fonts/BR-Firma-Firma/BR-Firma Firma SemiBold.otf'
+// import  './fonts/BR-Firma-Firma/BR-Firma Firma Thin.otf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
