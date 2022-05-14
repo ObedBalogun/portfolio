@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Br Firma Regular';
+    src: local('Br Firma Regular'), url('./fonts/BR-Firma/BR Firma Regular.otf') format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Br Firma Light';
+    src: local('Br Firma Light'), url('./fonts/BR-Firma/BR Firma Light.otf') format('opentype');
+    font-weight: normal;
+}

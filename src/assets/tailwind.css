@@ -1,21 +1,10 @@
-/*@import url('https://fonts.cdnfonts.com/css/br-firma');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap');*/
+@import url('https://fonts.cdnfonts.com/css/br-firma');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap');
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: 'Br Firma Regular';
-    src: local('Br Firma Regular'), url('../fonts/BR-Firma/BR Firma Regular.otf') format('opentype');
-    font-weight: normal;
-}
-@font-face {
-  font-family: 'Br Firma Light';
-    src: local('Br Firma Light'), url('../fonts/BR-Firma/BR Firma Light.otf') format('opentype');
-    font-weight: normal;
-}
-
 @layer components {
     html,
     body {
