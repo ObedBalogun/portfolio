@@ -71,7 +71,10 @@ const ContactPage = () => {
             setEnlarge(linkId);
 
         }
-
+        // const makePhoneCall = () => {
+        //     window.location.href = "tel:+1-847-847-8474";
+        //     // window.open("tel:+1-847-847-8474");
+        // }
 
         return (
             <motion.div
@@ -92,8 +95,10 @@ const ContactPage = () => {
                         together.
                     </div>
                     <div className="col-span-6 right-side-text z-20">
-                        <div className="email-address relative" onMouseEnter={() => setIsActive(1)}
-                             onMouseLeave={() => setIsActive(0)} onClick={ ()=> window.open('mailto:obedbalogun@gmail.com')}>
+                        <div className="email-address relative cursor-pointer"
+                             onMouseEnter={() => setIsActive(1)}
+                             onMouseLeave={() => setIsActive(0)}
+                             onClick={()=> window.open('mailto:obedbalogun@gmail.com')}>
                             <h4>Email</h4>
                             <h3>obedbalogun@gmail.com</h3>
                             <motion.div
@@ -114,13 +119,12 @@ const ContactPage = () => {
                                     </span>
                             </motion.div>
                         </div>
-                        <div className='phone-number  md:mt-14 relative'
+                        <div className='phone-number md:mt-14 relative cursor-pointer'
                              onMouseEnter={() => setIsActive(2)}
-                             onMouseLeave={() => setIsActive(0)}
-                        >
-                            <div className="content">
+                             onMouseLeave={() => setIsActive(0)}>
+                            <div className="content" onClick={()=> window.location.href = "tel:+1-847-847-8474"}>
                                 <h4>Phone</h4>
-                                <a href="tel:+2347067417382"><h3>+234 706 741 7382</h3></a>
+                                <h3>+234 706 741 7382</h3>
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === 2 ? "hover" : "hidden"}

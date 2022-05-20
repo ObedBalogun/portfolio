@@ -11,6 +11,7 @@ import {useEffect, useState} from "react";
 import {projects} from "./data/projects";
 import portrait from "./potrait.png"
 import WebFont from 'webfontloader';
+import Preloader from "./components/preloader";
 
 
 
@@ -49,8 +50,8 @@ function App() {
     }, [preLoadedPictures])
 
     return (
-        <div className="App bg-black">
-            {isLoading ? <p>ASS</p> : <BrowserRouter>
+        <div className="App bg-black cursor-default	">
+            {isLoading ? <Preloader/> : <BrowserRouter>
                 {showNav && <Navbar/>}
                 <AnimatePresence exitBeforeEnter>
                     <Routes>

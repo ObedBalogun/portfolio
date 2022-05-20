@@ -33,7 +33,8 @@ const Services = () => {
             <div className="services-content">
                 {/*############ 01 ############*/}
                 <hr className="relative solid border-black"/>
-                <div className="flex flex-row gap-x-28" onMouseEnter={() => handleHover(1)}
+                <div className="flex flex-row gap-x-28 cursor-pointer"
+                     onMouseEnter={() => handleHover(1)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative flex-none w-16">
                         <h1 className="py-16">01</h1>
@@ -60,7 +61,8 @@ const Services = () => {
                 </div>
                 <hr className="relative solid border-black"/>
                 {/*############ 02 ############*/}
-                <div className="flex flex-row gap-x-28" onMouseEnter={() => handleHover(2)}
+                <div className="flex flex-row gap-x-28 cursor-pointer"
+                     onMouseEnter={() => handleHover(2)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative flex-none w-16">
                         <h1 className="py-16">02</h1>
@@ -85,7 +87,8 @@ const Services = () => {
                 <hr className="relative solid border-black"/>
 
                 {/*############ 03 ############*/}
-                <div className="flex flex-row gap-x-28" onMouseEnter={() => handleHover(3)}
+                <div className="flex flex-row gap-x-28 cursor-pointer"
+                     onMouseEnter={() => handleHover(3)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative flex-none w-16">
                         <h1 className="py-16">03</h1>
@@ -108,7 +111,8 @@ const Services = () => {
                 <hr className="relative solid border-black"/>
 
                 {/*############ 04 ############*/}
-                <div className="flex flex-row gap-x-28" onMouseEnter={() => handleHover(4)}
+                <div className="flex flex-row gap-x-28 cursor-pointer"
+                     onMouseEnter={() => handleHover(4)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative flex-none w-16">
                         <h1 className="py-16">04</h1>
