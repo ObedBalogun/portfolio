@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from '../black-logo.png';
-import {Link, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {TopNav} from "../components/Navbar";
 import {motion} from 'framer-motion';
 

@@ -128,9 +128,9 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                     animate={isActive === project.id ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideDown}
-                                    className="flex technology-pills py-10">
+                                    className="flex technology-pills py-10 gap-2">
                                     {project.technology.map((technology, techIndex) => (
-                                        <button className="mr-2" key={techIndex}>
+                                        <button key={techIndex}>
                                             <span className="content">{technology}</span>
                                         </button>
                                     ))}
@@ -184,9 +184,9 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                     animate={isActive === project.id ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideDown}
-                                    className="flex technology-pills py-10">
+                                    className="flex technology-pills py-10 gap-2">
                                     {project.technology.map((technology, techIndex) => (
-                                        <button key={techIndex} className="mr-2">
+                                        <button key={techIndex}>
                                             <span>{technology}</span>
                                         </button>
                                     ))}

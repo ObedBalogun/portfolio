@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link, NavLink, useLocation} from "react-router-dom";
 import logo from "../black-logo.png";
 import logo2 from "../white-logo.png";
 
 const Navbar = () => {
-    const [active, setActive] = useState(true);
     const {pathname} = useLocation()
-    const handleActive = () => {
-        setActive(!active);
-    }
     return (
         <>
             <nav className="navbar fixed mx-auto inset-x-0 bottom-20 z-10">

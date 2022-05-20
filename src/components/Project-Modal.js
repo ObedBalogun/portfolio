@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
-import {projectDetails, projects} from "../data/projects";
+import {projectDetails} from "../data/projects";
 
 const Modal = ({cardNumber, handleModal}) => {
     const [showModal, setShowModal] = useState(true);
@@ -45,12 +45,6 @@ const Modal = ({cardNumber, handleModal}) => {
         setShowModal(false);
         handleModal(0);
     }
-    let preLoadedData = projectDetails.map((project) => {
-        const img = new Image()
-        img.src = require('../images' + project.image1)
-        return img
-
-    })
     useEffect(() => {
         if (cardNumber === 0) {
             setShowModal(false);
@@ -79,7 +73,7 @@ const Modal = ({cardNumber, handleModal}) => {
                                         <div className="left-text">
                                             <h2 className="mb-6">{project.name}</h2>
                                             <span
-                                                className="text-xl text-neutral-600 text-left">{project.description}</span>
+                                                className="text-xl font-medium text-neutral-600 text-left">{project.description}</span>
                                         </div>
                                     </div>
                                     <div className="flex-1">
@@ -172,3 +166,10 @@ const Modal = ({cardNumber, handleModal}) => {
 };
 
 export default Modal;
+
+// let preLoadedData = projectDetails.map((project) => {
+//     const img = new Image()
+//     img.src = require('../images' + project.image1)
+//     return img
+//
+// })
