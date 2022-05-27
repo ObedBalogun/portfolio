@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {TopNav} from "../components/Navbar";
 import {useLocation} from "react-router-dom";
 import {motion} from 'framer-motion';
 
 
-const ContactPage = () => {
+const ContactPage = ({navOpen}) => {
         const [isActive, setIsActive] = useState(0);
         const [enlarge, setEnlarge] = useState(0)
         let location = useLocation();
@@ -71,11 +71,9 @@ const ContactPage = () => {
             setEnlarge(linkId);
 
         }
-        // const makePhoneCall = () => {
-        //     window.location.href = "tel:+1-847-847-8474";
-        //     // window.open("tel:+1-847-847-8474");
-        // }
-
+        useEffect(() => {
+            navOpen('openNav')
+        }, [])
         return (
             <motion.div
                 className="relative h-screen w-screen overflow-hidden background contact-background bg-black"

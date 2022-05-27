@@ -121,7 +121,6 @@
     .nav-logo img {
         animation: rotate 8s infinite linear;
     }
-
     @keyframes rotate {
         from {
             transform: rotate(0deg);
@@ -129,6 +128,24 @@
 
         to {
             transform: rotate(359deg);
+        }
+    }
+    @keyframes rotateLeft {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(359deg);
+        }
+    }
+    @keyframes rotateRight {
+        from {
+            transform: rotate(359deg);
+        }
+
+        to {
+            transform: rotate(0deg);
         }
     }
     .logo {
@@ -161,7 +178,7 @@
         top: 4em;
         width: 889px;
         height: 100px;
-        font-size: 64px;
+        font-size: 4rem;
         font-weight: 600;
         color: black;
         line-height: 120%;
@@ -187,14 +204,14 @@
         justify-content: center;
         align-items: center;
         padding: 8px 16px;
-        width: 544px;
+        width: 34em;
         height: 3.5em;
         background: #FFFFFF;
         opacity: 0.9;
         box-shadow: 0 8px 24px 9px rgba(0, 0, 0, 0.13);
         backdrop-filter: blur(22px);
 
-        border-radius: 1.3em;
+        border-radius: 1.2em;
     }
 
 
@@ -205,7 +222,6 @@
         align-items: center;
         padding: 6px;
         flex-grow: 0;
-        margin: 0 12px
     }
 
     .navbar-nav:hover {
@@ -380,6 +396,94 @@
     .middle-image > img {
         height: 55em
     }
+
+
+    /*Responsiveness*/
+    @media (max-width: 1535px) {
+
+    }
+    @media (max-width: 639px) {
+        .navbar {
+            width: 18.5em;
+            height: 3em;
+            border-radius: 1rem;
+        }
+
+        .navbar-nav.active {
+            padding: .3em .5em;
+            border-radius: 0.7em;
+        }
+
+        .nav-item {
+            font-size: .9em;
+            margin: 0;
+        }
+
+        .main-header {
+            font-size: 2.2em;
+            width: 10em;
+        }
+
+        .main-sub-header {
+            font-size: .9em;
+            width: 17em;
+        }
+
+        .download-resume-button {
+            padding: 0.5em;
+            font-size: .9em;
+        }
+        .green {
+            position: absolute;
+            left: 44.65%;
+            right: 0;
+            top: 0;
+            bottom: 5.36%;
+            width: 15em;
+            background: #73E0A9;
+            filter: blur(120px);
+            animation: none;
+
+        }
+
+        .blue {
+            position: absolute;
+            left: 0;
+            right: 52.96%;
+            top: 19.59%;
+            bottom: 0;
+            width: 15em;
+            background: #5B68DF;
+            filter: blur(120px);
+            animation: none;
+        }
+
+        .green.animate {
+            animation: rotateLeft 8s infinite linear;
+            transform-origin: left;
+        }
+
+        .blue.animate {
+            animation: rotateRight 8s infinite linear;
+            transform-origin: right;
+        }
+        h1 {
+            font-size: 2.7rem;
+        }
+        .project-card {
+            width: 20em;
+            height: 30em;
+
+        }
+        .technology-pills > button {
+            font-size: 12px;
+            padding: 3px 8px;
+        }
+        .view-button > button {
+            font-size: 1em;
+        }
+
+    }
 }
 
 
@@ -392,40 +496,49 @@
     height: 100%;
     will-change: transform;
 }
+
 .pl__ball, .pl__ball-seg {
     position: absolute;
 }
+
 .pl__ball:nth-child(1) .pl__ball-seg {
     background: #f42f24;
     box-shadow: -0.6em -0.6em 1em inset;
     color: #c2130a;
 }
+
 .pl__ball:nth-child(2) {
     transform: rotate(90deg);
 }
+
 .pl__ball:nth-child(2) .pl__ball-seg {
     background: #255ff4;
     box-shadow: -0.6em 0.6em 1em inset;
     color: #0a3ec3;
 }
+
 .pl__ball:nth-child(3) {
     transform: rotate(180deg);
 }
+
 .pl__ball:nth-child(3) .pl__ball-seg {
     background: #0ad80a;
     box-shadow: 0.6em 0.6em 1em inset;
     color: #078f07;
 }
+
 .pl__ball:nth-child(4) {
     transform: rotate(270deg);
 }
+
 .pl__ball:nth-child(4) .pl__ball-seg {
     background: #f4af24;
     box-shadow: 0.6em -0.6em 1em inset;
     color: #c2850a;
 }
+
 .pl__ball-seg {
-    animation: rotateRight 4s ease-in-out infinite;
+    animation: rotateLoader 4s ease-in-out infinite;
     border-radius: 50%;
     top: calc(50% - 1.5em);
     left: calc(50% - 1.5em);
@@ -434,34 +547,44 @@
     height: 3em;
     z-index: 1;
 }
+
 .pl__ball-seg + .pl__ball-seg {
     opacity: 0.2;
     z-index: 0;
 }
+
 .pl__ball-seg:nth-child(2) {
     animation-delay: 0.0125s;
 }
+
 .pl__ball-seg:nth-child(3) {
     animation-delay: 0.025s;
 }
+
 .pl__ball-seg:nth-child(4) {
     animation-delay: 0.0375s;
 }
+
 .pl__ball-seg:nth-child(5) {
     animation-delay: 0.05s;
 }
+
 .pl__ball-seg:nth-child(6) {
     animation-delay: 0.0625s;
 }
+
 .pl__ball-seg:nth-child(7) {
     animation-delay: 0.075s;
 }
+
 .pl__ball-seg:nth-child(8) {
     animation-delay: 0.0875s;
 }
+
 .pl__ball-seg:nth-child(9) {
     animation-delay: 0.1s;
 }
+
 .pl__ball-seg:nth-child(10) {
     animation-delay: 0.1125s;
 }
@@ -472,8 +595,9 @@
         background: #17181c;
     }
 }
+
 /* Animation */
-@keyframes rotateRight {
+@keyframes rotateLoader {
     from {
         transform: rotate(0deg) translateY(-4.5em) rotate(0deg);
     }

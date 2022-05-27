@@ -107,11 +107,11 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
 
 
     return (
-        <>
-            <div className="flex flex-column justify-center px-8 mt-32 relative">
-                <div className="flex-1">
+        <div className="container">
+            <div className="md:flex justify-center md:px-8 mt-32 relative">
+                <div className="md:flex-1">
                     {leftSide.map((project) => (
-                        <div key={project.id} className="project-card text-white relative mb-5 lg:mb-0 md:p-4"
+                        <div key={project.id} className="project-card text-white relative mb-5 p-2 lg:mb-0 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
@@ -122,13 +122,13 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                             variants={zoom}
                                 />
                             </div>
-                            <div className="card-content px-8 overflow-hidden absolute top-0">
+                            <div className="card-content px-2 md:px-8 overflow-hidden absolute top-0">
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === project.id ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideDown}
-                                    className="flex technology-pills py-10 gap-2">
+                                    className="flex technology-pills py-8 md:py-10 mx-3 md:mx-0 gap-2">
                                     {project.technology.map((technology, techIndex) => (
                                         <button key={techIndex}>
                                             <span className="content">{technology}</span>
@@ -140,9 +140,9 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                     animate={isActive === project.id ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={toggleHide}
-                                    className="flex view-button justify-center pt-64 pb-32"
+                                    className="flex view-button justify-center mx-44 md:pt-64 md:pb-32"
                                     onClick={() => handleModal(project.id)}>
-                                    <button className="flex text-white items-center py-3 px-7"
+                                    <button className="flex text-white items-center py-3 md:px-7"
                                             onClick={() => handleModal(project.id)}>
                                         <span>View Project</span>
                                     </button>
@@ -152,7 +152,7 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                     animate={isActive === project.id ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideUp}
-                                    className="flex -mt-6">
+                                    className="flex -mt-6 hidden">
                                     <div className="project-details">
                                         <div className="title">{project.name}</div>
                                         <div className="content font-light text-2xl">
@@ -164,9 +164,9 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                         </div>
                     ))}
                 </div>
-                <div className="flex-1 mt-24 text-white relative">
+                <div className="md:flex-1 md:mt-24 text-white relative">
                     {rightSide.map((project) => (
-                        <div key={project.id} className="project-card text-white relative lg:p-4"
+                        <div key={project.id} className="project-card text-white relative mb-5"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>
                             <div
@@ -226,7 +226,7 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
             {showModal &&
                 <Modal cardNumber={cardNumber} handleModal={handleModal}/>
             }
-        </>
+        </div>
     );
 };
 

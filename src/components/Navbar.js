@@ -7,7 +7,7 @@ const Navbar = () => {
     const {pathname} = useLocation()
     return (
         <>
-            <nav className="navbar fixed mx-auto inset-x-0 bottom-20 z-10">
+            <nav className="navbar fixed mx-auto inset-x-0 bottom-20 z-10 justify-between">
                 <NavLink to='/' state={{from: pathname}}
                          className="navbar-nav">
                     <div>
@@ -41,10 +41,10 @@ const TopNav = () => {
     location = location.pathname;
     location = location === "/" || location === "/about"
     return (
-        <div className="top-nav flex justify-between items-center px-6 pt-12">
+        <div className="fixed top-nav gap-20 flex px-6 items-center md:px-6 pt-12 z-40 md:relative md:justify-between">
             <div className="nav-logo z-10">
                 <Link to="/">
-                    <img src={location ? logo : logo2} alt="" className="w-12 h-12"/>
+                    <img src={location ? logo : logo2} alt="" className="w-8 h-8 md:w-12 md:h-12"/>
                 </Link>
             </div>
             <div className="download-resume z-10">

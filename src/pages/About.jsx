@@ -4,8 +4,9 @@ import {TopNav} from "../components/Navbar";
 import {motion} from 'framer-motion';
 import Services from "../components/Services";
 import Experience from "../components/Experience";
+import {useEffect} from "react";
 
-const AboutPage = ({portrait}) => {
+const AboutPage = ({portrait,navOpen}) => {
     let location = useLocation();
     let prevLocation = location.state ? location.state.from : {pathname: '/about'}
     location = location.pathname;
@@ -33,7 +34,9 @@ const AboutPage = ({portrait}) => {
             transition
         }
     }
-
+    useEffect(() => {
+        navOpen('openNav')
+    }, [])
     return (
         <motion.div
             variants={variants}

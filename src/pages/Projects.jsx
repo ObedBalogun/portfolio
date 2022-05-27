@@ -3,6 +3,7 @@ import {TopNav} from "../components/Navbar";
 import {useLocation} from "react-router-dom";
 import {AnimatePresence, motion} from 'framer-motion';
 import Projects from "../components/Projects";
+import {useEffect} from "react";
 
 const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
     let location = useLocation()
@@ -30,6 +31,9 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
             // x: '-150vw'
         }
     }
+    useEffect(() => {
+        navOpen('openNav')
+    }, [])
 
     return (
         <AnimatePresence>
@@ -45,7 +49,7 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
                         <span className={`green ${location ? 'animate' : ''}`}/>
                         <span className={`blue ${location ? 'animate' : ''}`}/>
                     </div>
-                    <div className="page-title text-center text-white mt-10">
+                    <div className="page-title text-center text-white mt-32 md:mt-10">
                         <h1 className="relative">Projects</h1>
                     </div>
                     <div className="projects">

@@ -31,8 +31,13 @@ function App() {
         return img.src
     });
     const preLoadedPortrait = new Image().src=portrait;
-    const handleNavToggle = () => {
-        setShowNav(!showNav)
+    const handleNavToggle = (condition) => {
+        if(condition){
+            setShowNav(true)
+        }
+        else {
+            setShowNav(!showNav)
+        }
     };
     useEffect(() => {
         WebFont.load({
@@ -46,6 +51,7 @@ function App() {
         if (preLoadedPictures.length > 0) {
             setIsLoading(false)
         }
+        // setShowNav(true)
 
     }, [preLoadedPictures])
 
@@ -55,9 +61,9 @@ function App() {
                 {showNav && <Navbar/>}
                 <AnimatePresence exitBeforeEnter>
                     <Routes>
-                        <Route path='/' element={<Home/>}/>
-                        <Route path='/about' element={<AboutPage portrait={preLoadedPortrait}/>}/>
-                        <Route path='/contact' element={<ContactPage/>}/>
+                        <Route path='/' element={<Home navOpen={handleNavToggle}/>}/>
+                        <Route path='/about' element={<AboutPage portrait={preLoadedPortrait} navOpen={handleNavToggle}/>}/>
+                        <Route path='/contact' element={<ContactPage navOpen={handleNavToggle}/>}/>
                         <Route path='/projects' element={<ProjectsPage navOpen={handleNavToggle}
                                                                        preLoadedImages={preLoadedPictures}
                                                                        projects={preLoadProjects}/>}/>

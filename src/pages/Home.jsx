@@ -2,9 +2,10 @@ import React from 'react';
 import {useLocation} from "react-router-dom";
 import {TopNav} from "../components/Navbar";
 import {motion} from 'framer-motion';
+import {useEffect} from "react";
 
 
-const Home = () => {
+const Home = ({navOpen}) => {
     let location = useLocation();
     location = location.pathname;
     location = location === "/" || location === "/about";
@@ -22,6 +23,9 @@ const Home = () => {
             opacity: 0
         }
     }
+    useEffect(() => {
+        navOpen('openNav')
+    }, [])
 
     return (
         <motion.div
@@ -37,11 +41,11 @@ const Home = () => {
                 <span className={`blue ${location ? 'animate' : ''}`}/>
             </div>
             <div className="homepage-headers flex justify-center items-center">
-                <div className="main-header">
+                <div className="main-header mt-12 md:mt-0">
                     Hi, I’m Obed Balogun <br/>
                     a software developer.
                 </div>
-                <div className="main-sub-header">
+                <div className="main-sub-header mt-24 md:mt-0">
                     I build scalable and reliable web applications
                     from stable backend to frontend designs that work.
                 </div>
