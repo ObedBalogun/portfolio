@@ -349,13 +349,6 @@
         line-height: 120%;
     }
 
-    .project-details .title {
-        font-size: 2.7em;
-    }
-
-    .project-details .content {
-        font-size: 1.4em;
-    }
 
     .top-image > img, .final-image > img {
         height: 600px
@@ -402,8 +395,7 @@
         }
 
         .download-resume-button {
-            padding: 0.5em;
-            font-size: .9em;
+            /*font-size: .9em;*/
         }
 
         .green {
@@ -414,7 +406,7 @@
             bottom: 5.36%;
             width: 15em;
             background: #73E0A9;
-            filter: blur(120px);
+            filter: blur(90px);
             animation: none;
 
         }
@@ -427,7 +419,7 @@
             bottom: 0;
             width: 15em;
             background: #5B68DF;
-            filter: blur(120px);
+            filter: blur(90px);
             animation: none;
         }
 
@@ -467,6 +459,9 @@
             height: 30em;
 
         }
+        /*.project-details > title {*/
+        /*    font-size: 1.7em;*/
+        /*}*/
     }
 }
 

@@ -50,8 +50,8 @@ export const projects = [
     },
     {
         "id": 5,
-        "name": "Selormbeauty",
-        "description": "E-commerce website for amazing skincare products.",
+        "name": "Selormbeauty ",
+        "description": "E-commerce website for amazing skincare products.\n",
         "imageURL": "/selorm-cover.png",
         "technology": [
             "Django",
