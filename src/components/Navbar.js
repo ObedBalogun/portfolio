@@ -7,7 +7,7 @@ const Navbar = () => {
     const {pathname} = useLocation()
     return (
         <>
-            <nav className="navbar fixed mx-auto inset-x-0 bottom-14 md:bottom-20 z-10 justify-between">
+            <nav className="navbar flex flex-row bg-white/[0.75] w-72 md:w-2/6 px-2 py-4 md:py-2 items-center fixed mx-auto inset-x-0 bottom-14 md:bottom-20 z-10 justify-between">
                 <NavLink to='/' state={{from: pathname}}
                          className="navbar-nav">
                     <div>

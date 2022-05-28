@@ -172,19 +172,8 @@
     }
 
     .navbar {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 16px;
-        width: 34em;
-        height: 3.5em;
-        background: #FFFFFF;
-        opacity: 0.9;
         box-shadow: 0 8px 24px 9px rgba(0, 0, 0, 0.13);
         backdrop-filter: blur(22px);
-
         border-radius: 1.2em;
     }
 
@@ -369,8 +358,6 @@
     }
     @media screen and (max-width: 639px) {
         .navbar {
-            width: 18.5em;
-            height: 3em;
             border-radius: 1rem;
         }
 
