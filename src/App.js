@@ -56,7 +56,7 @@ function App() {
     }, [preLoadedPictures])
 
     return (
-        <div className="App bg-black cursor-default	">
+        <div className="App bg-black cursor-default">
             {isLoading ? <Preloader/> : <BrowserRouter>
                 {showNav && <Navbar/>}
                 <AnimatePresence exitBeforeEnter>

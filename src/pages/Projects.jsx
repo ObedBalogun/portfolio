@@ -43,13 +43,13 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
                 animate="visible"
                 exit="exit">
                 <div
-                    className="project-container relative h-screen w-screen overflow-y-auto project-background bg-black">
+                    className="project-container h-screen w-screen overflow-x-hidden overflow-y-auto project-background bg-black">
                     <TopNav/>
                     <div className="colored-background">
                         <span className={`green ${location ? 'animate' : ''}`}/>
                         <span className={`blue ${location ? 'animate' : ''}`}/>
                     </div>
-                    <div className="page-title text-center text-white mt-32 md:mt-10">
+                    <div className="page-title text-center text-white mt-10">
                         <h1 className="relative">Projects</h1>
                     </div>
                     <div className="projects">

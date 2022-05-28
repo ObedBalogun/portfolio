@@ -121,33 +121,7 @@
     .nav-logo img {
         animation: rotate 8s infinite linear;
     }
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
 
-        to {
-            transform: rotate(359deg);
-        }
-    }
-    @keyframes rotateLeft {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(359deg);
-        }
-    }
-    @keyframes rotateRight {
-        from {
-            transform: rotate(359deg);
-        }
-
-        to {
-            transform: rotate(0deg);
-        }
-    }
     .logo {
         width: 12em;
         height: 3em;
@@ -214,7 +188,6 @@
         border-radius: 1.2em;
     }
 
-
     .navbar-nav {
         display: flex;
         flex-direction: row;
@@ -259,7 +232,6 @@
         cursor: pointer;
 
     }
-
 
     .project-background .download-resume-button, .contact-background .download-resume-button {
         background: white;
@@ -402,7 +374,7 @@
     @media (max-width: 1535px) {
 
     }
-    @media (max-width: 639px) {
+    @media screen and (max-width: 639px) {
         .navbar {
             width: 18.5em;
             height: 3em;
@@ -433,6 +405,7 @@
             padding: 0.5em;
             font-size: .9em;
         }
+
         .green {
             position: absolute;
             left: 44.65%;
@@ -467,22 +440,33 @@
             animation: rotateRight 8s infinite linear;
             transform-origin: right;
         }
+
         h1 {
             font-size: 2.7rem;
         }
+
         .project-card {
-            width: 20em;
+            width: 25em;
             height: 30em;
 
         }
+
         .technology-pills > button {
             font-size: 12px;
             padding: 3px 8px;
         }
+
         .view-button > button {
             font-size: 1em;
         }
 
+    }
+    @media (max-width: 400px) {
+        .project-card {
+            width: 19em;
+            height: 30em;
+
+        }
     }
 }
 
@@ -589,6 +573,7 @@
     animation-delay: 0.1125s;
 }
 
+/*End Preloader*/
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
@@ -648,5 +633,35 @@
     }
     95%, to {
         transform: rotate(360deg) translateY(-4.5em) rotate(-360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotateLeft {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotateRight {
+    from {
+        transform: rotate(359deg);
+    }
+
+    to {
+        transform: rotate(0deg);
     }
 }

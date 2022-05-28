@@ -6,6 +6,7 @@ import Modal from "./Project-Modal";
 const Projects = ({navOpen,preLoadedImages,projects}) => {
     const [cardNumber, setCardNumber] = useState(0);
     const [showModal, setShowModal] = useState(false);
+    const [width, setWidth] = useState(window.innerWidth);
     const rightSide = projects.filter(project => project.position === 'right');
     const leftSide = projects.filter(project => project.position === 'left');
     const [isActive, setIsActive] = useState(0);
@@ -104,14 +105,18 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
     useEffect(() => {
         handleOverflow(cardNumber)
     }, [cardNumber]);
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [])
+
 
 
     return (
-        <div className="container">
-            <div className="md:flex justify-center md:px-8 mt-32 relative">
+        <>
+            <div className="flex flex-col md:flex-row justify-center px-2 md:px-8 mt-32">
                 <div className="md:flex-1">
                     {leftSide.map((project) => (
-                        <div key={project.id} className="project-card text-white relative mb-5 p-2 lg:mb-0 md:p-4"
+                        <div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
@@ -122,69 +127,13 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                             variants={zoom}
                                 />
                             </div>
-                            <div className="card-content px-2 md:px-8 overflow-hidden absolute top-0">
+                            <div className="flex-row grid h-full card-content px-8 overflow-hidden absolute top-0">
                                 <motion.div
                                     initial={"hidden"}
-                                    animate={isActive === project.id ? "hover" : "hidden"}
+                                    animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideDown}
-                                    className="flex technology-pills py-8 md:py-10 mx-3 md:mx-0 gap-2">
-                                    {project.technology.map((technology, techIndex) => (
-                                        <button key={techIndex}>
-                                            <span className="content">{technology}</span>
-                                        </button>
-                                    ))}
-                                </motion.div>
-                                <motion.div
-                                    initial={"hidden"}
-                                    animate={isActive === project.id ? "hover" : "hidden"}
-                                    exit={"hidden"}
-                                    variants={toggleHide}
-                                    className="flex view-button justify-center mx-44 md:pt-64 md:pb-32"
-                                    onClick={() => handleModal(project.id)}>
-                                    <button className="flex text-white items-center py-3 md:px-7"
-                                            onClick={() => handleModal(project.id)}>
-                                        <span>View Project</span>
-                                    </button>
-                                </motion.div>
-                                <motion.div
-                                    initial={"hidden"}
-                                    animate={isActive === project.id ? "hover" : "hidden"}
-                                    exit={"hidden"}
-                                    variants={slideUp}
-                                    className="flex -mt-6 hidden">
-                                    <div className="project-details">
-                                        <div className="title">{project.name}</div>
-                                        <div className="content font-light text-2xl">
-                                            {project.description}
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="md:flex-1 md:mt-24 text-white relative">
-                    {rightSide.map((project) => (
-                        <div key={project.id} className="project-card text-white relative mb-5"
-                             onMouseEnter={() => handleHover(project.id)}
-                             onMouseLeave={() => setIsActive(0)}>
-                            <div
-                                className="card-background rounded-3xl bg-black overflow-hidden h-full w-full object-cover">
-                                <motion.img src={preLoadedImages[project.id-1]} alt=""
-                                            className="h-full w-full object-cover"
-                                            initial={false}
-                                            animate={isActive === project.id ? "hover" : "hidden"}
-                                            variants={zoom}
-                                />
-                            </div>
-                            <div className="card-content px-8 overflow-hidden absolute top-0">
-                                <motion.div
-                                    initial={"hidden"}
-                                    animate={isActive === project.id ? "hover" : "hidden"}
-                                    exit={"hidden"}
-                                    variants={slideDown}
-                                    className="flex technology-pills py-10 gap-2">
+                                    className="space-x-1 technology-pills py-8 md:py-10 w-full">
                                     {project.technology.map((technology, techIndex) => (
                                         <button key={techIndex}>
                                             <span>{technology}</span>
@@ -193,19 +142,75 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                 </motion.div>
                                 <motion.div
                                     initial={"hidden"}
-                                    animate={isActive === project.id ? "hover" : "hidden"}
+                                    animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={toggleHide}
-                                    className="flex view-button justify-center pt-64 pb-32"
+                                    className="view-button place-self-center"
                                     onClick={() => handleModal(project.id)}>
-                                    <button className="flex text-white items-center py-3 px-7"
+                                    <button className="text-white items-center py-3 md:px-7"
                                             onClick={() => handleModal(project.id)}>
                                         <span>View Project</span>
                                     </button>
                                 </motion.div>
                                 <motion.div
                                     initial={"hidden"}
-                                    animate={isActive === project.id ? "hover" : "hidden"}
+                                    animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
+                                    exit={"hidden"}
+                                    variants={slideUp}
+                                    className=" ">
+                                    <div className="project-details">
+                                        <div className="title">{project.name}</div>
+                                        <div className="content font-light text-2xl">
+                                            {project.description}
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </div>
+
+                        </div>
+                    ))}
+                </div>
+                <div className="md:flex-1 md:mt-24">
+                    {rightSide.map((project) => (
+                        <div key={project.id} className="project-card mx-auto text-white relative mb-5 flex md:p-4"
+                             onMouseEnter={() => handleHover(project.id)}
+                             onMouseLeave={() => setIsActive(0)}>
+                            <div className="card-background rounded-3xl bg-black overflow-hidden h-full w-full object-cover">
+                                <motion.img src={preLoadedImages[project.id-1]} alt=""
+                                            className="h-full w-full object-cover"
+                                            initial={false}
+                                            animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
+                                            variants={zoom}
+                                />
+                            </div>
+                            <div className="flex-row grid h-full card-content px-8 overflow-hidden absolute top-0">
+                                <motion.div
+                                    initial={"hidden"}
+                                    animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
+                                    exit={"hidden"}
+                                    variants={slideDown}
+                                    className="space-x-1 technology-pills py-8 md:py-10 w-full">
+                                    {project.technology.map((technology, techIndex) => (
+                                        <button key={techIndex} className="">
+                                            <span>{technology}</span>
+                                        </button>
+                                    ))}
+                                </motion.div>
+                                <motion.div
+                                    initial={"hidden"}
+                                    animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
+                                    exit={"hidden"}
+                                    variants={toggleHide}
+                                    className="view-button  pt-64 pb-32"
+                                    onClick={() => handleModal(project.id)}>
+                                    <button className="text-white items-center py-3 px-7"
+                                            onClick={() => handleModal(project.id)}>
+                                        <span>View Project</span>
+                                    </button>
+                                </motion.div>
+                                <motion.div
+                                    initial={"hidden"}
+                                    animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideUp}
                                     className="flex">
@@ -226,7 +231,7 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
             {showModal &&
                 <Modal cardNumber={cardNumber} handleModal={handleModal}/>
             }
-        </div>
+        </>
     );
 };
 

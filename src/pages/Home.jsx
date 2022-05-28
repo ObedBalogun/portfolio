@@ -40,7 +40,7 @@ const Home = ({navOpen}) => {
                 <span className={`green ${location ? 'animate' : ''}`}/>
                 <span className={`blue ${location ? 'animate' : ''}`}/>
             </div>
-            <div className="homepage-headers flex justify-center items-center">
+            <div className="homepage-headers flex justify-center items-center w-screen h-screen">
                 <div className="main-header mt-12 md:mt-0">
                     Hi, I’m Obed Balogun <br/>
                     a software developer.

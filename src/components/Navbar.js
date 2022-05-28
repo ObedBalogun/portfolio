@@ -41,7 +41,7 @@ const TopNav = () => {
     location = location.pathname;
     location = location === "/" || location === "/about"
     return (
-        <div className="fixed top-nav gap-20 flex px-6 items-center md:px-6 pt-12 z-40 md:relative md:justify-between">
+        <div className="top-nav flex px-6 items-center md:px-6 pt-12 z-40 relative justify-between">
             <div className="nav-logo z-10">
                 <Link to="/">
                     <img src={location ? logo : logo2} alt="" className="w-8 h-8 md:w-12 md:h-12"/>
