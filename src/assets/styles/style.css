@@ -25,8 +25,7 @@
 @layer components {
     html,
     body {
-        overflow-x: hidden;
-        scroll-behavior: smooth;
+        overflow: hidden;
         font-family: 'Br Firma Regular', sans-serif;
     }
 
@@ -148,26 +147,14 @@
     }
 
     .main-header {
-        position: absolute;
-        top: 4em;
-        width: 889px;
-        height: 100px;
-        font-size: 4rem;
         font-weight: 600;
         color: black;
         line-height: 120%;
-        text-align: center;
     }
 
     .main-sub-header {
-        position: absolute;
-        top: 19em;
         width: 24em;
-        height: 62px;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 140%;
-        text-align: center;
+
 
     }
 
@@ -339,10 +326,6 @@
     }
 
 
-    .top-image > img, .final-image > img {
-        height: 600px
-    }
-
     .content {
         font-family: "Br Firma Light";
     }
@@ -354,11 +337,14 @@
 
     /*Responsiveness*/
     @media (max-width: 1535px) {
-
+        .top-image > img, .final-image > img {
+            height: 600px
+        }
     }
     @media screen and (max-width: 639px) {
         .navbar {
-            border-radius: 1rem;
+            width: 20rem;
+            border-radius: 1.5rem;
         }
 
         .navbar-nav.active {
@@ -367,13 +353,8 @@
         }
 
         .nav-item {
-            font-size: .9em;
+            font-size: .85em;
             margin: 0;
-        }
-
-        .main-header {
-            font-size: 2.2em;
-            width: 10em;
         }
 
         .main-sub-header {
@@ -440,15 +421,54 @@
         }
 
     }
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         .project-card {
-            width: 19em;
+            width: 25em;
             height: 30em;
 
         }
-        /*.project-details > title {*/
-        /*    font-size: 1.7em;*/
-        /*}*/
+        .navbar{
+            width: 24rem;
+        }
+
+        .navbar-nav.active {
+            border-radius: 1.5rem;
+        }
+        .top-image img, .middle-image img {
+            width: 400px;
+            height: 300px;
+        }
+        .final-content{
+            margin-top: 5em;
+        }
+    }
+    @media (max-width: 380px) {
+        .project-card {
+            width: 21em;
+            height: 30em;
+
+        }
+        .navbar{
+            width: 21rem;
+        }
+        .navbar-nav.active {
+            border-radius: 1.5rem;
+        }
+        .top-image img, .middle-image img {
+            width: 328px;
+            height: 206px;
+        }
+
+    }
+    @media (max-width:320px) {
+        .project-card {
+            width: 18em;
+            height: 30em;
+
+        }
+        .navbar{
+            width: 19rem;
+        }
     }
 }
 

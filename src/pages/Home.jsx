@@ -36,16 +36,16 @@ const Home = ({navOpen}) => {
             className="relative h-screen w-screen
             overflow-hidden bg-white">
             <TopNav/>
-            <div className="background">
+            <div className="background overflow-hidden">
                 <span className={`green ${location ? 'animate' : ''}`}/>
                 <span className={`blue ${location ? 'animate' : ''}`}/>
             </div>
-            <div className="homepage-headers flex justify-center items-center w-screen h-screen overflow-hidden">
-                <div className="main-header mt-12 md:mt-0">
+            <div className="homepage-headers relative flex-col text-center mx-auto h-screen w-screen">
+                <div className="main-header text-4xl md:text-6xl mt-32 md:mt-40 w-72 md:w-11/12 mx-auto ">
                     Hi, I’m Obed Balogun <br/>
                     a software developer.
                 </div>
-                <div className="main-sub-header mt-24 md:mt-0">
+                <div className="main-sub-header md:text-2xl mx-auto my-4">
                     I build scalable and reliable web applications
                     from stable backend to frontend designs that work.
                 </div>

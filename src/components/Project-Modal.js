@@ -66,57 +66,79 @@ const Modal = ({cardNumber, handleModal}) => {
                         variants={slideUp}
                         className="modal-background bg-black/[.6] z-50 h-screen w-screen overflow-hidden fixed mx-auto bottom-0"
                         onClick={handleClose}>
-                        <div className="project-modal rounded-2xl bg-white mx-8 mt-10 p-10 h-screen overflow-y-auto">
-                            <div className="project-content m-6">
-                                <div className="top-content flex flex-column gap-4">
-                                    <div className="flex-1">
+                        <div
+                            className="project-modal rounded-2xl bg-white mx-2 md:mx-8 mt-10 md:p-10 h-screen overflow-y-auto">
+                            <div className="project-content m-4 md:m-6 ">
+                                <div className="top-content flex-row md:flex md:flex-column gap-4">
+                                    <div className="md:flex-1">
                                         <div className="left-text">
-                                            <h2 className="mb-6">{project.name}</h2>
                                             <span
-                                                className="text-xl font-medium text-neutral-600 text-left">{project.description}</span>
+                                                className="mb-6 text-4xl md:text-5xl font-semibold">{project.name}</span>
+                                            <span
+                                                className="text-xl hidden md:block md:mt-9 font-medium text-neutral-600 text-left">{project.description}</span>
                                         </div>
                                     </div>
-                                    <div className="flex-1">
-                                        <div className="left-right mt-20">
+                                    <div className="md:flex-1">
+                                        <div className="mt-4 md:mt-20">
                                             <div className="role">
-                                                <span className="mb-10 text-neutral-600	font-normal">Role</span>
+                                                <span
+                                                    className="text-sm md:text-lg mb-10 text-neutral-600	font-normal">Role</span>
                                                 <br/>
-                                                <span className="font-normal text-xl">{project.role}</span>
+                                                <span className="text-base font-normal md:text-xl">{project.role}</span>
                                                 <hr className="relative solid border-slate-300 my-2"/>
                                             </div>
                                             <div className="stack">
-                                                <span className="mb-10 text-neutral-600	font-normal">Tools</span>
+                                                <span
+                                                    className="text-sm md:text-lg mb-10 text-neutral-600	font-normal">Tools</span>
                                                 <br/>
                                                 <span
-                                                    className="font-normal text-xl">{project.tools}</span>
+                                                    className="font-normal text-base md:text-xl">{project.tools}</span>
                                                 <hr className="relative solid border-slate-300 my-2"/>
                                             </div>
                                             <div className="year">
-                                                <span className="mb-10 text-neutral-600	font-normal">Year</span>
+                                                <span
+                                                    className="mb-10 text-neutral-600	font-normal text-sm md:text-lg">Year</span>
                                                 <br/>
-                                                <span className="font-normal text-xl">{project.year}</span>
+                                                <span
+                                                    className="font-normal text-base text-sm md:text-lg">{project.year}</span>
                                                 <hr className="relative solid border-slate-300 my-2"/>
                                             </div>
-
                                         </div>
+                                        <div
+                                            className="mt-10 text-base md:hidden font-medium text-neutral-600">{project.description}</div>
                                     </div>
                                 </div>
-                                <div className="other-content mt-20">
-                                    <div className="flex flex-col">
-                                        <div className="top-image w-full">
-                                            <img src={require('../images' + project.image1)} alt=""
-                                                 className="w-full object-cover rounded-3xl"/>
+                                <div className="other-content flex flex-col mt-10 md:mt-20">
+                                    <div className="top-image w-full">
+                                        <img src={require('../images' + project.image1)} alt=""
+                                             className="w-full object-cover rounded-3xl"/>
+                                    </div>
+                                    <div className="mt-10 md:mt-20 md:w-1/2 md:text-xl text-neutral-600">
+                                        {project.details1}
+                                    </div>
+                                    <div className="md:flex middle-image mt-10">
+                                        <img src={require('../images' + project.image2)} alt=""
+                                             className="w-1/2 object-cover rounded-3xl"/>
+                                        <div
+                                            className="mt-5 md:my-auto md:p-6 md:w-1/2 md:ml-10 md:text-xl text-neutral-600">
+                                            {project.details2}
                                         </div>
-                                        <div className="mt-20 w-1/2 text-xl text-neutral-600">
-                                            {project.details1}
+                                    </div>
+                                    <div className="final-content relative h-screen md:h-full">
+                                        <div className="absolute md:relative flex flex-col mt-72 md:flex-row md:mt-20 md:text-xl text-neutral-600 gap-4">
+                                            <div className="flex-1 ">
+                                                {project.details3}
+                                            </div>
+                                            <div className="flex-1">
+                                                {project.details4}
+                                            </div>
                                         </div>
-                                        <div className="flex middle-image mt-10">
-                                            <img src={require('../images' + project.image2)} alt=""
-                                                 className="w-1/2 object-cover rounded-3xl"/>
-                                            <span className="my-auto p-6 w-1/2 ml-10 text-xl text-neutral-600">
-                                                {project.details2}
-                                            </span>
+                                        <div className="absolute md:relative -top-44 md:top-0 final-image md:mt-10">
+                                            <img src={require('../images' + project.image3)} alt=""
+                                                 className="w-full object-contain rounded-3xl"/>
                                         </div>
+                                    </div>
+                                    <div className="final-content-mobile hidden">
                                         <div className="flex mt-20 text-xl text-neutral-600 gap-4">
                                             <div className="flex-1 ">
                                                 {project.details3}
@@ -134,7 +156,7 @@ const Modal = ({cardNumber, handleModal}) => {
                             </div>
                             <div className="close-button fixed bottom-14 inset-x-0" onClick={handleClose}>
                                 <button
-                                    className="flex bg-white/[.8] mx-auto w-24 text-black-100 font-normal py-4 px-4 rounded-xl shadow-lg">
+                                    className="flex bg-white/[.8] mx-auto w-24 text-black-100 font-normal py-4 px-4 rounded-full md:rounded-xl shadow-lg">
                             <span className={"flex items-center"}>
                                 <span className={"pr-2"}>Close</span>
                                 <span>
@@ -166,10 +188,3 @@ const Modal = ({cardNumber, handleModal}) => {
 };
 
 export default Modal;
-
-// let preLoadedData = projectDetails.map((project) => {
-//     const img = new Image()
-//     img.src = require('../images' + project.image1)
-//     return img
-//
-// })

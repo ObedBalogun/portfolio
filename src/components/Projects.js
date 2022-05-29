@@ -128,13 +128,13 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                             variants={zoom}
                                 />
                             </div>
-                            <div className="flex-row grid h-full card-content px-6 overflow-hidden absolute top-0">
+                            <div className="flex-row grid h-full card-content px-4 md:px-6 overflow-hidden absolute top-0">
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideDown}
-                                    className="space-x-1 technology-pills py-8 md:py-10 w-full">
+                                    className="space-x-1 technology-pills py-4 md:py-8 md:py-10 w-full">
                                     {project.technology.map((technology, techIndex) => (
                                         <button key={techIndex} className={'mb-1'}>
                                             <span>{technology}</span>
@@ -174,7 +174,8 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                     {rightSide.map((project) => (
                         <div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
-                             onMouseLeave={() => setIsActive(0)}>
+                             onMouseLeave={() => setIsActive(0)}
+                             onClick={() => handleModal(project.id)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full object-cover">
                                 <motion.img src={preLoadedImages[project.id-1]} alt=""
                                             className="h-full w-full object-cover"
@@ -183,7 +184,7 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                             variants={zoom}
                                 />
                             </div>
-                            <div className="flex-row grid h-full card-content px-6 overflow-hidden absolute top-0">
+                            <div className="flex-row grid h-full card-content px-4 md:px-6 overflow-hidden absolute top-0">
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}

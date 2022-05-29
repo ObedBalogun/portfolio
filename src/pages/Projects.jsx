@@ -49,7 +49,7 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
                         <span className={`green ${location ? 'animate' : ''}`}/>
                         <span className={`blue ${location ? 'animate' : ''}`}/>
                     </div>
-                    <div className="page-title text-center text-white mt-10">
+                    <div className="page-title text-center text-white mt-20 md:mt-10">
                         <h1 className="relative">Projects</h1>
                     </div>
                     <div className="projects">

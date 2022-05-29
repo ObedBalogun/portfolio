@@ -7,29 +7,30 @@ const Navbar = () => {
     const {pathname} = useLocation()
     return (
         <>
-            <nav className="navbar flex flex-row bg-white/[0.75] w-72 md:w-2/6 px-2 py-4 md:py-2 items-center fixed mx-auto inset-x-0 bottom-14 md:bottom-20 z-10 justify-between">
+            <nav className="navbar flex flex-row bg-white/[0.75] md:w-2/6 px-4 py-4 md:py-2 items-center fixed
+            mx-auto inset-x-0 bottom-14 md:bottom-20 z-10 justify-between">
                 <NavLink to='/' state={{from: pathname}}
                          className="navbar-nav">
                     <div>
-                        <span className="nav-item">Home</span>
+                        <span className="nav-item px-1">Home</span>
                     </div>
                 </NavLink>
                 <NavLink to='/projects' state={{from: pathname}}
                          className="navbar-nav">
                     <div>
-                        <span className="nav-item">Projects</span>
+                        <span className="nav-item px-1">Projects</span>
                     </div>
                 </NavLink>
                 <NavLink to='/about' state={{from: pathname}}
                          className="navbar-nav">
                     <div>
-                        <span className="nav-item">About</span>
+                        <span className="nav-item px-1">About</span>
                     </div>
                 </NavLink>
                 <NavLink to="/contact" state={{from: pathname}}
                          className="navbar-nav">
                     <div>
-                        <span className="nav-item">Contact</span>
+                        <span className="nav-item px-1">Contact</span>
                     </div>
                 </NavLink>
             </nav>
@@ -48,7 +49,8 @@ const TopNav = () => {
                 </Link>
             </div>
             <div className="download-resume z-10">
-                <Link to='/CV/Obed%20Balogun%20Resume.pdf' target="_blank" download className='download-resume-button pl-2 text-sm md:text-base'>Download Resume</Link>
+                <Link to='/CV/Obed%20Balogun%20Resume.pdf' target="_blank" download
+                      className='download-resume-button pl-2 text-sm md:text-base'>Download Resume</Link>
             </div>
         </div>
 
