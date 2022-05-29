@@ -43,39 +43,39 @@ const AboutPage = ({portrait,navOpen}) => {
             initial="hidden"
             animate="visible"
             exit="exit">
-            <div className="relative overflow-hidden background bg-white">
+            <div className="about-container h-screen w-screen overflow-x-hidden overflow-y-auto background bg-white">
                 <TopNav/>
                 <div className="colored-background">
                     <span className={`green ${location ? 'animate' : ''}`}/>
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>
-                <div className="about-heading flex mt-32 px-6">
-                        <span className="text-5xl z-20 font-semibold w-9/12 leading-tight">
+                <div className="about-heading relative flex mt-16 md:mt-32 px-4 md:px-6">
+                        <span className="text-2xl md:text-5xl font-semibold md:w-9/12 leading-tight">
                         Hey! Obed Balogun here. <br/>
                         I’m a software developer based in Ibadan, Nigeria. Currently,
                         at Crop2Cash, an Agri-Tech that provides digital financial services for farmers
                     </span>
                 </div>
-                <div className="about-image flex px-8 justify-end mt-12">
-                    <img src={portrait} className="w-10/12 h-full z-20" alt="portrait"/>
+                <div className="about-image flex px-4 md:px-8 justify-end mt-12">
+                    <img src={portrait} className="md:w-10/12 h-full z-20" alt="portrait"/>
                 </div>
-                <div className="about-content flex flex-row gap-4 text-white px-10 mt-24">
+                <div className="about-content flex flex-col md:flex-row gap-4 text-white px-4 md:px-10 md:mt-24 mt-10">
                     <div
-                        className=" z-20 font-semibold text-black text-2xl leading-10 w-10/12">
+                        className=" z-20 font-semibold text-black md:text-2xl md:leading-10 md:w-10/12">
                         In addition to software engineering, I also have an interest in Machine Learning.
                         I enjoy the idea of analyzing and generating useful insights from data. I have developed an RNN
                         model for flood susceptibility prediction based on weather and land use data.
                     </div>
                     <div
-                        className="z-20 font-semibold text-black text-2xl leading-10 w-10/12">
-                        Skilled in Python, Django, JavaScript, NodeJS, ReactJS, TailwindCSS, Bootstrap, Postgresql,
+                        className="z-20 font-semibold text-black md:text-2xl md:leading-10 md:w-10/12">
+                        Skilled in Python, Django, JavaScript, NodeJS, ReactJS, TailwindCSS, Bootstrap,MongoDB, Postgresql,
                         MYSQL, GIT and AWS
                     </div>
                 </div>
                 <div className="services mt-20 px-6">
                     <Services/>
                 </div>
-                <div className="work-experience my-48 px-6">
+                <div className="work-experience my-14 md:my-48 px-6">
                     <Experience/>
                 </div>
             </div>
