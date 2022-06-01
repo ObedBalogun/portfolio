@@ -13,19 +13,16 @@ const Modal = ({cardNumber, handleModal}) => {
             transition: {
                 duration: .5,
                 type: "tween",
-                stiffness: 100,
-                // ease: 'easeInOut'
+                ease: 'easeInOut'
             }
         },
         active: {
             opacity: 1,
-            height: '100vh',
             y: 0,
             transition: {
                 duration: .3,
                 type: "tween",
-                stiffness: 100,
-                // ease: 'easeInOut'
+                ease: 'easeInOut'
             }
         },
         exit: {

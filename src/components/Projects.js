@@ -204,8 +204,7 @@ const Projects = ({navOpen,preLoadedImages,projects}) => {
                                     variants={toggleHide}
                                     className="view-button hidden md:block place-self-center"
                                     onClick={() => handleModal(project.id)}>
-                                    <button className="text-white items-center py-3 px-7"
-                                            onClick={() => handleModal(project.id)}>
+                                    <button className="text-white items-center py-3 px-7">
                                         <span>View Project</span>
                                     </button>
                                 </motion.div>
