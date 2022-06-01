@@ -3,13 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './assets/styles/style.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import  './fonts/BR-Firma-Firma/BRFirma-Black.otf'
-// import  './fonts/BR-Firma-Firma/BRFirma-Bold.otf'
-// import  './fonts/BR-Firma-Firma/BR-Firma Firma Light.otf'
-// import  './fonts/BR-Firma-Firma/BR-Firma Firma Medium.otf'
-// import  './fonts/BR-Firma-Firma/BR-Firma Firma SemiBold.otf'
-// import  './fonts/BR-Firma-Firma/BR-Firma Firma Thin.otf'
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

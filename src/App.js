@@ -10,16 +10,9 @@ import {AnimatePresence} from "framer-motion";
 import {useEffect, useState} from "react";
 import {projects} from "./data/projects";
 import portrait from "./potrait.png"
-import WebFont from 'webfontloader';
 import Preloader from "./components/preloader";
 
 
-
-WebFont.load({
-    custom: {
-        families: ['Regular.woff'],
-    },
-});
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -39,13 +32,6 @@ function App() {
             setShowNav(!showNav)
         }
     };
-    useEffect(() => {
-        WebFont.load({
-            google: {
-                families: ['Regular','BR Firma'],
-            }
-        });
-    }, []);
     useEffect(() => {
         setPreLoadProjects(projects);
         if (preLoadedPictures.length > 0) {

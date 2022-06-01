@@ -36,7 +36,7 @@ const Home = ({navOpen}) => {
             className="relative h-screen w-screen
             overflow-hidden bg-white">
             <TopNav/>
-            <div className="background overflow-hidden">
+            <div className="background overflow-hidden pointer-events-none">
                 <span className={`green ${location ? 'animate' : ''}`}/>
                 <span className={`blue ${location ? 'animate' : ''}`}/>
             </div>

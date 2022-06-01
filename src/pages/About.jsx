@@ -45,7 +45,7 @@ const AboutPage = ({portrait,navOpen}) => {
             exit="exit">
             <div className="about-container h-screen w-screen overflow-x-hidden overflow-y-auto background bg-white">
                 <TopNav/>
-                <div className="colored-background">
+                <div className="colored-background pointer-events-none">
                     <span className={`green ${location ? 'animate' : ''}`}/>
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>

@@ -45,7 +45,7 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
                 <div
                     className="project-container h-screen w-screen overflow-x-hidden overflow-y-auto project-background bg-black">
                     <TopNav/>
-                    <div className="colored-background">
+                    <div className="colored-background pointer-events-none">
                         <span className={`green ${location ? 'animate' : ''}`}/>
                         <span className={`blue ${location ? 'animate' : ''}`}/>
                     </div>

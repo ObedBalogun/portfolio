@@ -154,7 +154,7 @@ const Modal = ({cardNumber, handleModal}) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="close-button fixed bottom-14 inset-x-0" onClick={handleClose}>
+                            <div className="close-button fixed bottom-20 md:bottom-14 inset-x-0" onClick={handleClose}>
                                 <button
                                     className="flex bg-white/[.8] mx-auto w-24 text-black-100 font-normal py-4 px-4 rounded-full md:rounded-xl shadow-lg">
                             <span className={"flex items-center"}>
