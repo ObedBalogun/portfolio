@@ -182,7 +182,7 @@
     }
 
     .navbar-nav.active {
-        padding: 6px;
+        padding: 6px 3px;
         background-color: black;
         border-radius: 1em;
 

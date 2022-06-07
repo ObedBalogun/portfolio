@@ -7,12 +7,12 @@ import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import ProjectsPage from "./pages/Projects";
 import {AnimatePresence} from "framer-motion";
-import {useEffect, useState} from "react";
+import {useEffect, useState, createContext, useContext} from "react";
 import {projects} from "./data/projects";
 import portrait from "./potrait.png"
 import Preloader from "./components/preloader";
 
-
+export const NavContext = createContext('navb');
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -42,22 +42,24 @@ function App() {
     }, [preLoadedPictures])
 
     return (
-        <div className="App bg-black cursor-default">
-            {isLoading ? <Preloader/> : <BrowserRouter>
-                {showNav && <Navbar/>}
-                <AnimatePresence exitBeforeEnter>
-                    <Routes>
-                        <Route path='/' element={<Home navOpen={handleNavToggle}/>}/>
-                        <Route path='/about' element={<AboutPage portrait={preLoadedPortrait} navOpen={handleNavToggle}/>}/>
-                        <Route path='/contact' element={<ContactPage navOpen={handleNavToggle}/>}/>
-                        <Route path='/projects' element={<ProjectsPage navOpen={handleNavToggle}
-                                                                       preLoadedImages={preLoadedPictures}
-                                                                       projects={preLoadProjects}/>}/>
-                    </Routes>
-                </AnimatePresence>
-            </BrowserRouter>
-            }
-        </div>
+        <NavContext.Provider value={handleNavToggle}>
+            <div className="App bg-black cursor-default">
+                {isLoading ? <Preloader/> : <BrowserRouter>
+                    {showNav && <Navbar/>}
+                    <AnimatePresence exitBeforeEnter>
+                        <Routes>
+                            <Route path='/' element={<Home navOpen={handleNavToggle}/>}/>
+                            <Route path='/about' element={<AboutPage portrait={preLoadedPortrait} navOpen={handleNavToggle}/>}/>
+                            <Route path='/contact' element={<ContactPage navOpen={handleNavToggle}/>}/>
+                            <Route path='/projects' element={<ProjectsPage navOpen={handleNavToggle}
+                                                                           preLoadedImages={preLoadedPictures}
+                                                                           projects={preLoadProjects}/>}/>
+                        </Routes>
+                    </AnimatePresence>
+                </BrowserRouter>
+                }
+            </div>
+        </NavContext.Provider>
     );
 }
 

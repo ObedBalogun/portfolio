@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {TopNav} from "../components/Navbar";
 import {useLocation} from "react-router-dom";
 import {AnimatePresence, motion} from 'framer-motion';
@@ -53,7 +53,7 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
                         <h1 className="relative">Projects</h1>
                     </div>
                     <div className="projects">
-                        <Projects navOpen={navOpen} preLoadedImages={preLoadedImages} projects={projects}/>
+                        <Projects preLoadedImages={preLoadedImages} projects={projects}/>
                     </div>
 
                 </div>

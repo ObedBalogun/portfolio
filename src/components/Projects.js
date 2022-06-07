@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {motion} from 'framer-motion';
 import Modal from "./Project-Modal";
+import {NavContext} from "../App";
 
-
-const Projects = ({navOpen,preLoadedImages,projects}) => {
+const Projects = ({preLoadedImages,projects}) => {
+    const navOpen = useContext(NavContext);
     const [cardNumber, setCardNumber] = useState(0);
     const [showModal, setShowModal] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
