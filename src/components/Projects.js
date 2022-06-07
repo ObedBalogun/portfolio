@@ -181,7 +181,7 @@ const Projects = ({preLoadedImages,projects}) => {
                                 <motion.img src={preLoadedImages[project.id-1]} alt=""
                                             className="h-full w-full object-cover"
                                             initial={false}
-                                            animate={isActive === project.id ? "hover" : "hidden"}
+                                            animate={isActive === project.id || width >= 768 ? "hover" : "hidden"}
                                             variants={zoom}
                                 />
                             </div>
