@@ -24,6 +24,7 @@ function App() {
         return img.src
     });
     const preLoadedPortrait = new Image().src=portrait;
+
     const handleNavToggle = (condition) => {
         if(condition){
             setShowNav(true)
