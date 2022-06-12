@@ -4,7 +4,7 @@ import c2c from "../images/c2c.png";
 import tempo from "../images/tempo.png";
 import goodchat from "../images/good-chat.png";
 import selorm from "../images/selorm.png";
-import {useEffect} from "@types/react";
+import {useEffect} from "react";
 
 const Experience = () => {
         const [isActive, setIsActive] = useState(0);
