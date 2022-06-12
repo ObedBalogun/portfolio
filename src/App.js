@@ -33,11 +33,18 @@ function App() {
             setShowNav(!showNav)
         }
     };
+    const counter = () => {
+        let counter = 0;
+        let c = 0;
+        const i = setInterval(function () {
+            counter++;
+        }, 10);
+    }
     useEffect(() => {
         setPreLoadProjects(projects);
         setInterval(() => {
             setIsLoading(false)
-        },1500);
+        },2000);
 
     }, [preLoadedPictures])
 
