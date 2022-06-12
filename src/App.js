@@ -35,9 +35,9 @@ function App() {
     };
     useEffect(() => {
         setPreLoadProjects(projects);
-        if (preLoadedPictures.length > 0) {
+        setInterval(() => {
             setIsLoading(false)
-        }
+        },1500);
 
     }, [preLoadedPictures])
 
