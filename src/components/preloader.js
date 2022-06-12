@@ -6,11 +6,13 @@ const Preloader = () => {
         let c = 0;
         const i = setInterval(function () {
             let counterDiv = document.getElementsByClassName("counter-number")
-            counterDiv[0].innerHTML = counter + "%";
             let counterBar = document.getElementsByClassName("divider")
-            counterBar[0].style.width = counter + "%";
-            counter++;
-            c++;
+            if (counterDiv.length > 0 && counterBar.length > 0) {
+                counterDiv[0].innerHTML = counter + "%";
+                counterBar[0].style.width = counter + "%";
+                counter++;
+                c++;
+            }
 
             if (counter === 101) {
                 clearInterval(i);
