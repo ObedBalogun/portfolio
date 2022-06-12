@@ -117,13 +117,13 @@ const Projects = ({preLoadedImages,projects}) => {
             <div className="flex flex-col md:flex-row justify-center px-2 md:px-8 mt-32">
                 <div className="md:flex-1">
                     {leftSide.map((project) => (
-                        <div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
+                        <motion.div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}
                              onClick={() => handleModal(project.id)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
                                 <motion.img src={require('../images' + project.imageURL)} alt=""
-                                            className={`w-full h-full object-cover`}
+                                            className={`w-full h-full object-cover ${width <= 768 ? 'opacity-60':'' }`}
                                             initial={false}
                                             animate={isActive === project.id && width >= 768 ? "hover" : "hidden"}
                                             variants={zoom}
@@ -168,7 +168,7 @@ const Projects = ({preLoadedImages,projects}) => {
                                     </div>
                                 </motion.div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
                 <div className="md:flex-1 md:mt-24 md:mb-0 mb-24">
@@ -179,7 +179,7 @@ const Projects = ({preLoadedImages,projects}) => {
                              onClick={() => handleModal(project.id)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full object-cover">
                                 <motion.img src={preLoadedImages[project.id-1]} alt=""
-                                            className="h-full w-full object-cover"
+                                            className={`h-full w-full object-cover ${width <= 768 ? 'opacity-60':''}`}
                                             initial={false}
                                             animate={isActive === project.id && width >= 768 ? "hover" : "hidden"}
                                             variants={zoom}
