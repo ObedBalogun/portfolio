@@ -7,6 +7,7 @@ import {motion} from 'framer-motion';
 const ContactPage = ({navOpen}) => {
         const [isActive, setIsActive] = useState(0);
         const [enlarge, setEnlarge] = useState(0)
+        const [width, setWidth] = useState(window.innerWidth);
         let location = useLocation();
         // let prevLocation = location.state.from
         location = location.pathname;
@@ -41,7 +42,7 @@ const ContactPage = ({navOpen}) => {
                 opacity: 0
             },
             hover: {
-                x: 250,
+                x: 275,
                 opacity: 1,
                 transition
             },
@@ -87,21 +88,21 @@ const ContactPage = ({navOpen}) => {
                     <span className={`green ${location ? 'animate' : ''}`}/>
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>
-                <div className="grid grid-flow-col gap-4 text-white px-8 mt-24">
-                    <div className="col-span-6 left-side-text z-20 w-11/12 font-semibold text-5xl leading-tight ">
+                <div className="flex flex-col md:flex-row md:space-x-24 text-white md:mt-28 md:mx-12 m-4 mt-16">
+                    <div className="md:flex-1 left-side-text z-20  font-semibold text-3xl md:text-5xl md:leading-tight ">
                         Have an idea or a concept that really excites you? What do you say? Let’s make magic
                         together.
                     </div>
-                    <div className="col-span-6 right-side-text z-20">
+                    <div className="md:flex-1 md:mt-0 mt-10 right-side-text font-bold z-20">
                         <div className="email-address relative cursor-pointer"
                              onMouseEnter={() => setIsActive(1)}
                              onMouseLeave={() => setIsActive(0)}
-                             onClick={()=> window.open('mailto:obedbalogun@gmail.com')}>
-                            <h4>Email</h4>
-                            <h3>obedbalogun@gmail.com</h3>
+                             onClick={() => window.open('mailto:obedbalogun@gmail.com')}>
+                            <div className='text-xl md:text-2xl mb-2'>Email</div>
+                            <div className='text-2xl md:text-4xl font-bold'>obedbalogun@gmail.com</div>
                             <motion.div
                                 initial={"hidden"}
-                                animate={isActive === 1 ? "hover" : "hidden"}
+                                animate={isActive === 1 && width >= 768 ? "hover" : "hidden"}
                                 exit={"hidden"}
                                 variants={slideOut}
                                 className="email-animation pointer-events-none">
@@ -117,15 +118,15 @@ const ContactPage = ({navOpen}) => {
                                     </span>
                             </motion.div>
                         </div>
-                        <div className='phone-number md:mt-14 relative cursor-pointer'
+                        <div className='phone-number md:mt-14 mt-5 relative cursor-pointer'
                              onMouseEnter={() => setIsActive(2)}
                              onMouseLeave={() => setIsActive(0)}>
-                            <div className="content" onClick={()=> window.location.href = "tel:+1-847-847-8474"}>
-                                <h4>Phone</h4>
-                                <h3>+234 706 741 7382</h3>
+                            <div className="content" onClick={() => window.location.href = "tel:+1-847-847-8474"}>
+                                <div className='text-xl md:text-2xl mb-2'>Phone</div>
+                                <div className='text-2xl md:text-4xl font-bold'>+234 706 741 7382</div>
                                 <motion.div
                                     initial={"hidden"}
-                                    animate={isActive === 2 ? "hover" : "hidden"}
+                                    animate={isActive === 2 && width >= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOutVariant}
                                     className="phone-animation pointer-events-none">
@@ -147,46 +148,36 @@ const ContactPage = ({navOpen}) => {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className="links flex md:mt-20">
-                            {/*<Link to="/">*/}
-                            {/*<motion.h4*/}
-                            {/*    initial={false}*/}
-                            {/*    animate={enlarge === 1 ? "hover" : " "}*/}
-                            {/*    variants={zoom}*/}
-                            {/*    className="underline underline-offset-8 mr-16"*/}
-                            {/*    onMouseEnter={() => handleZoom(1)}*/}
-                            {/*    onMouseLeave={() => handleZoom(0)}>Twitter*/}
-                            {/*</motion.h4>*/}
-                            {/*</Link>*/}
+                        <div className="links flex flex-col md:flex-row mt-10 md:mt-28 gap-2">
                             <a href="https://www.linkedin.com/in/obedbalogun/" target="_blank" rel="noreferrer">
-                                <motion.h4
+                                <motion.div
                                     initial={false}
                                     animate={enlarge === 2 ? "hover" : ""}
                                     variants={zoom}
-                                    className="underline underline-offset-8 mr-16"
+                                    className="underline underline-offset-8 mr-16 text-2xl md:text-3xl"
                                     onMouseEnter={() => handleZoom(2)}
                                     onMouseLeave={() => handleZoom(0)}>Linkedin
-                                </motion.h4>
+                                </motion.div>
                             </a>
                             <a href="https://www.instagram.com/brotherbalogun/" target="_blank" rel="noreferrer">
-                                <motion.h4
+                                <motion.div
                                     initial={false}
                                     animate={enlarge === 3 ? "hover" : " "}
                                     variants={zoom}
-                                    className="underline underline-offset-8 mr-16"
+                                    className="underline underline-offset-8 mr-16 text-2xl md:text-3xl"
                                     onMouseEnter={() => handleZoom(3)}
                                     onMouseLeave={() => handleZoom(0)}>Instagram
-                                </motion.h4>
+                                </motion.div>
                             </a>
                             <a href="https://github.com/obedbalogun" target="_blank" rel="noreferrer">
-                                <motion.h4
+                                <motion.div
                                     initial={false}
                                     animate={enlarge === 4 ? "hover" : " "}
                                     variants={zoom}
-                                    className="underline underline-offset-8"
+                                    className="underline underline-offset-8 text-2xl md:text-3xl"
                                     onMouseEnter={() => handleZoom(4)}
                                     onMouseLeave={() => handleZoom(0)}>Github
-                                </motion.h4>
+                                </motion.div>
                             </a>
                         </div>
                     </div>

@@ -4,9 +4,12 @@ import c2c from "../images/c2c.png";
 import tempo from "../images/tempo.png";
 import goodchat from "../images/good-chat.png";
 import selorm from "../images/selorm.png";
+import {useEffect} from "@types/react";
 
 const Experience = () => {
         const [isActive, setIsActive] = useState(0);
+        const [width, setWidth] = useState(window.innerWidth);
+
         const transition = {
             duration: 0.3,
             type: "tween",
@@ -28,6 +31,9 @@ const Experience = () => {
         const handleHover = (cardId) => {
             setIsActive(cardId);
         }
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [])
 
         return (
             <div className="experience-container">
@@ -41,19 +47,19 @@ const Experience = () => {
                          onMouseLeave={() => setIsActive(0)}>
                         <motion.img src={c2c} alt=""
                                     initial={"hidden"}
-                                    animate={isActive === 1 ? "hover" : "hidden"}
+                                    animate={isActive === 1 && width >= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
                                     className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>
                         <div className="relative md:flex-1 md:text-2xl font-semibold text-black">
                             AUGUST 2021 - PRESENT
                         </div>
-                           <div className="md:flex-1 relative md:text-2xl font-semibold text-black mt-5 md:mt-0">
-                                Crop2Cash
-                            </div>
-                            <div className="md:flex-1 relative md:text-2xl font-semibold text-black">
-                                Software Engineer
-                            </div>
+                        <div className="md:flex-1 relative md:text-2xl font-semibold text-black mt-5 md:mt-0">
+                            Crop2Cash
+                        </div>
+                        <div className="md:flex-1 relative md:text-2xl font-semibold text-black">
+                            Software Engineer
+                        </div>
 
                     </div>
                     <hr className="relative solid border-gray-500"/>
@@ -62,7 +68,7 @@ const Experience = () => {
                          onMouseLeave={() => setIsActive(0)}>
                         <motion.img src={goodchat} alt=""
                                     initial={"hidden"}
-                                    animate={isActive === 2 ? "hover" : "hidden"}
+                                    animate={isActive === 2 && width >= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
                                     className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>
@@ -82,7 +88,7 @@ const Experience = () => {
                          onMouseLeave={() => setIsActive(0)}>
                         <motion.img src={selorm} alt=""
                                     initial={"hidden"}
-                                    animate={isActive === 3 ? "hover" : "hidden"}
+                                    animate={isActive === 3 && width >= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideOut}
                                     className="absolute w-48 h-48 z-40 -top-12 pointer-events-none"/>

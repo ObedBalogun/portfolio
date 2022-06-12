@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {TopNav} from "../components/Navbar";
 import {useLocation} from "react-router-dom";
 import {AnimatePresence, motion} from 'framer-motion';
@@ -46,7 +46,7 @@ const ProjectsPage = ({navOpen,preLoadedImages,projects}) => {
                     className="project-container h-screen w-screen overflow-x-hidden overflow-y-auto project-background bg-black">
                     <TopNav/>
                     <div className="colored-background pointer-events-none">
-                        <span className={`green ${location ? 'animate' : ''}`}/>
+                        <span className={`green ${location ? 'animate' : ''}`}/> 
                         <span className={`blue ${location ? 'animate' : ''}`}/>
                     </div>
                     <div className="page-title text-center text-white mt-20 md:mt-10">

@@ -174,7 +174,7 @@
     }
 
     .navbar-nav:hover {
-        padding: 6px;
+        margin: 0 .15em;
         background: #CCCCCC;
         border-radius: 1em;
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
@@ -222,7 +222,7 @@
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
     }
 
-    .right-side-text {
+    .right-side-textm {
         width: 700px;
         height: 288px;
         font-style: normal;

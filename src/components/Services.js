@@ -4,6 +4,8 @@ import {motion} from 'framer-motion';
 
 const Services = () => {
     const [isOpen, setIsOpen] = useState(0);
+    const [isOpenMobile, setIsOpenMobile] = useState(true);
+
     const handleHover = (slideId) => {
         setIsOpen(slideId);
     }
@@ -25,6 +27,19 @@ const Services = () => {
             }
         }
     };
+    const handleMobileHover = (slideId) => {
+        setIsOpenMobile(!isOpenMobile);
+        console.log(isOpenMobile);
+
+        if (isOpenMobile===false){
+            setIsOpen(0)
+        }
+        else{
+            setIsOpen(slideId);
+        }
+
+    }
+
     return (
         <div className="services-container">
             <div className="relative mb-5 md:mb-16 text-2xl md:text-6xl font-semibold">
@@ -44,18 +59,21 @@ const Services = () => {
                             <div className="flex md:flex-none justify-between">
                                 <div className="text-2xl md:text-6xl font-bold md:py-10">Frontend Design</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
+                                    <button onClick={()=> handleMobileHover(1)}>
                                     {isOpen === 1 ? <svg width="19" height="4" viewBox="0 0 19 4" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.800781 3.5V0.5H18.8008V3.5H0.800781Z" fill="black"/>
                                         </svg>
 
                                         : <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                               xmlns="http://www.w3.org/2000/svg">
+                                               xmlns="http://www.w3.org/2000/svg"
+                                        >
                                             <path d="M8.30078 0H11.3008V18H8.30078V0Z" fill="black"/>
                                             <path d="M0.800781 10.5V7.5H18.8008V10.5H0.800781Z" fill="black"/>
                                         </svg>
 
                                     }
+                                    </button>
 
                                 </div>
                             </div>
@@ -89,6 +107,8 @@ const Services = () => {
                             <div className="flex md:flex-none justify-between">
                                 <div className="text-2xl md:text-6xl font-bold md:py-10">Backend Design</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
+                                    <button onClick={()=> handleMobileHover(2)}>
+
                                     {isOpen === 2 ? <svg width="19" height="4" viewBox="0 0 19 4" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.800781 3.5V0.5H18.8008V3.5H0.800781Z" fill="black"/>
@@ -101,6 +121,7 @@ const Services = () => {
                                         </svg>
 
                                     }
+                                    </button>
 
                                 </div>
                             </div>
@@ -132,6 +153,8 @@ const Services = () => {
                             <div className="flex md:flex-none justify-between">
                                 <div className="text-2xl md:text-6xl font-bold md:py-10">Database Design</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
+                                    <button onClick={()=> handleMobileHover(3)}>
+
                                     {isOpen === 3 ? <svg width="19" height="4" viewBox="0 0 19 4" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.800781 3.5V0.5H18.8008V3.5H0.800781Z" fill="black"/>
@@ -144,6 +167,7 @@ const Services = () => {
                                         </svg>
 
                                     }
+                                    </button>
 
                                 </div>
                             </div>
@@ -173,6 +197,7 @@ const Services = () => {
                             <div className="flex md:flex-none justify-between">
                                 <div className="text-2xl md:text-6xl font-bold md:py-10">Research</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
+                                    <button onClick={()=> handleMobileHover(4)}>
                                     {isOpen === 4 ? <svg width="19" height="4" viewBox="0 0 19 4" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.800781 3.5V0.5H18.8008V3.5H0.800781Z" fill="black"/>
@@ -185,7 +210,7 @@ const Services = () => {
                                         </svg>
 
                                     }
-
+                                    </button>
                                 </div>
                             </div>
                             <motion.div
