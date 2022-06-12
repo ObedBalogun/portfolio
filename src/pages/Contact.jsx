@@ -77,7 +77,7 @@ const ContactPage = ({navOpen}) => {
         }, [])
         return (
             <motion.div
-                className="relative h-screen w-screen overflow-x-hidden overflow-y-auto contact-background bg-black"
+                className="relative h-screen w-screen md:overflow-hidden overflow-y-auto overflow-x-hidden contact-background bg-black"
                 initial="hidden"
                 animate="visible"
                 exit="exit"
@@ -88,7 +88,7 @@ const ContactPage = ({navOpen}) => {
                     <span className={`green ${location ? 'animate' : ''}`}/>
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>
-                <div className="flex flex-col md:flex-row md:space-x-24 text-white md:mt-28 md:mx-12 m-4 mt-16 mb-64 ">
+                <div className="flex flex-col md:flex-row md:space-x-24 text-white md:mt-28 md:mx-12 m-4 mt-16 mb-64 md:mb-0 ">
                     <div className="md:flex-1 left-side-text z-20  font-semibold text-3xl md:text-5xl md:leading-tight ">
                         Have an idea or a concept that really excites you? What do you say? Let’s make magic
                         together.

@@ -38,7 +38,6 @@ function App() {
         if (preLoadedPictures.length > 0) {
             setIsLoading(false)
         }
-        // setShowNav(true)
 
     }, [preLoadedPictures])
 
