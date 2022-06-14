@@ -42,7 +42,7 @@ const Home = ({navOpen}) => {
             </div>
             <div className="homepage-headers relative flex-col text-center mx-auto h-screen w-screen">
                 <div className="main-header text-4xl md:text-6xl mt-32 md:mt-40 w-72 md:w-11/12 mx-auto ">
-                    Hi, I’m Obed Balogun <br/>
+                    Hi, I’m Obed Balogun, <br/>
                     a software developer.
                 </div>
                 <div className="main-sub-header md:text-2xl mx-auto my-4">

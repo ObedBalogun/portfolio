@@ -286,7 +286,7 @@
     }
 
 
-    .view-button > button {
+    .view-button > button, .view-button > a {
         font-weight: 400;
         font-size: 2em;
         background: rgba(0, 0, 0, 0.6);
@@ -319,113 +319,21 @@
 
 
     /*Responsiveness*/
-    @media (max-width: 1535px) {
-        .top-image > img, .final-image > img {
-            height: 600px
-        }
-    }
-    @media screen and (max-width: 639px) {
-        .navbar {
-            width: 20rem;
-            border-radius: 1.5rem;
-        }
-
-        .navbar-nav.active {
-            padding: .3em .5em;
-            border-radius: 0.7em;
-        }
-
-        .nav-item {
-            font-size: .85em;
-            margin: 0;
-        }
-
-        .main-sub-header {
-            font-size: .9em;
-            width: 17em;
-        }
-
-        .download-resume-button {
-            /*font-size: .9em;*/
-        }
-
-        .green {
-            position: absolute;
-            left: 44.65%;
-            right: 0;
-            top: 0;
-            bottom: 5.36%;
-            width: 15em;
-            background: #73E0A9;
-            filter: blur(90px);
-            animation: none;
-
-        }
-
-        .blue {
-            position: absolute;
-            left: 0;
-            right: 52.96%;
-            top: 19.59%;
-            bottom: 0;
-            width: 15em;
-            background: #5B68DF;
-            filter: blur(90px);
-            animation: none;
-        }
-
-        .green.animate {
-            animation: rotateLeft 8s infinite linear;
-            transform-origin: left;
-        }
-
-        .blue.animate {
-            animation: rotateRight 8s infinite linear;
-            transform-origin: right;
-        }
-
-        h1 {
-            font-size: 2.7rem;
-        }
-
+    @media screen and (min-width:320px) {
         .project-card {
-            width: 25em;
-            height: 30em;
-
-        }
-
-        .technology-pills > button {
-            font-size: 12px;
-            padding: 3px 8px;
-        }
-
-        .view-button > button {
-            font-size: 1em;
-        }
-
-    }
-    @media (max-width: 450px) {
-        .project-card {
-            width: 25em;
+            width: 18em;
             height: 30em;
 
         }
         .navbar{
-            width: 24rem;
+            width: 19rem;
         }
-
-        .navbar-nav.active {
-            border-radius: 1.5rem;
-        }
-        .top-image img, .middle-image img {
-            width: 400px;
-            height: 300px;
-        }
-        .final-content{
-            margin-top: 5em;
+        .nav-item {
+            font-size: .85em;
+            margin: 0 .5em;
         }
     }
-    @media (max-width: 380px) {
+    @media screen and (min-width: 375px) {
         .project-card {
             width: 21em;
             height: 30em;
@@ -443,16 +351,112 @@
         }
 
     }
-    @media (max-width:320px) {
-        .project-card {
-            width: 18em;
-            height: 30em;
+    /*@media (max-width: 1535px) {*/
+    /*    .top-image > img, .final-image > img {*/
+    /*        height: 600px*/
+    /*    }*/
+    /*}*/
+    /*@media screen and (max-width: 639px) {*/
+    /*    .navbar {*/
+    /*        width: 20rem;*/
+    /*        border-radius: 1.5rem;*/
+    /*    }*/
 
-        }
-        .navbar{
-            width: 19rem;
-        }
-    }
+    /*    .navbar-nav.active {*/
+    /*        padding: .3em .5em;*/
+    /*        border-radius: 0.7em;*/
+    /*    }*/
+
+    /*    .nav-item {*/
+    /*        font-size: .85em;*/
+    /*        margin: 0;*/
+    /*    }*/
+
+    /*    .main-sub-header {*/
+    /*        font-size: .9em;*/
+    /*        width: 17em;*/
+    /*    }*/
+
+    /*    .download-resume-button {*/
+    /*        !*font-size: .9em;*!*/
+    /*    }*/
+
+    /*    .green {*/
+    /*        position: absolute;*/
+    /*        left: 44.65%;*/
+    /*        right: 0;*/
+    /*        top: 0;*/
+    /*        bottom: 5.36%;*/
+    /*        width: 15em;*/
+    /*        background: #73E0A9;*/
+    /*        filter: blur(90px);*/
+    /*        animation: none;*/
+
+    /*    }*/
+
+    /*    .blue {*/
+    /*        position: absolute;*/
+    /*        left: 0;*/
+    /*        right: 52.96%;*/
+    /*        top: 19.59%;*/
+    /*        bottom: 0;*/
+    /*        width: 15em;*/
+    /*        background: #5B68DF;*/
+    /*        filter: blur(90px);*/
+    /*        animation: none;*/
+    /*    }*/
+
+    /*    .green.animate {*/
+    /*        animation: rotateLeft 8s infinite linear;*/
+    /*        transform-origin: left;*/
+    /*    }*/
+
+    /*    .blue.animate {*/
+    /*        animation: rotateRight 8s infinite linear;*/
+    /*        transform-origin: right;*/
+    /*    }*/
+
+    /*    h1 {*/
+    /*        font-size: 2.7rem;*/
+    /*    }*/
+
+    /*    .project-card {*/
+    /*        width: 25em;*/
+    /*        height: 30em;*/
+
+    /*    }*/
+
+    /*    .technology-pills > button {*/
+    /*        font-size: 12px;*/
+    /*        padding: 3px 8px;*/
+    /*    }*/
+
+    /*    .view-button > button {*/
+    /*        font-size: 1em;*/
+    /*    }*/
+
+    /*}*/
+    /*@media (max-width: 450px) {*/
+    /*    .project-card {*/
+    /*        width: 25em;*/
+    /*        height: 30em;*/
+
+    /*    }*/
+    /*    .navbar{*/
+    /*        width: 24rem;*/
+    /*    }*/
+
+    /*    .navbar-nav.active {*/
+    /*        border-radius: 1.5rem;*/
+    /*    }*/
+    /*    .top-image img, .middle-image img {*/
+    /*        width: 400px;*/
+    /*        height: 300px;*/
+    /*    }*/
+    /*    .final-content{*/
+    /*        margin-top: 5em;*/
+    /*    }*/
+    /*}*/
 }
 
 

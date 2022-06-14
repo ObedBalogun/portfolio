@@ -120,7 +120,7 @@ const Projects = ({preLoadedImages,projects}) => {
                         <motion.div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}
-                             onClick={() => handleModal(project.id)}>
+                             onClick={() => project.mode ==='live'? "": handleModal(project.id)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
                                 <motion.img src={require('../images' + project.imageURL)} alt=""
                                             className={`w-full h-full object-cover ${width <= 768 ? 'opacity-60':'' }`}
@@ -149,10 +149,19 @@ const Projects = ({preLoadedImages,projects}) => {
                                     variants={toggleHide}
                                     className="view-button hidden md:block place-self-center"
                                     onClick={() => handleModal(project.id)}>
-                                    <button className="text-white items-center py-3 px-7"
-                                            onClick={() => handleModal(project.id)}>
-                                        <span>View Project</span>
-                                    </button>
+                                    { project.mode === 'live' ?
+                                        <button className="text-white items-center py-3 px-7"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    window.location.href='http://google.com';
+                                                }}>
+                                            <span>Visit Site</span>
+                                        </button> :
+                                        <button className="text-white items-center py-3 px-7"
+                                                onClick={() => handleModal(project.id)}>
+                                            <span>View Project</span>
+                                        </button>
+                                    }
                                 </motion.div>
                                 <motion.div
                                     initial={"hidden"}
@@ -176,8 +185,8 @@ const Projects = ({preLoadedImages,projects}) => {
                         <div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}
-                             onClick={() => handleModal(project.id)}>
-                            <div className="card-background rounded-3xl bg-black overflow-hidden h-full object-cover">
+                             onClick={() => project.mode ==='live'? "":console.log(project.id)}>
+                        <div className="card-background rounded-3xl bg-black overflow-hidden h-full object-cover">
                                 <motion.img src={preLoadedImages[project.id-1]} alt=""
                                             className={`h-full w-full object-cover ${width <= 768 ? 'opacity-60':''}`}
                                             initial={false}
@@ -204,10 +213,16 @@ const Projects = ({preLoadedImages,projects}) => {
                                     exit={"hidden"}
                                     variants={toggleHide}
                                     className="view-button hidden md:block place-self-center"
-                                    onClick={() => handleModal(project.id)}>
-                                    <button className="text-white items-center py-3 px-7">
+                                    onClick={() => project.mode === 'live' ? '' : handleModal(project.id)}>
+                                { project.mode === 'live' ?
+                                        <a href={project.link} target="_blank" className="text-white items-center py-3 px-7">
+                                            <span>Visit Site</span>
+                                        </a> :
+                                        <button className="text-white items-center py-3 px-7"
+                                                onClick={() => project.mode ==='live'? "":handleModal(project.id)}>
                                         <span>View Project</span>
-                                    </button>
+                                        </button>
+                                    }
                                 </motion.div>
                                 <motion.div
                                     initial={"hidden"}

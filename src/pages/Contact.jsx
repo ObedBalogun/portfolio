@@ -152,7 +152,7 @@ const ContactPage = ({navOpen}) => {
                             <a href="https://www.linkedin.com/in/obedbalogun/" target="_blank" rel="noreferrer">
                                 <motion.div
                                     initial={false}
-                                    animate={enlarge === 2 ? "hover" : ""}
+                                    animate={enlarge === 2 && width >= 768 ? "hover" : ""}
                                     variants={zoom}
                                     className="underline underline-offset-8 mr-16 text-2xl md:text-3xl"
                                     onMouseEnter={() => handleZoom(2)}
@@ -162,7 +162,7 @@ const ContactPage = ({navOpen}) => {
                             <a href="https://www.instagram.com/brotherbalogun/" target="_blank" rel="noreferrer">
                                 <motion.div
                                     initial={false}
-                                    animate={enlarge === 3 ? "hover" : " "}
+                                    animate={enlarge === 3 && width >= 768 ? "hover" : " "}
                                     variants={zoom}
                                     className="underline underline-offset-8 mr-16 text-2xl md:text-3xl"
                                     onMouseEnter={() => handleZoom(3)}
@@ -172,7 +172,7 @@ const ContactPage = ({navOpen}) => {
                             <a href="https://github.com/obedbalogun" target="_blank" rel="noreferrer">
                                 <motion.div
                                     initial={false}
-                                    animate={enlarge === 4 ? "hover" : " "}
+                                    animate={enlarge === 4 && width >= 768 ? "hover" : " "}
                                     variants={zoom}
                                     className="underline underline-offset-8 text-2xl md:text-3xl"
                                     onMouseEnter={() => handleZoom(4)}

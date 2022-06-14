@@ -9,7 +9,10 @@ export const projects = [
             "Django",
             "React"
         ],
-        "position": "left"
+        "position": "left",
+        "mode": "not-live",
+        "link": "https://shyne-app.herokuapp.com/",
+
     },
     {
         "id": 2,
@@ -21,7 +24,9 @@ export const projects = [
             "Django",
             "Postgresql"
         ],
-        "position": "left"
+        "position": "left",
+        "mode": "not-live",
+        "link": "https://goodchatapp.herokuapp.com/",
     },
     {
         "id": 3,
@@ -46,11 +51,13 @@ export const projects = [
             "Django",
             "Postgresql"
         ],
-        "position": "right"
+        "position": "right",
+        "mode":"live",
+        "link": "https://www.akmarv.com/",
     },
     {
         "id": 5,
-        "name": "Selormbeauty ",
+        "name": "Selormbeauty",
         "description": "E-commerce website for amazing skincare products.\n",
         "imageURL": "/selorm-cover.png",
         "technology": [
@@ -60,7 +67,43 @@ export const projects = [
             "Tailwind"
         ],
         "position": "right"
-    }
+    },
+    {
+        "id": 6,
+        "name": "Sharp",
+        "description": "Customer Support portal to help manage and resolve tickets raised by customers.\n",
+        "imageURL": "/sharp-cover.png",
+        "technology": [
+            "Node",
+            "React",
+            "Tailwind"
+        ],
+        "position": "right"
+    },
+    {
+        "id": 7,
+        "name": "Gather Store",
+        "description": "Customer Support portal to help manage and resolve tickets raised by customers.\n",
+        "imageURL": "/gather-cover.png",
+        "technology": [
+            "Node",
+            "React",
+            "Tailwind"
+        ],
+        "position": "right"
+    },
+    {
+        "id": 8,
+        "name": "MusicHeads",
+        "description": "Customer Support portal to help manage and resolve tickets raised by customers.\n",
+        "imageURL": "/project.png",
+        "technology": [
+            "Node",
+            "React",
+            "Tailwind"
+        ],
+        "position": "left"
+    },
 ]
 
 export const projectDetails = [
@@ -146,5 +189,35 @@ export const projectDetails = [
         "details3": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
         "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
         "image3": "/project.png"
-    }
+    },
+    {
+        "id": 6,
+        "name": "SHARP",
+        "description": "Users can listen to beats and download them\nwith licenses provided by the artist.",
+        "role": "Software Developer",
+        "tools": "Node, React, Tailwind",
+        "year": "2020",
+        "image1": "/selorm-home.png",
+        "details1": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "image2": "/project.png",
+        "details2": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details3": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "image3": "/project.png"
+    },
+    {
+        "id": 8,
+        "name": "MusicHeads",
+        "description": "Users can listen to beats and download them\nwith licenses provided by the artist.",
+        "role": "Software Developer",
+        "tools": "Django, Bootstrap, REST API, Postgresql, React",
+        "year": "2020",
+        "image1": "/selorm-home.png",
+        "details1": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "image2": "/project.png",
+        "details2": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details3": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "image3": "/project.png"
+    },
 ]
