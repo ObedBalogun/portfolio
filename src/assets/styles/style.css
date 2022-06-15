@@ -443,8 +443,8 @@
     }
     @media screen and (min-width:1281px) {
         .project-card {
-            width: 31em;
-            height: 35em;
+            width: 45em;
+            height: 45em;
 
         }
         .navbar{
