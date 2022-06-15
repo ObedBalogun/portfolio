@@ -46,8 +46,8 @@ const Home = ({navOpen}) => {
                     a software developer.
                 </div>
                 <div className="main-sub-header w-72 sm:w-96 md:text-2xl mx-auto my-4">
-                    I build scalable and reliable web applications
-                    from stable backend to frontend designs that work.
+                    I build scalable and reliable applications
+                    from stable backends to frontend designs that work.
                 </div>
             </div>
 
