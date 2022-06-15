@@ -114,10 +114,10 @@ const Projects = ({preLoadedImages,projects}) => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row justify-center px-2 md:px-8 mt-32">
-                <div className="md:flex-1">
+            <div className="projects-container flex flex-col sm:flex-row justify-center px-2 sm:px-8 mt-32">
+                <div className="sm:flex-1">
                     {leftSide.map((project) => (
-                        <motion.div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
+                        <motion.div key={project.id} className="project-card mx-auto justify-center text-white relative p-4 sm:p-3"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}
                              onClick={() => project.mode ==='live'? "": handleModal(project.id)}>
@@ -135,9 +135,9 @@ const Projects = ({preLoadedImages,projects}) => {
                                     animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={slideDown}
-                                    className="space-x-1 technology-pills py-4 md:py-8 md:py-10 w-full">
+                                    className="flex-wrap space-x-0.5 mx-auto sm:px-0 sm:space-x-1 technology-pills text-sm sm:text-base py-8 sm:py-10 w-full">
                                     {project.technology.map((technology, techIndex) => (
-                                        <button key={techIndex} className={'mb-1'}>
+                                        <button key={techIndex} className={'mb-2'}>
                                             <span>{technology}</span>
                                         </button>
                                     ))}
@@ -147,7 +147,7 @@ const Projects = ({preLoadedImages,projects}) => {
                                     animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={toggleHide}
-                                    className="view-button hidden md:block place-self-center"
+                                    className="view-button place-self-center"
                                     onClick={() => handleModal(project.id)}>
                                     { project.mode === 'live' ?
                                         <button className="text-white items-center py-3 px-7"
@@ -170,8 +170,8 @@ const Projects = ({preLoadedImages,projects}) => {
                                     variants={slideUp}
                                     className="place-self-end mb-10">
                                     <div className="project-details">
-                                        <div className="title text-xl md:text-3xl">{project.name}</div>
-                                        <div className="content font-light text-sm md:text-2xl w-full">
+                                        <div className="title text-xl lg:text-3xl">{project.name}</div>
+                                        <div className="content font-light text-sm lg:text-2xl w-full">
                                             {project.description}
                                         </div>
                                     </div>
@@ -180,12 +180,12 @@ const Projects = ({preLoadedImages,projects}) => {
                         </motion.div>
                     ))}
                 </div>
-                <div className="md:flex-1 md:mt-24 md:mb-0 mb-24">
+                <div className="sm:flex-1 sm:mt-24 sm:mb-0 mb-24">
                     {rightSide.map((project) => (
-                        <div key={project.id} className="project-card mx-auto text-white relative mb-5 md:p-4"
+                        <div key={project.id} className="project-card mx-auto text-white relative mb-5 p-4 sm:p-3"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}
-                             onClick={() => project.mode ==='live'? "":console.log(project.id)}>
+                             onClick={() => project.mode ==='live'? "":handleModal(project.id)}>
                         <div className="card-background rounded-3xl bg-black overflow-hidden h-full object-cover">
                                 <motion.img src={preLoadedImages[project.id-1]} alt=""
                                             className={`h-full w-full object-cover ${width <= 768 ? 'opacity-60':''}`}
@@ -194,7 +194,7 @@ const Projects = ({preLoadedImages,projects}) => {
                                             variants={zoom}
                                 />
                             </div>
-                            <div className="flex-row grid h-full card-content px-4 md:px-6 overflow-hidden absolute top-0">
+                            <div className="flex-row grid h-full card-content px-4 sm:px-6 overflow-hidden absolute top-0">
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
@@ -212,7 +212,7 @@ const Projects = ({preLoadedImages,projects}) => {
                                     animate={isActive === project.id || width <= 768 ? "hover" : "hidden"}
                                     exit={"hidden"}
                                     variants={toggleHide}
-                                    className="view-button hidden md:block place-self-center"
+                                    className="view-button place-self-center"
                                     onClick={() => project.mode === 'live' ? '' : handleModal(project.id)}>
                                 { project.mode === 'live' ?
                                         <a href={project.link} target="_blank" className="text-white items-center py-3 px-7">
@@ -231,8 +231,8 @@ const Projects = ({preLoadedImages,projects}) => {
                                     variants={slideUp}
                                     className="place-self-end mb-10">
                                     <div className="project-details">
-                                        <div className="title text-xl md:text-3xl">{project.name}</div>
-                                        <div className="content font-light text-sm md:text-2xl w-full">
+                                        <div className="title text-xl lg:text-3xl">{project.name}</div>
+                                        <div className="content font-light text-sm lg:text-2xl w-full">
                                             {project.description}
                                         </div>
                                     </div>

@@ -70,34 +70,34 @@ const Modal = ({cardNumber, handleModal}) => {
                                     <div className="md:flex-1">
                                         <div className="left-text">
                                             <span
-                                                className="mb-6 text-4xl md:text-5xl font-semibold">{project.name}</span>
+                                                className="mb-6 text-4xl lg:text-5xl font-semibold">{project.name}</span>
                                             <span
-                                                className="text-xl hidden md:block md:mt-9 font-medium text-neutral-600 text-left">{project.description}</span>
+                                                className="text-lg lg:text-2xl hidden md:block md:mt-9 font-medium text-neutral-600 text-left">{project.description}</span>
                                         </div>
                                     </div>
                                     <div className="md:flex-1">
                                         <div className="mt-4 md:mt-20">
                                             <div className="role">
                                                 <span
-                                                    className="text-sm md:text-lg mb-10 text-neutral-600	font-normal">Role</span>
+                                                    className="text-sm lg:text-lg mb-10 text-neutral-600	font-normal">Role</span>
                                                 <br/>
-                                                <span className="text-base font-normal md:text-xl">{project.role}</span>
+                                                <span className="text-base font-normal lg:text-xl">{project.role}</span>
                                                 <hr className="relative solid border-slate-300 my-2"/>
                                             </div>
                                             <div className="stack">
                                                 <span
-                                                    className="text-sm md:text-lg mb-10 text-neutral-600	font-normal">Tools</span>
+                                                    className="text-sm lg:text-lg mb-10 text-neutral-600	font-normal">Tools</span>
                                                 <br/>
                                                 <span
-                                                    className="font-normal text-base md:text-xl">{project.tools}</span>
+                                                    className="font-normal text-base lg:text-xl">{project.tools}</span>
                                                 <hr className="relative solid border-slate-300 my-2"/>
                                             </div>
                                             <div className="year">
                                                 <span
-                                                    className="mb-10 text-neutral-600	font-normal text-sm md:text-lg">Year</span>
+                                                    className="mb-10 text-neutral-600 font-normal text-sm lg:text-lg">Year</span>
                                                 <br/>
                                                 <span
-                                                    className="font-normal text-base text-sm md:text-lg">{project.year}</span>
+                                                    className="font-normal text-base text-sm lg:text-lg">{project.year}</span>
                                                 <hr className="relative solid border-slate-300 my-2"/>
                                             </div>
                                         </div>
@@ -110,19 +110,19 @@ const Modal = ({cardNumber, handleModal}) => {
                                         <img src={require('../images' + project.image1)} alt=""
                                              className="w-full object-cover rounded-3xl"/>
                                     </div>
-                                    <div className="mt-10 md:mt-20 md:w-1/2 md:text-xl text-neutral-600">
+                                    <div className="mt-10 lg:mt-20 lg:w-1/2 md:text-xl text-neutral-600">
                                         {project.details1}
                                     </div>
-                                    <div className="md:flex middle-image mt-10">
+                                    <div className="lg:flex middle-image mt-10">
                                         <img src={require('../images' + project.image2)} alt=""
                                              className="w-1/2 object-cover rounded-3xl"/>
                                         <div
-                                            className="mt-5 md:my-auto md:p-6 md:w-1/2 md:ml-10 md:text-xl text-neutral-600">
+                                            className="mt-5 lg:my-auto md:p-6 lg:w-1/2 md:ml-10 md:text-xl text-neutral-600">
                                             {project.details2}
                                         </div>
                                     </div>
-                                    <div className="final-content relative h-screen md:h-full">
-                                        <div className="absolute md:relative flex flex-col mt-72 md:flex-row md:mt-20 md:text-xl text-neutral-600 gap-4">
+                                    <div className="final-content relative h-screen md:h-full sm:mt-0 mt-60">
+                                        <div className="absolute md:relative flex flex-col mt-24 md:flex-row lg:mt-20 md:text-xl text-neutral-600 gap-4">
                                             <div className="flex-1 ">
                                                 {project.details3}
                                             </div>

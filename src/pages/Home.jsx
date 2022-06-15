@@ -45,7 +45,7 @@ const Home = ({navOpen}) => {
                     Hi, I’m Obed Balogun, <br/>
                     a software developer.
                 </div>
-                <div className="main-sub-header md:text-2xl mx-auto my-4">
+                <div className="main-sub-header w-72 sm:w-96 md:text-2xl mx-auto my-4">
                     I build scalable and reliable web applications
                     from stable backend to frontend designs that work.
                 </div>

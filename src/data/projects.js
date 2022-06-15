@@ -90,7 +90,8 @@ export const projects = [
             "React",
             "Tailwind"
         ],
-        "position": "right"
+        "position": "right",
+        "mode": "live"
     },
     {
         "id": 8,

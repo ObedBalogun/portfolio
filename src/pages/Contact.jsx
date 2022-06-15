@@ -89,7 +89,7 @@ const ContactPage = ({navOpen}) => {
                     <span className={`blue ${location ? 'animate' : ''}`}/>
                 </div>
                 <div className="flex flex-col md:flex-row md:space-x-24 text-white md:mt-28 md:mx-12 m-4 mt-16 mb-64 md:mb-0 ">
-                    <div className="md:flex-1 left-side-text z-20  font-semibold text-3xl md:text-5xl md:leading-tight ">
+                    <div className="md:flex-1 left-side-text z-20  font-semibold text-3xl lg:text-5xl md:leading-tight ">
                         Have an idea or a concept that really excites you? What do you say? Let’s make magic
                         together.
                     </div>
@@ -98,8 +98,8 @@ const ContactPage = ({navOpen}) => {
                              onMouseEnter={() => setIsActive(1)}
                              onMouseLeave={() => setIsActive(0)}
                              onClick={() => window.open('mailto:obedbalogun@gmail.com')}>
-                            <div className='text-xl md:text-2xl mb-2'>Email</div>
-                            <div className='text-2xl md:text-4xl font-bold'>obedbalogun@gmail.com</div>
+                            <div className='text-xl lg:text-2xl mb-2'>Email</div>
+                            <div className='text-2xl lg:text-4xl font-bold'>obedbalogun@gmail.com</div>
                             <motion.div
                                 initial={"hidden"}
                                 animate={isActive === 1 && width >= 768 ? "hover" : "hidden"}
@@ -121,9 +121,9 @@ const ContactPage = ({navOpen}) => {
                         <div className='phone-number md:mt-14 mt-5 relative cursor-pointer'
                              onMouseEnter={() => setIsActive(2)}
                              onMouseLeave={() => setIsActive(0)}>
-                            <div className="content" onClick={() => window.location.href = "tel:+1-847-847-8474"}>
-                                <div className='text-xl md:text-2xl mb-2'>Phone</div>
-                                <div className='text-2xl md:text-4xl font-bold'>+234 706 741 7382</div>
+                            <div className="content" onClick={() => window.location.href = "tel:+234-7067417382"}>
+                                <div className='text-xl lg:text-2xl mb-2'>Phone</div>
+                                <div className='text-2xl lg:text-4xl font-bold'>+234 706 741 7382</div>
                                 <motion.div
                                     initial={"hidden"}
                                     animate={isActive === 2 && width >= 768 ? "hover" : "hidden"}
@@ -154,7 +154,7 @@ const ContactPage = ({navOpen}) => {
                                     initial={false}
                                     animate={enlarge === 2 && width >= 768 ? "hover" : ""}
                                     variants={zoom}
-                                    className="underline underline-offset-8 mr-16 text-2xl md:text-3xl"
+                                    className="underline underline-offset-8 mr-16 text-2xl lg:text-3xl"
                                     onMouseEnter={() => handleZoom(2)}
                                     onMouseLeave={() => handleZoom(0)}>Linkedin
                                 </motion.div>
@@ -164,7 +164,7 @@ const ContactPage = ({navOpen}) => {
                                     initial={false}
                                     animate={enlarge === 3 && width >= 768 ? "hover" : " "}
                                     variants={zoom}
-                                    className="underline underline-offset-8 mr-16 text-2xl md:text-3xl"
+                                    className="underline underline-offset-8 mr-16 text-2xl lg:text-3xl"
                                     onMouseEnter={() => handleZoom(3)}
                                     onMouseLeave={() => handleZoom(0)}>Instagram
                                 </motion.div>
@@ -174,7 +174,7 @@ const ContactPage = ({navOpen}) => {
                                     initial={false}
                                     animate={enlarge === 4 && width >= 768 ? "hover" : " "}
                                     variants={zoom}
-                                    className="underline underline-offset-8 text-2xl md:text-3xl"
+                                    className="underline underline-offset-8 text-2xl lg:text-3xl"
                                     onMouseEnter={() => handleZoom(4)}
                                     onMouseLeave={() => handleZoom(0)}>Github
                                 </motion.div>
