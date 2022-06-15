@@ -29,7 +29,6 @@ const Services = () => {
     };
     const handleMobileHover = (slideId) => {
         setIsOpenMobile(!isOpenMobile);
-        console.log(isOpenMobile);
 
         if (isOpenMobile===false){
             setIsOpen(0)
@@ -42,7 +41,7 @@ const Services = () => {
 
     return (
         <div className="services-container">
-            <div className="relative mb-5 md:mb-16 text-2xl md:text-6xl font-semibold">
+            <div className="relative mb-5 md:mb-16 text-2xl md:text-4xl lg:text-6xl font-semibold">
                 Services
             </div>
             <div className="services-content">
@@ -52,12 +51,12 @@ const Services = () => {
                      onMouseEnter={() => handleHover(1)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative md:flex-none w-16">
-                        <div className="text-2xl font-bold md:text-6xl py-2 md:py-10">01</div>
+                        <div className="text-2xl font-bold md:text-4xl lg:text-6xl py-2 md:py-10">01</div>
                     </div>
                     <div className="flex-1">
                         <div className="relative table-content">
                             <div className="flex md:flex-none justify-between">
-                                <div className="text-2xl md:text-6xl font-bold md:py-10">Frontend Design</div>
+                                <div className="text-2xl md:text-4xl lg:text-6xl font-bold md:py-10">Frontend Design</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
                                     <button onClick={()=> handleMobileHover(1)}>
                                     {isOpen === 1 ? <svg width="19" height="4" viewBox="0 0 19 4" fill="none"
@@ -82,7 +81,7 @@ const Services = () => {
                                 animate={isOpen === 1 ? "visible" : "hidden"}
                                 exit={"hidden"}
                                 variants={variants}
-                                className={'services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-2xl md:w-3/4'}>
+                                className={'services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-xl lg:text-2xl md:w-3/4'}>
                                 I use React, TailWind and Bootstrap to design client-friendly and responsive UIs. I
                                 enjoy
                                 the ease and comfort of using the React Library (with Hooks) to design components
@@ -100,12 +99,12 @@ const Services = () => {
                      onMouseEnter={() => handleHover(2)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative md:flex-none w-16">
-                        <div className="text-2xl font-bold md:text-6xl py-2 md:py-10">02</div>
+                        <div className="text-2xl font-bold md:text-4xl lg:text-6xl py-2 md:py-10">02</div>
                     </div>
                     <div className="flex-1">
                         <div className="relative table-content">
                             <div className="flex md:flex-none justify-between">
-                                <div className="text-2xl md:text-6xl font-bold md:py-10">Backend Design</div>
+                                <div className="text-2xl md:text-4xl lg:text-6xl font-bold md:py-10">Backend Design</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
                                     <button onClick={()=> handleMobileHover(2)}>
 
@@ -130,7 +129,7 @@ const Services = () => {
                                 animate={isOpen === 2 ? "visible" : "hidden"}
                                 exit={"hidden"}
                                 variants={variants}
-                                className="services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-2xl md:w-3/4">
+                                className="services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-xl lg:text-2xl md:w-3/4">
                                 I am comfortable with and often utilize Python/Django and its associated stack. I have
                                 built APIs with the Django REST framework, interacted with databases using Django Object
                                 Relational Mapping and also tested code. I have also built some applications with other
@@ -146,12 +145,12 @@ const Services = () => {
                      onMouseEnter={() => handleHover(3)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative flex-none w-16">
-                        <div className="text-2xl font-bold md:text-6xl py-2 md:py-10">03</div>
+                        <div className="text-2xl font-bold md:text-4xl lg:text-6xl py-2 md:py-10">03</div>
                     </div>
                     <div className="flex-1">
                         <div className="relative table-content">
                             <div className="flex md:flex-none justify-between">
-                                <div className="text-2xl md:text-6xl font-bold md:py-10">Database Design</div>
+                                <div className="text-2xl md:text-4xl lg:text-6xl font-bold md:py-10">Database Design</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
                                     <button onClick={()=> handleMobileHover(3)}>
 
@@ -176,7 +175,7 @@ const Services = () => {
                                 animate={isOpen === 3 ? "visible" : "hidden"}
                                 exit={'hidden'}
                                 variants={variants}
-                                className="services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-2xl md:w-3/4">
+                                className="services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-xl lg:text-2xl md:w-3/4">
                                 I use Postgresql and MySql to build object oriented database systems. I have some
                                 experience with NoSql database structures like Redis.
                             </motion.div>
@@ -190,12 +189,12 @@ const Services = () => {
                      onMouseEnter={() => handleHover(4)}
                      onMouseLeave={() => setIsOpen(0)}>
                     <div className="relative md:flex-none w-16">
-                        <div className="text-2xl font-bold md:text-6xl py-2 md:py-10">04</div>
+                        <div className="text-2xl font-bold md:text-4xl lg:text-6xl py-2 md:py-10">04</div>
                     </div>
                     <div className="flex-1">
                         <div className="relative table-content">
                             <div className="flex md:flex-none justify-between">
-                                <div className="text-2xl md:text-6xl font-bold md:py-10">Research</div>
+                                <div className="text-2xl md:text-4xl lg:text-6xl font-bold md:py-10">Research</div>
                                 <div className="md:hidden text-2xl md:text-6xl font-bold md:py-10">
                                     <button onClick={()=> handleMobileHover(4)}>
                                     {isOpen === 4 ? <svg width="19" height="4" viewBox="0 0 19 4" fill="none"
@@ -218,7 +217,7 @@ const Services = () => {
                                 animate={isOpen === 4 ? "visible" : "hidden"}
                                 exit={'hidden'}
                                 variants={variants}
-                                className="services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-2xl md:w-3/4">
+                                className="services-text md:leading-9 my-2 md:-mt-5 pointer-events-none text-base font-semibold md:text-xl lg:text-2xl md:w-3/4">
                                 Understanding clients needs and requirements builds on the projects knowledge. This
                                 knowledge along with research helps to determine the best way to approach the
                                 project and deliver user-friendly and scalable solutions.
