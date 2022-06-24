@@ -148,15 +148,11 @@ const Projects = ({preLoadedImages,projects}) => {
                                     exit={"hidden"}
                                     variants={toggleHide}
                                     className="view-button place-self-center"
-                                    onClick={() => handleModal(project.id)}>
+                                    onClick={() => project.mode ==='live'? "": handleModal(project.id)}>
                                     { project.mode === 'live' ?
-                                        <button className="text-white items-center py-3 px-7"
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    window.location.href='http://google.com';
-                                                }}>
+                                        <a href={project.link} target="_blank" rel="noreferrer" className="text-white items-center py-3 px-7">
                                             <span>Visit Site</span>
-                                        </button> :
+                                        </a> :
                                         <button className="text-white items-center py-3 px-7"
                                                 onClick={() => handleModal(project.id)}>
                                             <span>View Project</span>
@@ -215,7 +211,7 @@ const Projects = ({preLoadedImages,projects}) => {
                                     className="view-button place-self-center"
                                     onClick={() => project.mode === 'live' ? '' : handleModal(project.id)}>
                                 { project.mode === 'live' ?
-                                        <a href={project.link} target="_blank" className="text-white items-center py-3 px-7">
+                                        <a href={project.link} target="_blank" rel="noreferrer" className="text-white items-center py-3 px-7">
                                             <span>Visit Site</span>
                                         </a> :
                                         <button className="text-white items-center py-3 px-7"

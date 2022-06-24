@@ -10,7 +10,7 @@ export const projects = [
             "React"
         ],
         "position": "left",
-        "mode": "not-live",
+        "mode": "live",
         "link": "https://shyne-app.herokuapp.com/",
 
     },
@@ -30,7 +30,7 @@ export const projects = [
     },
     {
         "id": 3,
-        "name": "Project",
+        "name": "Finag",
         "description": " USSD based application for farmers to manage their supply chain and\ntransactions.",
         "imageURL": "/project.png",
         "technology": [
@@ -39,7 +39,8 @@ export const projects = [
             "REST API",
             "TailwindCSS"
         ],
-        "position": "left"
+        "position": "left",
+        "mode": "not-live",
     },
     {
         "id": 4,
@@ -66,19 +67,23 @@ export const projects = [
             "React",
             "Tailwind"
         ],
-        "position": "right"
+        "position": "right",
+        "mode": "not-live",
     },
     {
         "id": 6,
         "name": "Sharp",
-        "description": "Customer Support portal to help manage and resolve tickets raised by customers.\n",
+        "description": "Sharp is a web application that improves customer relationships and customer data management and " +
+            "increases efficiency of Base; a USSD App. Sharp is a customized tool built to maximize collaboration within" +
+            " the Base customer support team.\n",
         "imageURL": "/sharp-cover.png",
         "technology": [
             "Node",
             "React",
             "Tailwind"
         ],
-        "position": "right"
+        "position": "right",
+        "mode": "not-live",
     },
     {
         "id": 7,
@@ -194,16 +199,25 @@ export const projectDetails = [
     {
         "id": 6,
         "name": "SHARP",
-        "description": "Users can listen to beats and download them\nwith licenses provided by the artist.",
+        "description": "Sharp is a web application that improves customer relationships and customer data management and " +
+            "increases efficiency of Base; a USSD App. Sharp is a customized tool built to maximize collaboration within" +
+            " the Base customer support team.\n",
         "role": "Software Developer",
         "tools": "Node, React, Tailwind",
         "year": "2020",
         "image1": "/selorm-home.png",
-        "details1": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details1": "Every customer support team needs an efficient tool to maintain customer relationships and work" +
+            " efficiently. In addition to this, they want to be able to monitor all the activities of customers when " +
+            "they use the product in question so they can be well informed and provide help where needed. " +
+            "Sharp allows its users to keep track of farmer data, orders and transactions performed on Base. " +
+            "It allows the team to have all the required information in one place which maintains order and improves efficiency.\n",
         "image2": "/project.png",
-        "details2": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
-        "details3": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
-        "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details2": "Sharp is packed with features, but it's intuitive interface makes it easy to use, regardless of " +
+            "technical aptitude. It centralizes and compartmentalizes data where necessary from multiple customer " +
+            "touchpoints to avoid duplication of efforts or embarrassing miscommunications.",
+        "details3": "The dashboards update in real time to ensure the users always have access to the most current data, " +
+            "and get full context on all customer interactions.\n" ,
+        "details4": "The message templates and filters allow the users to message the right audience at the right time.",
         "image3": "/project.png"
     },
     {
