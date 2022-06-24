@@ -343,11 +343,11 @@
             width: 328px;
             height: 206px;
         }
-        .middle-image img {
-            width: 328px;
-            height: 206px;
+        /*.middle-image img {*/
+        /*    width: 328px;*/
+        /*    height: 206px;*/
 
-        }
+        /*}*/
 
     }
     @media screen and (min-width:480px) {
@@ -422,7 +422,7 @@
             height: 30em;
         }
         .middle-image img{
-            width: 45em;
+            width: 30em;
             height: 50em;
 
 

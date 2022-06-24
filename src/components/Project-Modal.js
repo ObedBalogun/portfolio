@@ -110,15 +110,22 @@ const Modal = ({cardNumber, handleModal}) => {
                                         <img src={require('../images' + project.image1)} alt=""
                                              className="w-full object-cover rounded-3xl"/>
                                     </div>
-                                    <div className="mt-10 lg:mt-20 lg:w-3/5 md:text-xl text-neutral-600">
+                                    <div className="flex mt-10 lg:mt-20 md:text-xl text-neutral-600 gap-10">
+                                    <div className="flex-1">
                                         {project.details1}
+                                    </div>
+                                        <div className="flex-1">
+                                        {project.details1}
+                                    </div>
                                     </div>
                                     <div className="lg:flex middle-image mt-10">
                                         <img src={require('../images' + project.image2)} alt=""
-                                             className="w-1/2 lg:w-3/4 object-cover rounded-3xl"/>
+                                             className=" flex-1 object-cover rounded-3xl"/>
                                         <div
-                                            className="mt-5 lg:my-auto md:p-6 lg:w-1/2 md:ml-10 md:text-xl text-neutral-600">
-                                            {project.details2}
+                                            className="flex-1 mt-5 lg:my-auto md:p-6 lg:w-1/2 md:ml-10 md:text-xl text-neutral-600">
+                                            <p>{project.details2}</p> <br/>
+                                            <p>{project.details2}</p> <br/>
+                                            <p>{project.details2}</p>
                                         </div>
                                     </div>
                                     <div className="final-content relative h-screen md:h-full sm:mt-0 mt-60">
