@@ -120,7 +120,7 @@ const Projects = ({preLoadedImages,projects}) => {
                         <motion.div key={project.id} className="project-card mx-auto justify-center text-white relative p-4 sm:p-3"
                              onMouseEnter={() => handleHover(project.id)}
                              onMouseLeave={() => setIsActive(0)}
-                             onClick={() => project.mode ==='live'? "": handleModal(project.id)}>
+                             onClick={() => project.mode ==='live'? window.open(project.link): handleModal(project.id)}>
                             <div className="card-background rounded-3xl bg-black overflow-hidden h-full">
                                 <motion.img src={require('../images' + project.imageURL)} alt=""
                                             className={`w-full h-full object-cover ${width <= 768 ? 'opacity-60':'' }`}

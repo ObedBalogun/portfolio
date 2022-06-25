@@ -34,7 +34,7 @@
 
     }
 
-    body::-webkit-scrollbar, .project-modal::-webkit-scrollbar, .project-container::-webkit-scrollbar,.about-container::-webkit-scrollbar {
+    body::-webkit-scrollbar, .project-modal::-webkit-scrollbar, .project-container::-webkit-scrollbar, .about-container::-webkit-scrollbar {
         width: 0;
     }
 
@@ -174,6 +174,7 @@
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 
     }
+
     .navbar-nav.active {
         background: black;
         border-radius: .8em;
@@ -304,53 +305,59 @@
 
 
     /*Responsiveness*/
-
-    @media screen and (min-width:320px) {
+    @media screen and (min-width: 320px) {
         .project-card {
             width: 19em;
             height: 30em;
 
         }
-        .navbar{
+
+        .navbar {
             width: 19rem;
         }
+
         .nav-item {
             font-size: .85em;
             margin: 0;
         }
+
         .view-button > button, .view-button > a {
             font-size: 1em;
         }
-            .top-image img, .middle-image img {
-                width: 400px;
-                height: 300px;
-            }
 
+        .top-image img, .middle-image img {
+            width: 400px;
+            height: 300px;
         }
+
+    }
     @media screen and (min-width: 375px) {
         .project-card {
             width: 21em;
             height: 30em;
 
         }
-        .navbar{
+
+        .navbar {
             width: 21rem;
         }
+
         .navbar-nav.active {
             border-radius: 1.5rem;
         }
-        .top-image img{
+
+        .top-image img {
             width: 328px;
             height: 206px;
         }
+
         /*.middle-image img {*/
         /*    width: 328px;*/
         /*    height: 206px;*/
-
         /*}*/
 
     }
-    @media screen and (min-width:480px) {
+    @media screen and (min-width: 480px) {
         .project-card {
             width: 25em;
             height: 30em;
@@ -363,6 +370,7 @@
             border-radius: 1em;
 
         }
+
         .nav-item {
             font-size: 1rem;
             margin: 0;
@@ -373,7 +381,7 @@
         }
 
     }
-    @media screen and (min-width:640px) {
+    @media screen and (min-width: 640px) {
         .project-card {
             width: 20em;
             height: 24em;
@@ -386,6 +394,7 @@
             border-radius: 1em;
 
         }
+
         .nav-item {
             font-size: 1rem;
             margin: 0;
@@ -396,7 +405,7 @@
         }
 
     }
-    @media screen and (min-width:767px) {
+    @media screen and (min-width: 767px) {
         .project-card {
             width: 24em;
             height: 24em;
@@ -409,6 +418,7 @@
             border-radius: 1em;
 
         }
+
         .nav-item {
             font-size: 1rem;
             margin: 0;
@@ -417,11 +427,13 @@
         .view-button > button, .view-button > a {
             font-size: 1em;
         }
-        .top-image img{
+
+        .top-image img {
             width: 100%;
             height: 30em;
         }
-        .middle-image img{
+
+        .middle-image img {
             width: 30em;
             height: 50em;
 
@@ -429,7 +441,7 @@
         }
 
     }
-    @media screen and (min-width:1024px) {
+    @media screen and (min-width: 1024px) {
         .project-card {
             width: 31em;
             height: 35em;
@@ -442,6 +454,7 @@
             border-radius: 1em;
 
         }
+
         .nav-item {
             font-size: 1.5rem;
             margin: 0;
@@ -451,14 +464,21 @@
             font-size: 2em;
         }
 
+        .final-image > img {
+            height: 50em;
+            /*width: 700em;*/
+
+        }
+
     }
-    @media screen and (min-width:1281px) {
+    @media screen and (min-width: 1281px) {
         .project-card {
             width: 45em;
             height: 45em;
 
         }
-        .navbar{
+
+        .navbar {
             width: 27em !important;
         }
 
@@ -468,6 +488,7 @@
             border-radius: 1em;
 
         }
+
         .nav-item {
             font-size: 1.5rem;
             margin: 0;
@@ -489,26 +510,21 @@
     /*        width: 20rem;*/
     /*        border-radius: 1.5rem;*/
     /*    }*/
-
     /*    .navbar-nav.active {*/
     /*        padding: .3em .5em;*/
     /*        border-radius: 0.7em;*/
     /*    }*/
-
     /*    .nav-item {*/
     /*        font-size: .85em;*/
     /*        margin: 0;*/
     /*    }*/
-
     /*    .main-sub-header {*/
     /*        font-size: .9em;*/
     /*        width: 17em;*/
     /*    }*/
-
     /*    .download-resume-button {*/
     /*        !*font-size: .9em;*!*/
     /*    }*/
-
     /*    .green {*/
     /*        position: absolute;*/
     /*        left: 44.65%;*/
@@ -519,9 +535,7 @@
     /*        background: #73E0A9;*/
     /*        filter: blur(90px);*/
     /*        animation: none;*/
-
     /*    }*/
-
     /*    .blue {*/
     /*        position: absolute;*/
     /*        left: 0;*/
@@ -533,47 +547,37 @@
     /*        filter: blur(90px);*/
     /*        animation: none;*/
     /*    }*/
-
     /*    .green.animate {*/
     /*        animation: rotateLeft 8s infinite linear;*/
     /*        transform-origin: left;*/
     /*    }*/
-
     /*    .blue.animate {*/
     /*        animation: rotateRight 8s infinite linear;*/
     /*        transform-origin: right;*/
     /*    }*/
-
     /*    h1 {*/
     /*        font-size: 2.7rem;*/
     /*    }*/
-
     /*    .project-card {*/
     /*        width: 25em;*/
     /*        height: 30em;*/
-
     /*    }*/
-
     /*    .technology-pills > button {*/
     /*        font-size: 12px;*/
     /*        padding: 3px 8px;*/
     /*    }*/
-
     /*    .view-button > button {*/
     /*        font-size: 1em;*/
     /*    }*/
-
     /*}*/
     /*@media (max-width: 450px) {*/
     /*    .project-card {*/
     /*        width: 25em;*/
     /*        height: 30em;*/
-
     /*    }*/
     /*    .navbar{*/
     /*        width: 24rem;*/
     /*    }*/
-
     /*    .navbar-nav.active {*/
     /*        border-radius: 1.5rem;*/
     /*    }*/
@@ -593,15 +597,18 @@
 .loading-page {
     background: #0d0d0d;
 }
+
 .loading-page .counter p {
     font-size: 40px;
     font-weight: 100;
     color: #5b68df;
 }
+
 .loading-page .counter h1 {
     color: white;
     font-size: 60px;
 }
+
 .loading-page .counter hr {
     background: #73e0a9;
     border: none;

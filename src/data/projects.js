@@ -126,6 +126,8 @@ export const projectDetails = [
         "details2": "Shyne was developed with the mobile first approach by mocking what the app would look like as an application on a mobile device.",
         "details3": "The application was built to accommodate the needs of the client and cleaning agency by letting them manage cleaning requests and view the status of their requests.",
         "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details5": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+        "details6": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
         "image3": "/shyne-temp.png"
     },
     {
@@ -136,16 +138,23 @@ export const projectDetails = [
         "tools": "Django, Bootstrap, REST API, Postgresql, React",
         "year": "2020",
         "image1": "/goodchat-2.png",
-        "details1": "Goodchat brings together people that need to talk and people that are qualified to listen to them " +
-            "and maybe even give advice. The platform allows Talkers and Listeners to manage their call sessions and wallet transactions",
+        "details1": "Designed during the Covid-19 pandemic, Goodchat is a platform designed to connect people that want" +
+            " to have a chat depending on their mood with people that are qualified to listen to them " +
+            "and maybe even give advice. The goal was to provide cheap therapy-like sessions to interested individuals.",
         "image2": "/goodchat-sessions.png",
-        "details2": "Talkers can schedule sessions with listeners they are familiar with or opt for someone new. " +
-            "Both listeners and talkers are rated based on reviews of past sessions. Users view session history and manage sessions.",
-        "details3": "Accepted sessions are carried out on google meet and a timer is triggered on the app by the listener. " +
-            "After a call session, the timer is stopped and the charge calculated and shown to both parties involved." +
-            " The listener's wallet is credited,while the talker's wallet is debited.",
-        "details4": "The timer runs for as long as the" +
-            " talker has credit or until the listener stops it.",
+        "details2": "There are two categories of application users. We have the Talkers, which are the users that come to the \n" +
+            "platform to have conversations. We also have the Listeners, which are the registered users that are qualified to listen to\n" +
+            "Talkers and give advice if necessary.",
+        "details3": "Talkers can log into the app to schedule sessions with Listeners selected from the pool of available " +
+            "candidates. These listeners can be filtered by listeners rating and completed sessions etc. " +
+            "As long as a session has been accepted by a listener and the talkers wallet is funded," +
+            " call session are carried out, leveraging the Google Meet platform",
+        "details4": "When a Listener accepts a session and proceeds to start the call session, a timer is triggered on the app." +
+            " The length of sessions is determined by either category of users and also by the available balance in the talkers wallet.",
+        "details5": "Once the timer is stopped, the session charge is calculated and shown to both parties involved.\n" +
+            "The listener's wallet is credited and the talker's wallet is debited.",
+        // "details7": "Users are notified when the status of a session changes.",
+        "details6": "Listeners can manage the history of their sessions, view previous clients, as well as revisit notes takes from each sessions ",
         "image3": "/goodchat-session.png"
     },
     {
@@ -208,16 +217,19 @@ export const projectDetails = [
         "image1": "/selorm-home.png",
         "details1": "Every customer support team needs an efficient tool to maintain customer relationships and work" +
             " efficiently. In addition to this, they want to be able to monitor all the activities of customers when " +
-            "they use the product in question so they can be well informed and provide help where needed. " +
-            "Sharp allows its users to keep track of farmer data, orders and transactions performed on Base. " +
-            "It allows the team to have all the required information in one place which maintains order and improves efficiency.\n",
+            "they use the product in question so they can be well informed and provide help where needed. ",
+        "details2": "Sharp allows its users to keep track of farmer data, orders and transactions performed on Base. " +
+            "It allows the team to have all the required information in one place which maintains order and improves efficiency. ",
         "image2": "/project.png",
-        "details2": "Sharp is packed with features, but it's intuitive interface makes it easy to use, regardless of " +
+        "details3": "Sharp is packed with features, but it's intuitive interface makes it easy to use, regardless of " +
             "technical aptitude. It centralizes and compartmentalizes data where necessary from multiple customer " +
             "touchpoints to avoid duplication of efforts or embarrassing miscommunications.",
-        "details3": "The dashboards update in real time to ensure the users always have access to the most current data, " +
+        "details4": "The dashboards update in real time to ensure the users always have access to the most current data, " +
             "and get full context on all customer interactions.\n" ,
-        "details4": "The message templates and filters allow the users to message the right audience at the right time.",
+        "details5": "The message templates and filters allow the users to message the right audience at the right time.",
+        "details6": "Sharp enables customer support to manage user actions on the Gather Store App. Customer support agents can" +
+            "make orders as well as manage the purchase and delivery cycle of inputs and services provided by registered vendors .",
+        "details7": "",
         "image3": "/project.png"
     },
     {
