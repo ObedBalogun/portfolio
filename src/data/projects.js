@@ -28,20 +28,20 @@ export const projects = [
         "mode": "not-live",
         "link": "https://goodchatapp.herokuapp.com/",
     },
-    {
-        "id": 3,
-        "name": "Finag",
-        "description": " USSD based application for farmers to manage their supply chain and\ntransactions.",
-        "imageURL": "/project.png",
-        "technology": [
-            "Django",
-            "Postgresql",
-            "REST API",
-            "TailwindCSS"
-        ],
-        "position": "left",
-        "mode": "not-live",
-    },
+    // {
+    //     "id": 3,
+    //     "name": "Finag",
+    //     "description": " USSD based application for farmers to manage their supply chain and\ntransactions.",
+    //     "imageURL": "/project.png",
+    //     "technology": [
+    //         "Django",
+    //         "Postgresql",
+    //         "REST API",
+    //         "TailwindCSS"
+    //     ],
+    //     "position": "left",
+    //     "mode": "not-live",
+    // },
     {
         "id": 4,
         "name": "AKMarv Beat Repo",
@@ -148,21 +148,21 @@ export const projectDetails = [
             " talker has credit or until the listener stops it.",
         "image3": "/goodchat-session.png"
     },
-    {
-        "id": 3,
-        "name": "Finag",
-        "description": "If you need someone to chat with, rant about your problems, or just want to\nbe listened you, Goodchat is the service for you.",
-        "role": "Software Developer",
-        "tools": "Django, Bootstrap, REST API, Postgresql, React",
-        "year": "2020",
-        "image1": "/shyne-confirm.png",
-        "details1": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
-        "image2": "/shyne-cars.png",
-        "details2": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
-        "details3": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
-        "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
-        "image3": "/shyne-temp.png"
-    },
+    // {
+    //     "id": 3,
+    //     "name": "Finag",
+    //     "description": "If you need someone to chat with, rant about your problems, or just want to\nbe listened you, Goodchat is the service for you.",
+    //     "role": "Software Developer",
+    //     "tools": "Django, Bootstrap, REST API, Postgresql, React",
+    //     "year": "2020",
+    //     "image1": "/shyne-confirm.png",
+    //     "details1": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+    //     "image2": "/shyne-cars.png",
+    //     "details2": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+    //     "details3": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+    //     "details4": "Shyne is a platform that connects cleaning services to clients within their area who need a\nshyne.",
+    //     "image3": "/shyne-temp.png"
+    // },
     {
         "id": 4,
         "name": "AkMarv",
